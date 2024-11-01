@@ -702,8 +702,6 @@ span:nth-child(9) {
   background-color: var(--pointColor);
 }
 
-.dot {
-}
 
 .black-big-text {
   font-size: 48px;
@@ -831,7 +829,6 @@ span:nth-child(9) {
 
   padding-top: 148px;
 
-  display: flex;
 }
 
 .black-big-text .big-text .easy {
@@ -966,10 +963,50 @@ span:nth-child(9) {
   height: 545px;
 
 }
-.section-02 .main-items-wrap .biz-img-wrap>img{
+.section-02 .main-items-wrap .biz-img-wrap .biz-img {
+  display: none;
+}
+
+
+.section-02 .main-items-wrap .biz-img-wrap .biz-img.active {
+  display: block;
   width: 100%;
   height: 100%;
 }
+
+/* 오시는 길 */
+
+.section-03 .black-big-text {
+  font-size: 48px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  color: #fff;
+
+  padding-top: 120px;
+  padding-bottom: 51px;
+}
+.section-03 .main-title {
+  
+  position: relative;
+  color: #fff;
+}
+
+.section-03 .main-title::after {
+  content: "";
+  display: block;
+  clear: both;
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--pointColor);
+}
+
+
+
 
 
 

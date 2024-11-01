@@ -80,7 +80,6 @@
             <div class="big-text main-title font6">
               <span class="easy font6">쉽고 재미있는</span> 심리측정
             </div>
-            <div class="dot"></div>
           </div>
         </div>
 
@@ -203,16 +202,16 @@
                   <div class="biz-article">
                     <div class="biz-text">
                       <div class="biz-title-wrap">
-                        <p class="biz-title font6">
-                          개인 맞춤형 심리 모니터링
-                        </p>
+                        <p class="biz-title font6">개인 맞춤형 심리 모니터링</p>
                         <button class="biz-button">
                           <i class="xi-angle-up-thin"></i>
                         </button>
                       </div>
                       <p class="biz-content font4">
-                        개인 맞춤형 심리 모니터링 시스템은 사용자의 심리 상태를 지속적으로 관찰하여 변화나 이상 징후를 조기에 감지할
-                        수 있도록 설계되었습니다. 심리 설문과 인지 기능 측정 등 다양한 데이터를 수집하고, AI 분석을 통해 개인별 맞춤형
+                        개인 맞춤형 심리 모니터링 시스템은 사용자의 심리 상태를
+                        지속적으로 관찰하여 변화나 이상 징후를 조기에 감지할 수
+                        있도록 설계되었습니다. 심리 설문과 인지 기능 측정 등
+                        다양한 데이터를 수집하고, AI 분석을 통해 개인별 맞춤형
                         심리 지원을 제공합니다.
                       </p>
 
@@ -234,8 +233,10 @@
                         </button>
                       </div>
                       <p class="biz-content font4">
-                        BASE는 사용자의 심리 상태를 주기적으로 모니터링하고, 이를 통해 심리적 외상을 조기에 발견할 수 있도록 돕는 시
-                        스템입니다. COGEM과 연동되어 사용자에게 필요한 심리 측정을 제공하고, 그 결과를 기록함으로써 지속적인 심리
+                        BASE는 사용자의 심리 상태를 주기적으로 모니터링하고,
+                        이를 통해 심리적 외상을 조기에 발견할 수 있도록 돕는 시
+                        스템입니다. COGEM과 연동되어 사용자에게 필요한 심리
+                        측정을 제공하고, 그 결과를 기록함으로써 지속적인 심리
                         상태 추적이 가능합니다.
                       </p>
 
@@ -249,34 +250,75 @@
               <img
                 src="./images/chair_woman.png"
                 alt="심리적 외상 조기탐지 시스템"
+                class="biz-img active"
+              />
+              <img
+                src="./images/earphone.png"
+                alt="쉽고 재미있는 심리 측정 시스템"
+                class="biz-img"
+              />
+              <img
+                src="./images/write.png"
+                alt="개인 맞춤형 심리 모니터링"
+                class="biz-img"
+              />
+              <img
+                src="./images/PLC.png"
+                alt="딥러닝과 AI 기반 심리 분석 및 기록"
+                class="biz-img"
               />
             </div>
           </div>
         </section>
+
+        <section class="section-03">
+          <div class="black-big-text font6">
+            <h3 class="big-text main-title font6">
+              오시는길
+            </h3>
+          </div>
+        </section>
+      </div>
+
+      <div class="container-1920">
+        
       </div>
     </div>
 
     <div id="top_menu"></div>
+    <div id="footer"></div>
   </body>
 
   <!-- monitering-bizs 버튼 관련 스크립트 -->
   <script>
-    document.querySelectorAll(".biz-button").forEach((button) => {
+    document.querySelectorAll(".biz-button").forEach((button, index) => {
       button.addEventListener("click", () => {
         const article = button.closest(".item");
         const contentShow = article.querySelector(".biz-content");
-        const img = article.querySelector(".biz-img-wrap");
         const title = article.querySelector(".biz-title");
-        const list = document.querySelector(".item");
+
+        document.querySelectorAll(".item").forEach((item, itemIndex) => {
+          if (itemIndex !== index) {
+            item.classList.remove("active");
+            item.querySelector(".biz-content").classList.remove("active");
+            // item.querySelector(".biz-img-wrap").style.display = "none";
+          }
+        });
+
+        document.querySelectorAll(".biz-img").forEach((img, imgIndex) => {
+          if (index !== imgIndex) {
+            img.classList.remove("active");
+          } else {
+            img.classList.add("active");
+          }
+        });
 
         if (article.classList.contains("active")) {
           article.classList.remove("active");
           contentShow.classList.remove("active");
-          img.style.display = "none";
         } else {
           article.classList.add("active");
           contentShow.classList.add("active");
-          img.style.display = "block";
         }
       });
     });
