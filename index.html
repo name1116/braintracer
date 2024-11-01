@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=0" />
+
+<title></title>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+<link rel="stylesheet" type="text/css" href="./css/common.css">
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+
+<body>
+    <div id="wrap">
+
+        <div id="header"></div>
+
+        <!-- 내용 -->
+         <div class="main-image" data-speed="clamp(0.5)">
+            <img src="images/braintracer_main_picture.png"/>
+
+            <div class="main-text-wrap">
+                <img src="fonts/main_small_subject.svg" class="main-image-smallText">
+                
+                <div class="main-image-bigText">
+                    <span>Detecting&nbsp;</span>
+                    <span>Changes,&nbsp;</span>
+                    <span>Protecting&nbsp;</span>
+                    <span>You. </span> <br/>
+                    <span>변화를&nbsp; </span>
+                    <span>감지하고,&nbsp; </span>
+                    <span>당신을&nbsp;</span>
+                    <span>보호합니다.</span>
+                       
+                </div>
+
+                <div class="go-homePage">
+                    <a href="./html/main.html">
+
+                        대표홈페이지 바로가기
+                    </a>
+                </div>
+            </div>
+            
+         </div>
+
+        <div id="footer" class="footer" data-speed="clamp(0.8)">
+
+            <div class="com-info-div">
+                <img src="fonts/main_small_subject.svg" class="com-info-logo"/>
+
+                <p class="com-info">
+                    상호명 : 브레인트레이서&nbsp; | &nbsp;대표 : 임재근&nbsp; | &nbsp;이메일 : braintracer@manito.kr <br/>
+                    주소 : 대전광역시 서구 둔지로 60, 4층 457호(둔산동, 35229) 브레인트레이서
+                </p>
+
+                <p class="copyright">
+                    Copyright 2024 브레인트레이서 All Rights Reserved.
+                </p>
+
+            </div>
+
+            <div class="nav">
+                <div class="section">
+                    <p class="nav-sub">
+                        About us
+                    </p>
+
+                    <div class="line"></div>
+
+                    <p class="nav-text">
+                        <a href="">
+
+                            회사소개
+                        </a>
+                    </p>
+                    <p class="nav-text">
+                        <a href="">
+
+                            연혁
+                        </a>
+                    </p>
+                </div>
+                <div class="section">
+                    <p class="nav-sub">
+                        Services
+                    </p>
+
+                    <div class="line"></div>
+
+                    <p class="nav-text">
+                        <a href="">
+                            BraintracerBraintracer For all
+
+                        </a>
+                    </p>
+                    <p class="nav-text">
+                        <a href="">
+                            BraintracerBraintracer For PTSD
+
+                        </a>
+                    </p>
+                </div>
+                <div class="section">
+                    <p class="nav-sub">
+                        Contact us
+                    </p>
+
+                    <div class="line"></div>
+
+                    <p class="nav-text">
+                        <a href="">
+
+                            문의하기
+                        </a>
+                    </p>
+                    <p class="nav-text">
+                        <a href="">
+
+                            오시는길
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- <div id="top_menu"></div> -->
+
+        <!-- 팝업 -->
+        <!-- 
+    <div class="pop-parent" id="popParent">
+        <div class="pop">
+            <div class="swiper-container">
+                <div class="swiper popupSwiper">
+                    <div class="swiper-wrapper">
+                        <a href="{{$item->link}}" class="swiper-slide" target="_blank">
+                            <div class="m-ratioBox-wrap">
+                                <div class="m-ratioBox">
+                                    <img src="https://admin.hielpay.com/storage/popup/1698050140_open-popup2.jpg" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="swiper-control">
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <div class="pop-btns">
+                    <input type="checkbox" name="oneday" id="oneday_check">
+                    <label for="oneday_check">
+                        <span class="icon"></span> 오늘하루 보지 않기
+                    </label>
+
+                    <button class="btn-toggle">
+                        <i class="xi-angle-up" style="color:#fff;"></i>
+                    </button>
+
+                    <button class="btn-close" onclick="nonePopup()">
+                        <i class="xi-close" style="color:#fff;"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div> 
+    -->
+        <!-- //팝업 -->
+</body>
+
+<script src="/js/jquery.js"></script>
+<script src="/js/script.js"></script>
+<script>
+    function nonePopup() {
+        document.getElementById('popParent').style.display = "none";
+    }
+
+    //popup
+    var popupSwiper = new Swiper(".popupSwiper", {
+        autoplay: {
+            delay: 3000,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        loop: true,
+    });
+
+    $(".pop-parent .btn-toggle").click(function () {
+        $(".pop-parent").toggleClass("active");
+    });
+</script>
+
+</html>
