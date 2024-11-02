@@ -71,7 +71,7 @@
       </div>
     </div>
 
-    <!-- <iframe src="../components/top_menu.html" class="top_button"></iframe> -->
+
 
     <!-- 쉽고 재미있는 심리측정 -->
 
@@ -286,7 +286,8 @@
       <section
         id="daumRoughmapContainer1730511948647"
         class="root_daum_roughmap root_daum_roughmap_landing"
-        data-aos="fade-left"></section>
+        data-aos="fade-left"
+      ></section>
 
       <div class="loc-info" data-aos="fade-up">
         <div class="loc-btn-wrap">
@@ -318,6 +319,18 @@
     <div id="top_menu"></div>
     <div id="footer" data-aos="fade-up"></div>
   </body>
+
+      <!-- 비디오 스탯 -->
+      <script>
+        const video = document.querySelector(".brain-video");
+        const overlay = document.querySelectorAll(
+          ".swiper-pagination-bullet-active::before"
+        );
+        video.addEventListener("timeupdate", () => {
+          const progress = (video.currentTime / video.duration) * 100;
+          overlay.style.width = `${progress}%`;
+        });
+      </script>
 
   <!-- AOS 스크립트 -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

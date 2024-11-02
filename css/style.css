@@ -653,11 +653,37 @@ span:nth-child(9) {
 
 .mySwiper .swiper-pagination-bullet {
   opacity: 1;
+  border-radius: 3px;
   background-color: rgba(255, 255, 255, 0.15);
 }
 .mySwiper .swiper-pagination-bullet-active {
-  background-color: #fff;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.15);
+  width: 72px;
+  border-radius: 3px;
+  overflow: hidden;
 }
+.mySwiper .swiper-pagination-bullet-active::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.85);
+  /* animation: fillOverlay 20s linear forwards; */
+}
+@keyframes fillOverlay {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
 .mySwiper .swiper-button-prev.swiper-button-disabled {
   opacity: 1;
 }
