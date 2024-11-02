@@ -1018,7 +1018,6 @@ span:nth-child(9) {
 .container-1920 .map {
   width: 100%;
   height: 100%;
-  object-fit: cover;
 }
 
 
