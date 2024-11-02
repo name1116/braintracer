@@ -685,7 +685,6 @@ span:nth-child(9) {
 }
 
 .section-01 .main-title {
-  
   position: relative;
   color: #fff;
 }
@@ -701,7 +700,6 @@ span:nth-child(9) {
   border-radius: 50%;
   background-color: var(--pointColor);
 }
-
 
 .black-big-text {
   font-size: 48px;
@@ -734,7 +732,7 @@ span:nth-child(9) {
 
 .articles .title {
   margin-top: 29px;
-  
+
   font-size: 24px;
   font-weight: 500;
   font-stretch: normal;
@@ -817,7 +815,6 @@ span:nth-child(9) {
   color: #fff;
 }
 
-
 /* 맞춤형 모니터링 시스템 */
 
 .section-02 .black-big-text {
@@ -828,7 +825,6 @@ span:nth-child(9) {
   color: #fff;
 
   padding-top: 148px;
-
 }
 
 .black-big-text .big-text .easy {
@@ -839,7 +835,6 @@ span:nth-child(9) {
   color: #707070;
 }
 .section-02 .main-title {
-  
   position: relative;
   color: #fff;
 }
@@ -857,7 +852,7 @@ span:nth-child(9) {
   background-color: var(--pointColor);
 }
 
-.section-02 .main-items-wrap{
+.section-02 .main-items-wrap {
   display: flex;
   gap: 126px;
 }
@@ -874,18 +869,16 @@ span:nth-child(9) {
 .section-02 .main-items-wrap .item:first-of-type .monitering-bizs {
   margin-top: 80px;
 }
-.section-02 .main-items-wrap .item:not(:first-of-type) .monitering-bizs{
+.section-02 .main-items-wrap .item:not(:first-of-type) .monitering-bizs {
   margin-top: 48px;
 }
-.section-02 .main-items-wrap .item.active .biz-title-wrap .biz-title{
+.section-02 .main-items-wrap .item.active .biz-title-wrap .biz-title {
   color: #fff;
   width: 100%;
 }
-.section-02 .main-items-wrap .item.active .biz-button i{
+.section-02 .main-items-wrap .item.active .biz-button i {
   transform: rotate(0deg);
 }
-
-
 
 /* .section-02 .monitering-bizs .biz-article {
   display: flex;
@@ -921,18 +914,15 @@ span:nth-child(9) {
   transform: rotate(180deg);
 }
 
-
-
-
 /* 열기/닫기 버튼을 통해 나오는 내용 */
 
-.conatainer-1440{
+.conatainer-1440 {
   width: 100%;
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
 }
-.biz-text{
+.biz-text {
   border-bottom: 2px solid #484848;
   padding-bottom: 32px;
 }
@@ -953,20 +943,16 @@ span:nth-child(9) {
   display: none;
 }
 
-
-
 /* 사진 */
-.section-02 .main-items-wrap .biz-img-wrap{
+.section-02 .main-items-wrap .biz-img-wrap {
   margin-top: 80px;
 
   width: 480px;
   height: 545px;
-
 }
 .section-02 .main-items-wrap .biz-img-wrap .biz-img {
   display: none;
 }
-
 
 .section-02 .main-items-wrap .biz-img-wrap .biz-img.active {
   display: block;
@@ -987,7 +973,6 @@ span:nth-child(9) {
   padding-bottom: 51px;
 }
 .section-03 .main-title {
-  
   position: relative;
   color: #fff;
 }
@@ -1005,47 +990,117 @@ span:nth-child(9) {
   background-color: var(--pointColor);
 }
 
-.container-1920{
+.container-1920 {
   width: 100%;
   max-width: 1920px;
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
-
-
+  position: relative;
 }
 
 .container-1920 .map {
   width: 100%;
   height: 100%;
 }
+/* 지도 상세 페이지 설명 */
+.container-1920 .loc-info {
+  position: absolute;
+  top: 189px;
+  left: 775px;
+  z-index: 20;
 
+  padding: 8px;
 
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  border: solid 1px #e4e4e4;
+}
+.container-1920 .loc-info .loc-btn-wrap {
+  text-align: right;
+}
+.container-1920 .loc-info .loc-btn-wrap .loc-info-btn {
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+}
 
+.container-1920 .loc-info .loc-info-text-wrap {
+  padding-right: 44px;
+  padding-left: 24px;
+  padding-bottom: 24px;
+}
+.container-1920 .loc-info .loc-info-text-wrap .loc-info-title {
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  color: #202020;
+}
+.container-1920 .loc-info .loc-info-text-wrap .loc-info-detail {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: normal;
+  color: #202020;
+}
+.container-1920 .loc-info .loc-info-text-wrap .loc-info-detail.font3 {
+  color: #707070;
+}
 
+.container-1920 .company-info {
+  position: absolute;
+  bottom: 80px;
+  right: 80px;
+  padding: 40px;
+  z-index: 20;
+  background-color: #3b6dec;
+  text-align: left;
+}
+.container-1920 .company-info .company-name {
+  font-size: 32px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  color: #fff;
 
+  
+  
+}
+.container-1920 .company-info .company-name:after {
+  padding-top: 15px;
+  content: "";
+  display: block;
+  border-bottom: 3px solid #fff;
+  width: 25%;
+}
 
+.container-1920 .company-info .company-loc {
+  padding-top: 11px;
+  font-size: 20px;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.9;
+  color: #fff;
+}
+.container-1920 .company-info .company-loc i {
+  color: #fff;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.container-1920 .company-info .company-mail {
+  font-size: 20px;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.9;
+  color: #fff;
+}
+.container-1920 .company-info .company-mail i {
+  color: #fff;
+}
 
 
 
