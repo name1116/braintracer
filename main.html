@@ -23,6 +23,8 @@
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
   />
+  <!-- AOS 라이브러리 -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
   <body>
     <header id="header"></header>
@@ -77,14 +79,14 @@
       <div class="conatainer-1440">
         <div class="text section-01">
           <div class="black-big-text font6">
-            <div class="big-text main-title font6">
+            <div class="big-text main-title font6" data-aos="fade-down">
               <span class="easy font6">쉽고 재미있는</span> 심리측정
             </div>
           </div>
         </div>
 
         <div class="articles">
-          <div class="article">
+          <div class="article" data-aos="fade-left">
             <img
               src="./images/survey.png"
               alt="자기보고식 설문 제공"
@@ -95,7 +97,7 @@
             <p class="content font4">사용자 맞춤형 설문 및 기록</p>
           </div>
 
-          <div class="article">
+          <div class="article" data-aos="fade-up">
             <img
               src="./images/puzzle.png"
               alt="개인 맞춤형 심리 모니터링"
@@ -106,7 +108,7 @@
             <p class="content font4">주기적 사용자 심리 상태 기록</p>
           </div>
 
-          <div class="article">
+          <div class="article" data-aos="fade-right">
             <img
               src="./images/laptop.png"
               alt="조기 탐지 시스템"
@@ -118,13 +120,13 @@
           </div>
         </div>
 
-        <div class="show-more-btn">
+        <div class="show-more-btn" data-aos="fade-up">
           <button class="show-more font6">
             더 알아보기 <i class="xi-long-arrow-right"></i>
           </button>
         </div>
 
-        <div class="special-img">
+        <div class="special-img" data-aos="fade-up">
           <img
             src="./images/special_image.svg"
             alt="브레인트레이서의 특별함"
@@ -139,13 +141,13 @@
 
         <section class="section-02">
           <div class="text">
-            <div class="black-big-text font6">
+            <div class="black-big-text font6" data-aos="fade-left">
               <h3 class="big-text main-title font6">
                 <span class="easy font6">맞춤형</span> 모니터링 시스템
               </h3>
             </div>
           </div>
-          <div class="main-items-wrap">
+          <div class="main-items-wrap" data-aos="fade-left">
             <ul>
               <li class="item active">
                 <div class="monitering-bizs">
@@ -246,7 +248,7 @@
                 </div>
               </li>
             </ul>
-            <div class="biz-img-wrap">
+            <div class="biz-img-wrap" data-aos="fade-right">
               <img
                 src="./images/chair_woman.png"
                 alt="심리적 외상 조기탐지 시스템"
@@ -272,7 +274,7 @@
         </section>
 
         <section class="section-03">
-          <div class="black-big-text font6">
+          <div class="black-big-text font6" data-aos="fade-right">
             <h3 class="big-text main-title font6">오시는길</h3>
           </div>
         </section>
@@ -284,9 +286,9 @@
       <section
         id="daumRoughmapContainer1730511948647"
         class="root_daum_roughmap root_daum_roughmap_landing"
-      ></section>
+        data-aos="fade-left"></section>
 
-      <div class="loc-info">
+      <div class="loc-info" data-aos="fade-up">
         <div class="loc-btn-wrap">
           <button class="loc-info-btn" onclick="locInfoClose()">
             <i class="xi-close"></i>
@@ -301,19 +303,27 @@
         </div>
       </div>
 
-      <div class="company-info">
+      <div class="company-info" data-aos="fade-up">
         <h3 class="company-name font6">브레인트레이서</h3>
         <p class="company-loc font4">
           <i class="xi-maker"></i>&nbsp;대전광역시 서구 둔지로 60, <br />
           &nbsp;&nbsp;&nbsp;&nbsp;4층 457호(둔산동, 35229) 브레인트레이서
         </p>
-        <p class="company-mail font4"><i class="xi-mail"></i>&nbsp;braintracer@manito.kr</p>
+        <p class="company-mail font4">
+          <i class="xi-mail"></i>&nbsp;braintracer@manito.kr
+        </p>
       </div>
     </div>
 
     <div id="top_menu"></div>
-    <div id="footer"></div>
+    <div id="footer" data-aos="fade-up"></div>
   </body>
+
+  <!-- AOS 스크립트 -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
   <!-- monitering-bizs 버튼 관련 스크립트 -->
   <script>
