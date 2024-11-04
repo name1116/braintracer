@@ -1489,7 +1489,7 @@ span:nth-child(9) {
 
 /* 심리 조기 진단, 맞춤형 치료 지원 */
 
-.about-section02 {
+.about-section03 {
   position: relative;
   max-width: 1920px;
   margin-left: auto;
@@ -1497,4 +1497,66 @@ span:nth-child(9) {
   text-align: center;
   background-color: #202020;
   align-items: center;
+}
+
+.about-section03 .about-section03-title {
+  padding-top: 140px;
+  font-size: 40px;
+  line-height: 1.35;
+  color: #fff;
+}
+
+.about-section03 .solution-flex {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 64px;
+}
+.about-section03 .solution-flex.next{
+  margin-top: 80px;
+  padding-bottom: 131px;
+}
+.about-section03 .solution-flex .solution-image {
+  max-width: 700px;
+  max-height: 430px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.about-section03 .solution-flex .solution-text-wrap {
+  margin-top: 118px;
+}
+
+
+.about-section03 .solution-flex .solution-text-wrap .solution-text-title {
+  font-size: 32px;
+  text-align: left;
+  color: #fff;
+}
+.about-section03 .solution-flex .solution-text-wrap .solution-text-title .blue {
+  color: #3b6dec;
+}
+
+.about-section03 .solution-flex .solution-text-wrap .solution-text {
+  margin-top: 24px;
+  font-size: 16px;
+  line-height: 2;
+  text-align: left;
+  color: #fff;
+}
+
+
+/* 고객 & 협력 */
+
+.about-section04 {
+  position: relative;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 140px;
+  text-align: center;
+  background-color: #ffffff;
+  align-items: center;
+  
 }
