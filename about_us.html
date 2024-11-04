@@ -125,26 +125,26 @@
   <script src="./js/jquery.js"></script>
   <script src="./js/script.js"></script>
 
-  <!-- <script>
-    const observerOptions = {
+  <script>
+    // Intersection Observer 설정
+    const options = {
       root: null,
       threshold: 0.5
     };
+    const targetSection = document.querySelector(".about-section04");
 
-    const whiteModeObserver = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          document.body.classList.add("white-mode");
+          targetSection.style.backgroundColor = "#FFF"; // 도착 시 배경색 변경
         } else {
-          document.body.classList.remove("white-mode");
+          targetSection.style.backgroundColor = ""; // 떠날 시 원래 배경색
         }
       });
-    }, observerOptions);
+    }, options);
 
-    // about-section04 섹션을 관찰하여 다크 모드 전환
-    const targetSection = document.querySelector(".about-section04");
-    whiteModeObserver.observe(targetSection);
-  </script> -->
+    observer.observe(targetSection);
+  </script>
 
   <script>
     document
