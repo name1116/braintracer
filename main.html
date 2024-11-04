@@ -14,7 +14,6 @@
     href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
   />
   <link rel="stylesheet" type="text/css" href="./css/common.css" />
-  <link rel="stylesheet" type="text/css" href="./css/main_style.css" />
   <link rel="stylesheet" href="./css/style.css" />
   <!-- <link rel="stylesheet" type="text/css" href="path/to/xeicon/xeicon.min.css" /> -->
   <!-- swiper -->
@@ -34,7 +33,7 @@
         <div class="swiper-slide">
           <div class="bg-video">
             <video
-              src="../mp4/brain.mp4"
+              src="./mp4/brain.mp4"
               class="brain-video"
               type="video/mp4"
               autoplay
@@ -70,8 +69,6 @@
         <div class="swiper-button-next"></div>
       </div>
     </div>
-
-
 
     <!-- 쉽고 재미있는 심리측정 -->
 
@@ -320,17 +317,21 @@
     <div id="footer" data-aos="fade-up"></div>
   </body>
 
-      <!-- 비디오 스탯 -->
-      <script>
-        const video = document.querySelector(".brain-video");
-        const overlay = document.querySelectorAll(
-          ".swiper-pagination-bullet-active::before"
-        );
-        video.addEventListener("timeupdate", () => {
-          const progress = (video.currentTime / video.duration) * 100;
-          overlay.style.width = `${progress}%`;
-        });
-      </script>
+
+  <script src="./js/jquery.js"></script>
+  <script src="./js/script.js"></script>
+
+  <!-- 비디오 스탯 -->
+  <script>
+    const video = document.querySelector(".brain-video");
+    const overlay = document.querySelectorAll(
+      ".swiper-pagination-bullet-active::before"
+    );
+    video.addEventListener("timeupdate", () => {
+      const progress = (video.currentTime / video.duration) * 100;
+      overlay.style.width = `${progress}%`;
+    });
+  </script>
 
   <!-- AOS 스크립트 -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -397,7 +398,7 @@
     }
   </script>
 
-  <script src="./js/jquery.js"></script>
+
   <!-- swiper -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
@@ -412,7 +413,7 @@
       loop: true,
     });
   </script>
-  <script src="./js/script.js"></script>
+
   <script>
     function nonePopup() {
       document.getElementById("popParent").style.display = "none";
