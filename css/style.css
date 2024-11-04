@@ -1398,4 +1398,103 @@ span:nth-child(9) {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  background-color: #202020;
+  align-items: center;
+}
+.about-section02 .about-section02-buttons {
+  display: flex;
+  justify-content: center;
+
+}
+.about-section02 .about-section02-button-wrap::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #3b6dec;
+}
+.about-section02 .about-section02-button-wrap .about-section02-button {
+  font-size: 18px;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #fff;
+
+  padding-top: 16px;
+  padding-left: 127px;
+  padding-right: 127px;
+  
+}
+.about-section02 .about-section02-button-wrap .about-section02-button.able {
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+}
+.about-section02 .about-section02-button-wrap .about-section02-button.able::after {
+  content: "";
+  display: block;
+  border-bottom: 3px solid #3b6dec;
+
+  padding-top: 18px;
+}
+
+/* 회사소개 제목 */
+
+.about-section02 .about-section02-title {
+  font-size: 48px;
+  color: #fff;
+  margin-top: 140px;
+  position: relative;
+}
+
+
+.about-section02 .about-section02-title::after {
+  content: "";
+  display: block;
+  clear: both;
+  position: absolute;
+  top: -12px;
+  right: 45%;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--pointColor);
+}
+
+.about-section02 .about-section02-title-line {
+  border: 1px solid #fff;
+  width: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 64px;
+  transform: rotate(90deg);
+}
+
+.about-section02 .about-section02-bg {
+  margin-top: 84px;
+  width: 100%;
+  max-width: 1920px;
+  background-image: linear-gradient(120deg, #3b6dec 25%, #202020 129%);
+  padding: 114px 625px 113px;
+}
+.about-section02 .about-section02-bg .about-section02-bg-img {
+  width: 359px;
+  height: 45px;
+}
+.about-section02 .about-section02-bg .about-section02-bg-text {
+  margin-top: 40px;
+  font-size: 24px;
+  line-height: 1.58;
+  color: #fff;
+}
+
+/* 심리 조기 진단, 맞춤형 치료 지원 */
+
+.about-section02 {
+  position: relative;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: #202020;
+  align-items: center;
 }

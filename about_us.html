@@ -34,10 +34,29 @@
       </div>
     </section>
     <section class="about-section02">
-        <div class="about-section02-buttons">
-            <button class="about-company">회사소개</button>
-            <button class="history-company">연혁</button>
-        </div>
+      <div class="about-section02-button-wrap">
+        <button class="about-section02-button able font6">회사소개</button>
+        <button class="about-section02-button font4">연혁</button>
+      </div>
+
+      <h3 class="about-section02-title font6">회사소개</h3>
+
+      <div class="about-section02-title-line"></div>
+      
+      <div class="about-section02-bg">
+        <img src="./images/main_small_subject.svg" alt="braintracer" class="about-section02-bg-img">
+        <p class="about-section02-bg-text font5">
+            소방공무원 등 고위험 직군의 정신건강을 체계적으로 관리하고 <br/>
+            PTSD 예방을 지원하는 디지털 헬스케어 솔루션 브레인트레이서
+        </p>
+      </div>
+
+    </section>
+    <section class="about-section03">
+        <h3 class="about-section03-title">
+            심리 조기 진단과<br/>
+            맞춤형 치료를 지원합니다.
+        </h3>
     </section>
 
     <div id="top_menu"></div>
@@ -46,6 +65,24 @@
 
   <script src="./js/jquery.js"></script>
   <script src="./js/script.js"></script>
+
+  <script>
+    document
+      .querySelectorAll(".about-section02-button")
+      .forEach((btn, index, buttons) => {
+        btn.addEventListener("click", () => {
+          buttons.forEach((otherBtn, otherIndex) => {
+            if (otherIndex !== index) {
+              otherBtn.classList.remove("able");
+              otherBtn.classList.remove("font6");
+              otherBtn.classList.add("font4");
+            }
+          });
+          btn.classList.toggle("able");
+          btn.classList.toggle("font6");
+        });
+      });
+  </script>
 
   <script>
     function nonePopup() {
