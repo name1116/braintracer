@@ -1,6 +1,9 @@
 :root {
   --pointColor: #3b6dec;
 }
+img{
+  vertical-align: top;
+}
 
 /* 팝업 */
 .pop-parent {
@@ -672,7 +675,7 @@ span:nth-child(9) {
   width: 0%;
   border-radius: 3px;
   background-color: rgba(255, 255, 255, 0.85);
-  /* animation: fillOverlay 20s linear forwards; */
+  animation: fillOverlay 4s ease forwards;
 }
 @keyframes fillOverlay {
   0% {
@@ -681,6 +684,9 @@ span:nth-child(9) {
   100% {
     width: 100%;
   }
+}
+.mySwiper .swiper-slide{
+  background-color: #000;
 }
 
 
@@ -1373,6 +1379,12 @@ span:nth-child(9) {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  overflow: hidden;
+}
+.about-section01 .about-section01-img {
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
 }
 .about-section01 .about-section01-text {
   position: absolute;
@@ -1412,6 +1424,7 @@ span:nth-child(9) {
   border-bottom: 1px solid #3b6dec;
 }
 .about-section02 .about-section02-button-wrap .about-section02-button {
+  width: 288px;
   font-size: 18px;
   font-weight: 200;
   font-stretch: normal;
@@ -1420,8 +1433,8 @@ span:nth-child(9) {
   color: #fff;
 
   padding-top: 16px;
-  padding-left: 127px;
-  padding-right: 127px;
+  /* padding-left: 127px;
+  padding-right: 127px; */
   
 }
 .about-section02 .about-section02-button-wrap .about-section02-button.able {
@@ -1440,10 +1453,13 @@ span:nth-child(9) {
 /* 회사소개 제목 */
 
 .about-section02 .about-section02-title {
+  width: fit-content;
   font-size: 48px;
   color: #fff;
   margin-top: 140px;
   position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -1453,7 +1469,7 @@ span:nth-child(9) {
   clear: both;
   position: absolute;
   top: -12px;
-  right: 45%;
+  right: -12px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -1558,5 +1574,19 @@ span:nth-child(9) {
   text-align: center;
   background-color: #ffffff;
   align-items: center;
-  
 }
+
+.about-section04 .customer {
+  font-size: 40px;
+  color: #202020;
+}
+.about-section04 .customer-text {
+  margin-top: 32px;
+  font-size: 20px;
+  color: #202020;
+  line-height: 1.7;
+}
+
+/* .white-mode {
+  background-color: #fff;
+} */

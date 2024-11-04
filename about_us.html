@@ -69,7 +69,8 @@
         />
         <div class="solution-text-wrap">
           <h3 class="solution-text-title font6">
-            자동화된 심리 분석 및 <span class="blue font6">맞춤형 솔루션 제공</span>
+            자동화된 심리 분석 및
+            <span class="blue font6">맞춤형 솔루션 제공</span>
           </h3>
           <p class="solution-text font4">
             음성·텍스트 데이터를 AI로 분석해 사용자 상태에 맞는 설문과 인지
@@ -105,8 +106,16 @@
         />
       </div>
     </section>
+
+    <!-- 고객사&협력사 -->
+
     <section class="about-section04">
-        
+      <h3 class="customer font6">고객사</h3>
+      <p class="customer-text font4">
+        다양한 기업에서 브레인트레이서의 심리적 외상 조기탐지 시스템을 도입하여<br/>
+        조직의 경쟁력을 강화하고 직원들의 정신적 안정과 생산성을 향상시키고
+        있습니다.
+      </p>
     </section>
 
     <div id="top_menu"></div>
@@ -115,6 +124,27 @@
 
   <script src="./js/jquery.js"></script>
   <script src="./js/script.js"></script>
+
+  <!-- <script>
+    const observerOptions = {
+      root: null,
+      threshold: 0.5
+    };
+
+    const whiteModeObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          document.body.classList.add("white-mode");
+        } else {
+          document.body.classList.remove("white-mode");
+        }
+      });
+    }, observerOptions);
+
+    // about-section04 섹션을 관찰하여 다크 모드 전환
+    const targetSection = document.querySelector(".about-section04");
+    whiteModeObserver.observe(targetSection);
+  </script> -->
 
   <script>
     document
