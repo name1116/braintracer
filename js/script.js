@@ -43,3 +43,9 @@ $(document).ready(function(){
 // });
 // import { GSAPInfoBar } from "https://codepen.io/GreenSock/pen/vYqpyLg.js"
 // new GSAPInfoBar({ link: "https://gsap.com/docs/v3/Plugins/ScrollSmoother/"});
+
+
+
+
+
+
