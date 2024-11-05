@@ -1513,7 +1513,13 @@ span:nth-child(9) {
   text-align: center;
   background-color: #202020;
   align-items: center;
+  transition-duration: 1s;
 }
+.about-section03.white {
+  background-color: #FFF;
+  transition-duration: 1s;
+}
+
 
 .about-section03 .about-section03-title {
   padding-top: 140px;
@@ -1532,6 +1538,8 @@ span:nth-child(9) {
   margin-top: 80px;
   padding-bottom: 131px;
 }
+
+
 .about-section03 .solution-flex .solution-image {
   max-width: 700px;
   max-height: 430px;
@@ -1553,6 +1561,10 @@ span:nth-child(9) {
 .about-section03 .solution-flex .solution-text-wrap .solution-text-title .blue {
   color: #3b6dec;
 }
+.about-section03 .solution-flex .solution-text-wrap .solution-text-title.white {
+  color: #202020;
+  transition-duration: 1s;
+}
 
 .about-section03 .solution-flex .solution-text-wrap .solution-text {
   margin-top: 24px;
@@ -1561,6 +1573,13 @@ span:nth-child(9) {
   text-align: left;
   color: #fff;
 }
+
+.about-section03 .solution-flex.next .solution-text-wrap .solution-text.white {
+  color: #202020;
+  transition-duration: 1s;
+}
+
+
 
 
 /* 고객 & 협력 */
@@ -1574,6 +1593,8 @@ span:nth-child(9) {
   text-align: center;
   background-color: #202020;
   align-items: center;
+
+  transition-duration: 1s;
 }
 
 .about-section04 .customer {

@@ -131,19 +131,28 @@
       root: null,
       threshold: 0.5
     };
-    const targetSection = document.querySelector(".about-section04");
+    const targetSection01 = document.querySelector(".about-section04");
+    const targetSection02 = document.querySelector(".about-section03");
+    const tS02Title = document.querySelector(".solution-flex.next .solution-text-wrap .solution-text-title");
+    const tS02Text = document.querySelector(".solution-flex.next .solution-text-wrap .solution-text");
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          targetSection.style.backgroundColor = "#FFF"; // 도착 시 배경색 변경
+          targetSection01.style.backgroundColor = "#FFF"; // 도착 시 배경색 변경
+          targetSection02.classList.add("white");
+          tS02Title.classList.add("white");
+          tS02Text.classList.add("white");
         } else {
-          targetSection.style.backgroundColor = ""; // 떠날 시 원래 배경색
+          targetSection01.style.backgroundColor = ""; // 떠날 시 원래 배경색
+          targetSection02.classList.remove("white");
+          tS02Title.classList.remove("white");
+          tS02Text.classList.remove("white");
         }
       });
     }, options);
 
-    observer.observe(targetSection);
+    observer.observe(targetSection01);
   </script>
 
   <script>
