@@ -456,6 +456,16 @@
   </script>
 
   <script>
+    const s2Title = document.querySelector(".about-section02-title");
+    const s2TitleLine = document.querySelector(".about-section02-title-line");
+    const s2Bg = document.querySelector(".about-section02-bg");
+
+    const s3 = document.querySelector(".about-section03");
+    const s4 = document.querySelector(".about-section04");
+    const s5 = document.querySelector(".about-section05");
+    const s6 = document.querySelector(".about-section06");
+
+
     document
       .querySelectorAll(".about-section02-button")
       .forEach((btn, index, buttons) => {
@@ -465,10 +475,27 @@
               otherBtn.classList.remove("able");
               otherBtn.classList.remove("font6");
               otherBtn.classList.add("font4");
+              s2Title.style.display = "block";
+              s2TitleLine.style.display = "block";
+              s2Bg.style.display = "block";
+              s3.style.display = "block";
+              s4.style.display = "block";
+              s5.style.display = "block";
+              s6.style.display = "block";
+            } else {
+              s2Title.style.display = "none";
+              s2TitleLine.style.display = "none";
+              s2Bg.style.display = "none";
+              s3.style.display = "none";
+              s4.style.display = "none";
+              s5.style.display = "none";
+              s6.style.display = "none";
             }
           });
+          
           btn.classList.toggle("able");
           btn.classList.toggle("font6");
+          
         });
       });
   </script>

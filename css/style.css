@@ -1435,12 +1435,13 @@ span:nth-child(9) {
   padding-top: 16px;
   /* padding-left: 127px;
   padding-right: 127px; */
-  
+  pointer-events: auto;
 }
 .about-section02 .about-section02-button-wrap .about-section02-button.able {
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
+  pointer-events: none;
 }
 .about-section02 .about-section02-button-wrap .about-section02-button.able::after {
   content: "";
@@ -1674,7 +1675,7 @@ span:nth-child(9) {
   background-color: #707070; /*로고 사진 넣을때, 배경색 뺴줘야함 */
 }
 .about-section04 .partner-wrap .partner-logo:hover {
-  transition: 0.2s;
+  transition: 0.5s;
   box-shadow: 0 0 5px #333;
 }
 
@@ -1741,7 +1742,7 @@ span:nth-child(9) {
 }
 .about-section05 .about-section05-content .content-title.white {
   color: #FFF;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
 }
 .about-section05 .about-section05-content .content {
   
