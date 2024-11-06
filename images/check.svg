@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-5 {
+        fill: none;
+      }
+
+      .cls-2, .cls-5 {
+        stroke: #fff;
+      }
+
+      .cls-3 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-4 {
+        clip-path: url(#clip-path-2);
+      }
+
+      .cls-5 {
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="사각형_120669" data-name="사각형 120669" class="cls-1" width="50" height="50" transform="translate(108 94)"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="사각형_119825" data-name="사각형 119825" class="cls-2" width="45.707" height="41.707" transform="translate(0 0)"/>
+    </clipPath>
+  </defs>
+  <g id="마스크_그룹_139569" data-name="마스크 그룹 139569" class="cls-3" transform="translate(-108 -94)">
+    <g id="그룹_144098" data-name="그룹 144098" transform="translate(110 98)">
+      <g id="그룹_144097" data-name="그룹 144097" class="cls-4">
+        <path id="패스_155835" data-name="패스 155835" class="cls-5" d="M37.474,14.234A19.017,19.017,0,1,1,32.4,7.309"/>
+        <path id="패스_155836" data-name="패스 155836" class="cls-5" d="M12,15.707l9,9,24-24"/>
+      </g>
+    </g>
+  </g>
+</svg>

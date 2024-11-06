@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="41.626" viewBox="0 0 34 41.626">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        opacity: 0;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #3b6dec;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+
+      .cls-3 {
+        opacity: 0.5;
+      }
+    </style>
+  </defs>
+  <g id="구성_요소_196_1" data-name="구성 요소 196 – 1" transform="translate(0 0.121)">
+    <rect id="사각형_119821" data-name="사각형 119821" class="cls-1" width="34" height="41"/>
+    <g id="그룹_144091" data-name="그룹 144091" transform="translate(-500 -2463)">
+      <g id="그룹_139023" data-name="그룹 139023" transform="translate(490 2464.646)">
+        <path id="패스_151646" data-name="패스 151646" class="cls-2" d="M.354.354l18,18.692-18,18.692" transform="translate(24)"/>
+      </g>
+      <g id="그룹_139024" data-name="그룹 139024" class="cls-3" transform="translate(478 2469.646)">
+        <path id="패스_151646-2" data-name="패스 151646" class="cls-2" d="M.354.354l14,14.538-14,14.538" transform="translate(24)"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,41 @@
+<svg id="그룹_144101" data-name="그룹 144101" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="50" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .cls-1, .cls-3 {
+        fill: none;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #fff;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-4 {
+        clip-path: url(#clip-path);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="사각형_119826" data-name="사각형 119826" class="cls-1" width="50" height="50"/>
+    </clipPath>
+  </defs>
+  <line id="선_15770" data-name="선 15770" class="cls-2" x2="11.557" y2="11.557" transform="translate(28.535 28.535)"/>
+  <line id="선_15771" data-name="선 15771" class="cls-3" x2="11.557" y2="11.557" transform="translate(28.535 28.535)"/>
+  <line id="선_15772" data-name="선 15772" class="cls-3" y1="4.723" x2="9.971" transform="translate(10.514 27.139)"/>
+  <g id="그룹_144100" data-name="그룹 144100">
+    <g id="그룹_144099" data-name="그룹 144099" class="cls-4">
+      <circle id="타원_2691" data-name="타원 2691" class="cls-3" cx="5" cy="5" r="5" transform="translate(20 20)"/>
+      <circle id="타원_2692" data-name="타원 2692" class="cls-3" cx="5" cy="5" r="5" transform="translate(29 1)"/>
+      <circle id="타원_2693" data-name="타원 2693" class="cls-3" cx="5" cy="5" r="5" transform="translate(39 39)"/>
+      <circle id="타원_2694" data-name="타원 2694" class="cls-3" cx="5" cy="5" r="5" transform="translate(1 29)"/>
+      <line id="선_15773" data-name="선 15773" class="cls-3" y1="9.971" x2="4.723" transform="translate(27.138 10.515)"/>
+    </g>
+  </g>
+</svg>
