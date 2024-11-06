@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=0"
+  />
+
+  <title></title>
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  <link
+    rel="stylesheet"
+    href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+  />
+  <link rel="stylesheet" type="text/css" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <body>
+    <header id="header" class="services-header"></header>
+    <section class="services-section01">
+      <img
+        src="./images/service_web.png"
+        alt="Services"
+        class="services-section01-image"
+      />
+      <div class="services-section01-text-wrap">
+        <h3 class="title font6">Services</h3>
+        <p class="text font4">
+          감정 분석과 맞춤형 설문을 통해 심리 상태를<br />
+          모니터링하고 트라우마를 조기에 탐지합니다.
+        </p>
+      </div>
+    </section>
+
+    <section class="services-section02">
+      <div class="services-section02-button-wrap">
+        <button class="services-section02-button able font6">
+          Braintracer For All
+        </button>
+        <button class="services-section02-button font4">
+          Braintracer For PTSD
+        </button>
+      </div>
+    </section>
+    <!-- 버튼 토글 시 section이 다르게 나옴 -->
+    <section class="services-braintracer">
+      <div class="services-braintracer-text-wrap">
+        <h3 class="title font6"><span>Braintracer For</span> All</h3>
+        <div class="services-braintracer-title-line"></div>
+        <p class="text font6">
+          맞춤형 설문과 AI 기반 트라우마 분석을 통해<br />
+          심리 상태를 <span>실시간으로 모니터링</span>하고 관리합니다.
+        </p>
+      </div>
+    </section>
+
+    <div id="top_menu"></div>
+    <div id="footer"></div>
+  </body>
+
+  <script>
+    document
+      .querySelectorAll(".services-section02-button")
+      .forEach((btn, index, buttons) => {
+        btn.addEventListener("click", () => {
+          buttons.forEach((otherBtn, otherIndex) => {
+            if (otherIndex !== index) {
+              otherBtn.classList.remove("able");
+              otherBtn.classList.remove("font6");
+              otherBtn.classList.add("font4");
+            }
+          });
+
+          btn.classList.add("able");
+        });
+      });
+  </script>
+
+  <script src="./js/jquery.js"></script>
+  <script src="./js/script.js"></script>
+</html>

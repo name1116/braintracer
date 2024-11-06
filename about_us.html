@@ -425,7 +425,7 @@
             <div class="history-year-wrap">
               <h3 class="history-year font6">2024</h3>
             </div>
-            <div class="history-text-wrap">
+            <div class="history-text-wrap on">
               <div class="history-text">
                 <div class="history-text-detail able">
                   <h4 class="history-year-detail font4">2024.04</h4>
@@ -458,7 +458,7 @@
             <div class="history-year-wrap">
               <h3 class="history-year font6">2023</h3>
             </div>
-            <div class="history-text-wrap">
+            <div class="history-text-wrap on">
               <div class="history-text">
                 <div class="history-text-detail able">
                   <h4 class="history-year-detail font4">2024.04</h4>
@@ -615,35 +615,106 @@
       });
   </script>
 
-  <script>
-    document.querySelectorAll(".history-circle").forEach((circle, index) => {
-      circle.addEventListener("click", () => {
-        if (circle.classList.contains("able")) {
-          circle.classList.remove("able");
-          circle.classList.add("disable");
+<script>
+  let isAnimating = false;
 
-          circle
-            .closest(".history-list")
-            .querySelectorAll(".history-text-detail")
-            .forEach((historyText) => {
-              historyText.classList.remove("able");
-              historyText.classList.add("disable");
-            });
-        } else {
-          circle.classList.remove("disable");
-          circle.classList.add("able");
+  let slideUp = (target, duration = 500) => {
+    target.style.transitionProperty = 'height, margin, padding';
+    target.style.transitionDuration = duration + 'ms';
+    target.style.boxSizing = 'border-box';
+    target.style.height = target.offsetHeight + 'px';
+    target.offsetHeight;
+    target.style.overflow = 'hidden';
+    target.style.height = 0;
+    target.style.paddingTop = 0;
+    target.style.paddingBottom = 0;
+    target.style.marginTop = 0;
+    target.style.marginBottom = 0;
+    window.setTimeout(() => {
+      target.style.display = 'none';
+      target.style.removeProperty('height');
+      target.style.removeProperty('padding-top');
+      target.style.removeProperty('padding-bottom');
+      target.style.removeProperty('margin-top');
+      target.style.removeProperty('margin-bottom');
+      target.style.removeProperty('overflow');
+      target.style.removeProperty('transition-duration');
+      target.style.removeProperty('transition-property');
+      isAnimating = false;
+    }, duration);
+  }
+  let slideDown = (target, duration = 500) => {
+    target.style.removeProperty('display');
+    let display = window.getComputedStyle(target).display;
 
-          circle
-            .closest(".history-list")
-            .querySelectorAll(".history-text-detail")
-            .forEach((historyText) => {
-              historyText.classList.remove("disable");
-              historyText.classList.add("able");
-            });
-        }
-      });
+    if (display === 'none')
+      display = 'block';
+
+    target.style.display = display;
+    let height = target.offsetHeight;
+    target.style.overflow = 'hidden';
+    target.style.height = 0;
+    target.style.paddingTop = 0;
+    target.style.paddingBottom = 0;
+    target.style.marginTop = 0;
+    target.style.marginBottom = 0;
+    target.offsetHeight;
+    target.style.boxSizing = 'border-box';
+    target.style.transitionProperty = "height, margin, padding";
+    target.style.transitionDuration = duration + 'ms';
+    target.style.height = height + 'px';
+    target.style.removeProperty('padding-top');
+    target.style.removeProperty('padding-bottom');
+    target.style.removeProperty('margin-top');
+    target.style.removeProperty('margin-bottom');
+    window.setTimeout(() => {
+      target.style.removeProperty('height');
+      target.style.removeProperty('overflow');
+      target.style.removeProperty('transition-duration');
+      target.style.removeProperty('transition-property');
+      isAnimating = false;
+    }, duration);
+  }
+
+  // ====  
+  document.querySelectorAll(".history-circle").forEach((circle, index) => {
+    const siblingsTextWrap = circle.nextElementSibling.nextElementSibling
+
+    circle.addEventListener("click", () => {
+      if (isAnimating) return; 
+      isAnimating = true;
+
+      if (circle.classList.contains("able")) {
+        circle.classList.remove("able");
+        circle.classList.add("disable");
+
+        slideUp(siblingsTextWrap)
+
+        // circle
+        //   .closest(".history-list")
+        //   .querySelectorAll(".history-text-detail")
+        //   .forEach((historyText) => {
+        //     historyText.classList.remove("able");
+        //     historyText.classList.add("disable");
+        //   });
+      } else {
+        circle.classList.remove("disable");
+        circle.classList.add("able");
+
+        slideDown(siblingsTextWrap)
+        isAnimating = false;
+
+        // circle
+        //   .closest(".history-list")
+        //   .querySelectorAll(".history-text-detail")
+        //   .forEach((historyText) => {
+        //     historyText.classList.remove("disable");
+        //     historyText.classList.add("able");
+        //   });
+      }
     });
-  </script>
+  });
+</script>
 
   <script>
     function nonePopup() {

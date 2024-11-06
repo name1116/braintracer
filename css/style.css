@@ -1968,20 +1968,7 @@ span:nth-child(9) {
 .history-container .history-list .history-year-wrap{
   margin-left: 24px;
 }
-/* .history-container .history-list .history-text-wrap{
-  overflow: hidden;
-  max-height: 0px;
-} */
-.history-container .history-list .history-text-wrap>.history-text-detail{
-  transition: all 0,3s;
-}
-.history-container .history-list .history-text-wrap .history-text-detail.disable{
-  overflow: hidden;
-  max-height: 0px;
-}
-.history-container .history-list .history-text-wrap .history-text-detail.able{
-  max-height:none;
-}
+
 
 
 
@@ -2006,7 +1993,7 @@ span:nth-child(9) {
   margin-bottom: 40px;
 }
 
-.history-container .history-list .history-text .history-text-detail.able {
+.history-container .history-list .history-text .history-text-detail {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -2019,15 +2006,153 @@ span:nth-child(9) {
 /* .history-container .history-list .history-text .history-text-detail:last-child {
   margin-bottom: 73px;
 } */
-.history-container .history-list .history-text .history-text-detail.able h4{
+.history-container .history-list .history-text .history-text-detail h4{
   opacity: 0.5;
   font-size: 20px;
   color: #fff;
   padding-top: 6px;
 }
 
-.history-container .history-list .history-text .history-text-detail.able p{
+.history-container .history-list .history-text .history-text-detail p{
   font-size: 20px;
   line-height: 1.8;
   color: #fff;
+}
+
+.history-container .history-list .history-text-wrap{
+  display: none
+}
+.history-container .history-list .history-text-wrap.on{
+  display: block;
+}
+
+
+
+/* Services 챕터 >> 이전해야할 것*/
+
+.services-header {
+  -webkit-backdrop-filter: blur(20px)
+}
+
+.services-section01 {
+  position: relative;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: #202020;
+  align-items: center;
+}
+.services-section01 .services-section01-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.services-section01 .services-section01-text-wrap {
+  position: absolute;
+  top: 40%;
+  left: 35%;
+}
+.services-section01 .services-section01-text-wrap .title {
+  text-align: center;
+  font-size: 56px;
+  color: #fff;
+  margin-bottom: 32px;
+}
+.services-section01 .services-section01-text-wrap .text {
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.58;
+  color: #fff;
+}
+
+.services-section02 {
+  position: relative;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: #202020;
+  align-items: center;
+}
+.services-section02 .services-section02-buttons {
+  display: flex;
+  justify-content: center;
+
+}
+.services-section02 .services-section02-button-wrap::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #3b6dec;
+}
+.services-section02 .services-section02-button-wrap .services-section02-button {
+  position: relative;
+  width: 288px;
+  font-size: 18px;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #fff;
+
+  padding: 16px 0px;
+}
+.services-section02 .services-section02-button-wrap .services-section02-button.able {
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  font-size: 18px;
+  /* pointer-events: none; */
+}
+.services-section02 .services-section02-button-wrap .services-section02-button.able::after {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  content: "";
+  display: block;
+  border-bottom: 3px solid #3b6dec;
+
+  /* padding-top: 18px; */
+}
+.services-braintracer {
+  position: relative;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 149px;
+  text-align: center;
+  background-color: #202020;
+  align-items: center;
+}
+.services-braintracer .services-braintracer-text-wrap .title {
+  position: relative;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 48px;
+  color: #FFF;
+  text-align: center;
+}
+.services-braintracer .services-braintracer-text-wrap .title span {
+  color: #707070;
+}
+.services-braintracer .services-braintracer-text-wrap .title::after {
+  content: "";
+  display: block;
+  clear: both;
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--pointColor);
+}
+
+.services-braintracer .services-braintracer-text-wrap .services-braintracer-title-line {
+  margin-bottom: 84px;
+  border: 1px solid #FFF;
+  width: 40px;
+  transform: rotate(90deg);
 }
