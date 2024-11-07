@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=0"
+  />
+
+  <title></title>
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  <link
+    rel="stylesheet"
+    href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+  />
+  <link rel="stylesheet" type="text/css" href="./css/common.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <body>
+    <header id="header" class="contact-header"></header>
+    <section class="contact-section01">
+      <img src="./images/contact_us.png" alt="Contact us" class="bg" />
+      <div class="contact-section01-text-wrap">
+        <h3 class="title font6">Contact us</h3>
+        <p class="text font4">
+        당신의 마음 상태 이제 브레인트레이서에서<br/> 쉽게 관리하세요 외상 탐지부터
+        치유까지 함께하겠습니다.
+      </div>
+      </p>
+    </section>
+    <section class="contact-section02">
+        <div class="contact-section02-button-wrap">
+          <button
+            class="contact-section02-button able font6"
+            data-section="contact"
+          >
+            문의하기
+          </button>
+          <button
+            class="contact-section02-button font4"
+            data-section="directions"
+          >
+            오시는길
+          </button>
+        </div>
+    </section>
+
+    <!-- 문의하기 -->
+    <form action="" method="post" class="contact-form">
+        <div class="text-title-wrap">
+            <h3 class="title font6">문의하기</h3>
+            <p class="info font4">
+                <span>*</span> 필수 입력 항목
+            </p>
+        </div>
+
+        <div class="input-wrap-flex">
+            <div class="input-wrap">
+                <p class="info font6">
+                    이름<span>*</span>
+                </p>
+                <input type="text" placeholder="성함을 입력해주세요." required>
+            </div>
+            <div class="input-wrap">
+                <p class="info font6">
+                    연락처<span>*</span>
+                </p>
+                <input type="number" placeholder="연락처를 입력해주세요." required>
+            </div>
+            <div class="input-wrap">
+                <p class="info font6">
+                    이메일
+                </p>
+                <input type="email" placeholder="이메일을 입력해주세요.">
+            </div>
+            <div class="input-wrap">
+                <p class="info font6">
+                    상담분야
+                </p>
+                <input type="text" placeholder="상담분야를 입력해주세요.">
+            </div>
+        </div>
+        <div class="text-area-wrap">
+            <p class="info font6">
+                문의내용
+            </p>
+            <textarea type="text" placeholder="문의내용을 기재해주세요."></textarea>
+        </div>
+
+    </form>
+
+
+    <div id="top_menu"></div>
+    <div id="footer"></div>
+  </body>
+
+
+
+  <script>
+    // const section01 = document.querySelector(".services-braintracer");
+    // const section02 = document.querySelector(".services-ptsd");
+
+    // 버튼 클릭 시 해시값 변경 및 섹션 표시
+    document
+      .querySelectorAll(".contact-section02-button")
+      .forEach((btn, index, buttons) => {
+        btn.addEventListener("click", () => {
+          // 버튼 클릭 시 URL 해시 변경
+          if (index === 0) {
+            location.hash = "contact";
+          } else {
+            location.hash = "directions";
+          }
+
+          // 버튼 스타일 업데이트 및 섹션 표시
+          buttons.forEach((otherBtn, otherIndex) => {
+            if (otherIndex !== index) {
+              otherBtn.classList.remove("able", "font6");
+              otherBtn.classList.add("font4");
+              section01.style.display = "block";
+              section02.style.display = "none";
+            } else {
+              section01.style.display = "none";
+              section02.style.display = "block";
+            }
+          });
+
+          btn.classList.add("able", "font6");
+        });
+      });
+
+    // 페이지 로드 시 해시값에 따라 초기화
+    window.addEventListener("load", () => {
+      const hash = location.hash.replace("#", "");
+
+      if (hash === "directions") {
+        // section01.style.display = "none";
+        // section02.style.display = "block";
+
+        // 버튼 스타일 업데이트
+        document
+          .querySelectorAll(".contact-section02-button")[0]
+          .classList.remove("able", "font6");
+        document
+          .querySelectorAll(".contact-section02-button")[0]
+          .classList.add("font4");
+
+        document
+          .querySelectorAll(".contact-section02-button")[1]
+          .classList.add("able", "font6");
+      } else {
+        // section01.style.display = "block";
+        // section02.style.display = "none";
+
+        // 버튼 스타일 업데이트
+        document
+          .querySelectorAll(".contact-section02-button")[1]
+          .classList.remove("able", "font6");
+        document
+          .querySelectorAll(".contact-section02-button")[1]
+          .classList.add("font4");
+
+        document
+          .querySelectorAll(".contact-section02-button")[0]
+          .classList.add("able", "font6");
+      }
+    });
+
+    // 해시값이 변경될 때마다 섹션을 갱신하는 이벤트 리스너 추가
+    window.addEventListener("hashchange", () => {
+      const hash = location.hash.replace("#", "");
+
+      if (hash === "directions") {
+        // section01.style.display = "none";
+        // section02.style.display = "block";
+
+        // 버튼 스타일 업데이트
+        document
+          .querySelectorAll(".contact-section02-button")[0]
+          .classList.remove("able", "font6");
+        document
+          .querySelectorAll(".contact-section02-button")[0]
+          .classList.add("font4");
+
+        document
+          .querySelectorAll(".contact-section02-button")[1]
+          .classList.add("able", "font6");
+      } else {
+        // section01.style.display = "block";
+        // section02.style.display = "none";
+
+        // 버튼 스타일 업데이트
+        document
+          .querySelectorAll(".contact-section02-button")[1]
+          .classList.remove("able", "font6");
+        document
+          .querySelectorAll(".contact-section02-button")[1]
+          .classList.add("font4");
+
+        document
+          .querySelectorAll(".contact-section02-button")[0]
+          .classList.add("able", "font6");
+      }
+    });
+  </script>
+
+  <script src="./js/jquery.js"></script>
+  <script src="./js/script.js"></script>
+</html>
