@@ -35,10 +35,16 @@
 
     <section class="services-section02">
       <div class="services-section02-button-wrap">
-        <button class="services-section02-button able font6">
+        <button
+          class="services-section02-button able font6"
+          data-section="braintracerforall"
+        >
           Braintracer For All
         </button>
-        <button class="services-section02-button font4">
+        <button
+          class="services-section02-button font4"
+          data-section="braintracerforptsd"
+        >
           Braintracer For PTSD
         </button>
       </div>
@@ -257,7 +263,9 @@
           AI 알고리즘으로 예측하여 PTSD 예방을 지원하는 브레인트레이서
         </p>
         <button class="btn">
-          <a href="#" class="font6"> 문의하기 <i class="xi-long-arrow-right"></i></a>
+          <a href="#" class="font6">
+            문의하기 <i class="xi-long-arrow-right"></i
+          ></a>
         </button>
       </div>
     </section>
@@ -266,7 +274,8 @@
     <div id="footer"></div>
   </body>
 
-  <script>
+  <!-- <script>
+
     const section01 = document.querySelector(".services-braintracer");
     const section02 = document.querySelector(".services-ptsd");
 
@@ -274,10 +283,17 @@
       .querySelectorAll(".services-section02-button")
       .forEach((btn, index, buttons) => {
         btn.addEventListener("click", () => {
+          // 버튼 인덱스에 따라 URL 해시 변경
+          if (index === 0) {
+            location.hash = "braintracerforall";
+          } else {
+            location.hash = "braintracerforptsd";
+          }
+
+          // 버튼 스타일 업데이트 및 섹션 표시
           buttons.forEach((otherBtn, otherIndex) => {
             if (otherIndex !== index) {
-              otherBtn.classList.remove("able");
-              otherBtn.classList.remove("font6");
+              otherBtn.classList.remove("able", "font6");
               otherBtn.classList.add("font4");
               section01.style.display = "block";
               section02.style.display = "none";
@@ -287,9 +303,152 @@
             }
           });
 
-          btn.classList.add("able");
+          btn.classList.add("able", "font6");
         });
       });
+
+    // 페이지 로드 시 해시값에 따라 초기화
+    window.addEventListener("load", () => {
+      const hash = location.hash.replace("#", "");
+
+      if (hash === "braintracerforptsd") {
+        section01.style.display = "none";
+        section02.style.display = "block";
+
+        document
+          .querySelectorAll(".services-section02-button")[0]
+          .classList.remove("able", "font6");
+        document
+          .querySelectorAll(".services-section02-button")[0]
+          .classList.add("font4");
+
+        document
+          .querySelectorAll(".services-section02-button")[1]
+          .classList.add("able", "font6");
+      } else {
+        section01.style.display = "block";
+        section02.style.display = "none";
+
+        document
+          .querySelectorAll(".services-section02-button")[1]
+          .classList.remove("able", "font6");
+        document
+          .querySelectorAll(".services-section02-button")[1]
+          .classList.add("font4");
+
+        document
+          .querySelectorAll(".services-section02-button")[0]
+          .classList.add("able", "font6");
+      }
+    });
+  </script> -->
+
+  <script>
+    const section01 = document.querySelector(".services-braintracer");
+    const section02 = document.querySelector(".services-ptsd");
+
+    // 버튼 클릭 시 해시값 변경 및 섹션 표시
+    document
+      .querySelectorAll(".services-section02-button")
+      .forEach((btn, index, buttons) => {
+        btn.addEventListener("click", () => {
+          // 버튼 클릭 시 URL 해시 변경
+          if (index === 0) {
+            location.hash = "braintracerforall";
+          } else {
+            location.hash = "braintracerforptsd";
+          }
+
+          // 버튼 스타일 업데이트 및 섹션 표시
+          buttons.forEach((otherBtn, otherIndex) => {
+            if (otherIndex !== index) {
+              otherBtn.classList.remove("able", "font6");
+              otherBtn.classList.add("font4");
+              section01.style.display = "block";
+              section02.style.display = "none";
+            } else {
+              section01.style.display = "none";
+              section02.style.display = "block";
+            }
+          });
+
+          btn.classList.add("able", "font6");
+        });
+      });
+
+    // 페이지 로드 시 해시값에 따라 초기화
+    window.addEventListener("load", () => {
+      const hash = location.hash.replace("#", "");
+
+      if (hash === "braintracerforptsd") {
+        section01.style.display = "none";
+        section02.style.display = "block";
+
+        // 버튼 스타일 업데이트
+        document
+          .querySelectorAll(".services-section02-button")[0]
+          .classList.remove("able", "font6");
+        document
+          .querySelectorAll(".services-section02-button")[0]
+          .classList.add("font4");
+
+        document
+          .querySelectorAll(".services-section02-button")[1]
+          .classList.add("able", "font6");
+      } else {
+        section01.style.display = "block";
+        section02.style.display = "none";
+
+        // 버튼 스타일 업데이트
+        document
+          .querySelectorAll(".services-section02-button")[1]
+          .classList.remove("able", "font6");
+        document
+          .querySelectorAll(".services-section02-button")[1]
+          .classList.add("font4");
+
+        document
+          .querySelectorAll(".services-section02-button")[0]
+          .classList.add("able", "font6");
+      }
+    });
+
+    // 해시값이 변경될 때마다 섹션을 갱신하는 이벤트 리스너 추가
+    window.addEventListener("hashchange", () => {
+      const hash = location.hash.replace("#", "");
+
+      if (hash === "braintracerforptsd") {
+        section01.style.display = "none";
+        section02.style.display = "block";
+
+        // 버튼 스타일 업데이트
+        document
+          .querySelectorAll(".services-section02-button")[0]
+          .classList.remove("able", "font6");
+        document
+          .querySelectorAll(".services-section02-button")[0]
+          .classList.add("font4");
+
+        document
+          .querySelectorAll(".services-section02-button")[1]
+          .classList.add("able", "font6");
+      } else {
+        section01.style.display = "block";
+        section02.style.display = "none";
+
+        // 버튼 스타일 업데이트
+        document
+          .querySelectorAll(".services-section02-button")[1]
+          .classList.remove("able", "font6");
+        document
+          .querySelectorAll(".services-section02-button")[1]
+          .classList.add("font4");
+
+        document
+          .querySelectorAll(".services-section02-button")[0]
+          .classList.add("able", "font6");
+      }
+    });
   </script>
 
   <script src="./js/jquery.js"></script>

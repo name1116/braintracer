@@ -39,8 +39,18 @@
     </section>
     <section class="about-section02">
       <div class="about-section02-button-wrap">
-        <button class="about-section02-button able font6">회사소개</button>
-        <button class="about-section02-button font4">연혁</button>
+        <button
+          class="about-section02-button able font6"
+          data-section="aboutcompany"
+        >
+          회사소개
+        </button>
+        <button
+          class="about-section02-button font4"
+          data-section="companyhistory"
+        >
+          연혁
+        </button>
       </div>
 
       <h3 class="about-section02-title font6">회사소개</h3>
@@ -612,142 +622,158 @@
     const s6 = document.querySelector(".about-section06");
     const h1 = document.querySelector(".history-section01");
 
-    document
-      .querySelectorAll(".about-section02-button")
-      .forEach((btn, index, buttons) => {
-        btn.addEventListener("click", () => {
-          // 클릭하지 않은 버튼은 class able 삭제
-          // 버튼을 클릭하면 클릭한 버튼에 class able 추가
-          buttons.forEach((otherBtn, otherIndex) => {
-            if (otherIndex !== index) {
-              otherBtn.classList.remove("able");
-              otherBtn.classList.remove("font6");
-              otherBtn.classList.add("font4");
-              s2Title.style.display = "block";
-              s2TitleLine.style.display = "block";
-              s2Bg.style.display = "block";
-              s3.style.display = "block";
-              s4.style.display = "block";
-              s5.style.display = "block";
-              s6.style.display = "block";
-              h1.style.display = "none";
-            } else {
-              s2Title.style.display = "none";
-              s2TitleLine.style.display = "none";
-              s2Bg.style.display = "none";
-              s3.style.display = "none";
-              s4.style.display = "none";
-              s5.style.display = "none";
-              s6.style.display = "none";
-              h1.style.display = "block";
-            }
-          });
+    // 섹션 표시 함수
+    function showSection(section) {
+      if (section === "companyhistory") {
+        s2Title.style.display = "none";
+        s2TitleLine.style.display = "none";
+        s2Bg.style.display = "none";
+        s3.style.display = "none";
+        s4.style.display = "none";
+        s5.style.display = "none";
+        s6.style.display = "none";
+        h1.style.display = "block";
+      } else {
+        s2Title.style.display = "block";
+        s2TitleLine.style.display = "block";
+        s2Bg.style.display = "block";
+        s3.style.display = "block";
+        s4.style.display = "block";
+        s5.style.display = "block";
+        s6.style.display = "block";
+        h1.style.display = "none";
+      }
+    }
 
-          btn.classList.add("able");
-        });
+    // 페이지 로드 및 해시 변경 시 섹션 표시
+    function updateSectionFromHash() {
+      const hash = location.hash.replace("#", "") || "aboutcompany";
+      showSection(hash);
+
+      // 해시값에 따라 버튼 스타일 초기화
+      document.querySelectorAll(".about-section02-button").forEach((btn) => {
+        if (btn.getAttribute("data-section") === hash) {
+          btn.classList.add("able", "font6");
+          btn.classList.remove("font4");
+        } else {
+          btn.classList.remove("able", "font6");
+          btn.classList.add("font4");
+        }
       });
+    }
+
+    // 해시값 변경 시마다 updateSectionFromHash 호출
+    window.addEventListener("DOMContentLoaded", updateSectionFromHash);
+    window.addEventListener("hashchange", updateSectionFromHash);
+
+    // 버튼 클릭 시 해시값 설정 및 섹션 표시
+    document.querySelectorAll(".about-section02-button").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const section = btn.getAttribute("data-section");
+        location.hash = section; // 해시값 설정
+      });
+    });
   </script>
 
-<script>
-  let isAnimating = false;
+  <script>
+    let isAnimating = false;
 
-  let slideUp = (target, duration = 500) => {
-    target.style.transitionProperty = 'height, margin, padding';
-    target.style.transitionDuration = duration + 'ms';
-    target.style.boxSizing = 'border-box';
-    target.style.height = target.offsetHeight + 'px';
-    target.offsetHeight;
-    target.style.overflow = 'hidden';
-    target.style.height = 0;
-    target.style.paddingTop = 0;
-    target.style.paddingBottom = 0;
-    target.style.marginTop = 0;
-    target.style.marginBottom = 0;
-    window.setTimeout(() => {
-      target.style.display = 'none';
-      target.style.removeProperty('height');
-      target.style.removeProperty('padding-top');
-      target.style.removeProperty('padding-bottom');
-      target.style.removeProperty('margin-top');
-      target.style.removeProperty('margin-bottom');
-      target.style.removeProperty('overflow');
-      target.style.removeProperty('transition-duration');
-      target.style.removeProperty('transition-property');
-      isAnimating = false;
-    }, duration);
-  }
-  let slideDown = (target, duration = 500) => {
-    target.style.removeProperty('display');
-    let display = window.getComputedStyle(target).display;
-
-    if (display === 'none')
-      display = 'block';
-
-    target.style.display = display;
-    let height = target.offsetHeight;
-    target.style.overflow = 'hidden';
-    target.style.height = 0;
-    target.style.paddingTop = 0;
-    target.style.paddingBottom = 0;
-    target.style.marginTop = 0;
-    target.style.marginBottom = 0;
-    target.offsetHeight;
-    target.style.boxSizing = 'border-box';
-    target.style.transitionProperty = "height, margin, padding";
-    target.style.transitionDuration = duration + 'ms';
-    target.style.height = height + 'px';
-    target.style.removeProperty('padding-top');
-    target.style.removeProperty('padding-bottom');
-    target.style.removeProperty('margin-top');
-    target.style.removeProperty('margin-bottom');
-    window.setTimeout(() => {
-      target.style.removeProperty('height');
-      target.style.removeProperty('overflow');
-      target.style.removeProperty('transition-duration');
-      target.style.removeProperty('transition-property');
-      isAnimating = false;
-    }, duration);
-  }
-
-  // ====  
-  document.querySelectorAll(".history-circle").forEach((circle, index) => {
-    const siblingsTextWrap = circle.nextElementSibling.nextElementSibling
-
-    circle.addEventListener("click", () => {
-      if (isAnimating) return; 
-      isAnimating = true;
-
-      if (circle.classList.contains("able")) {
-        circle.classList.remove("able");
-        circle.classList.add("disable");
-
-        slideUp(siblingsTextWrap)
-
-        // circle
-        //   .closest(".history-list")
-        //   .querySelectorAll(".history-text-detail")
-        //   .forEach((historyText) => {
-        //     historyText.classList.remove("able");
-        //     historyText.classList.add("disable");
-        //   });
-      } else {
-        circle.classList.remove("disable");
-        circle.classList.add("able");
-
-        slideDown(siblingsTextWrap)
+    let slideUp = (target, duration = 500) => {
+      target.style.transitionProperty = "height, margin, padding";
+      target.style.transitionDuration = duration + "ms";
+      target.style.boxSizing = "border-box";
+      target.style.height = target.offsetHeight + "px";
+      target.offsetHeight;
+      target.style.overflow = "hidden";
+      target.style.height = 0;
+      target.style.paddingTop = 0;
+      target.style.paddingBottom = 0;
+      target.style.marginTop = 0;
+      target.style.marginBottom = 0;
+      window.setTimeout(() => {
+        target.style.display = "none";
+        target.style.removeProperty("height");
+        target.style.removeProperty("padding-top");
+        target.style.removeProperty("padding-bottom");
+        target.style.removeProperty("margin-top");
+        target.style.removeProperty("margin-bottom");
+        target.style.removeProperty("overflow");
+        target.style.removeProperty("transition-duration");
+        target.style.removeProperty("transition-property");
         isAnimating = false;
+      }, duration);
+    };
+    let slideDown = (target, duration = 500) => {
+      target.style.removeProperty("display");
+      let display = window.getComputedStyle(target).display;
 
-        // circle
-        //   .closest(".history-list")
-        //   .querySelectorAll(".history-text-detail")
-        //   .forEach((historyText) => {
-        //     historyText.classList.remove("disable");
-        //     historyText.classList.add("able");
-        //   });
-      }
+      if (display === "none") display = "block";
+
+      target.style.display = display;
+      let height = target.offsetHeight;
+      target.style.overflow = "hidden";
+      target.style.height = 0;
+      target.style.paddingTop = 0;
+      target.style.paddingBottom = 0;
+      target.style.marginTop = 0;
+      target.style.marginBottom = 0;
+      target.offsetHeight;
+      target.style.boxSizing = "border-box";
+      target.style.transitionProperty = "height, margin, padding";
+      target.style.transitionDuration = duration + "ms";
+      target.style.height = height + "px";
+      target.style.removeProperty("padding-top");
+      target.style.removeProperty("padding-bottom");
+      target.style.removeProperty("margin-top");
+      target.style.removeProperty("margin-bottom");
+      window.setTimeout(() => {
+        target.style.removeProperty("height");
+        target.style.removeProperty("overflow");
+        target.style.removeProperty("transition-duration");
+        target.style.removeProperty("transition-property");
+        isAnimating = false;
+      }, duration);
+    };
+
+    // ====
+    document.querySelectorAll(".history-circle").forEach((circle, index) => {
+      const siblingsTextWrap = circle.nextElementSibling.nextElementSibling;
+
+      circle.addEventListener("click", () => {
+        if (isAnimating) return;
+        isAnimating = true;
+
+        if (circle.classList.contains("able")) {
+          circle.classList.remove("able");
+          circle.classList.add("disable");
+
+          slideUp(siblingsTextWrap);
+
+          // circle
+          //   .closest(".history-list")
+          //   .querySelectorAll(".history-text-detail")
+          //   .forEach((historyText) => {
+          //     historyText.classList.remove("able");
+          //     historyText.classList.add("disable");
+          //   });
+        } else {
+          circle.classList.remove("disable");
+          circle.classList.add("able");
+
+          slideDown(siblingsTextWrap);
+          isAnimating = false;
+
+          // circle
+          //   .closest(".history-list")
+          //   .querySelectorAll(".history-text-detail")
+          //   .forEach((historyText) => {
+          //     historyText.classList.remove("disable");
+          //     historyText.classList.add("able");
+          //   });
+        }
+      });
     });
-  });
-</script>
+  </script>
 
   <script>
     function nonePopup() {
