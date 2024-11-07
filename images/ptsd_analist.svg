@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        opacity: 0;
+      }
+
+      .cls-2, .cls-5, .cls-6 {
+        fill: none;
+      }
+
+      .cls-2, .cls-5 {
+        stroke: #fff;
+      }
+
+      .cls-3 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-4 {
+        clip-path: url(#clip-path-2);
+      }
+
+      .cls-5, .cls-6 {
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+
+      .cls-6 {
+        stroke: #3b6dec;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="사각형_119910" data-name="사각형 119910" class="cls-1" width="64" height="64" transform="translate(266 2260)"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="사각형_119907" data-name="사각형 119907" class="cls-2" width="46" height="49"/>
+    </clipPath>
+  </defs>
+  <g id="마스크_그룹_139543" data-name="마스크 그룹 139543" class="cls-3" transform="translate(-266 -2260)">
+    <g id="그룹_144245" data-name="그룹 144245" transform="translate(275 2268)">
+      <g id="그룹_144244" data-name="그룹 144244" class="cls-4">
+        <path id="패스_155910" data-name="패스 155910" class="cls-5" d="M21,47H3a2,2,0,0,1-2-2V3A2,2,0,0,1,3,1H39a2,2,0,0,1,2,2V24"/>
+        <line id="선_15775" data-name="선 15775" class="cls-5" x2="24" transform="translate(1 31.667)"/>
+        <line id="선_15776" data-name="선 15776" class="cls-5" x2="40" transform="translate(1 16.333)"/>
+        <line id="선_15777" data-name="선 15777" class="cls-5" x2="7.5" transform="translate(6 6)"/>
+        <line id="선_15778" data-name="선 15778" class="cls-5" x2="7.5" transform="translate(6 21.333)"/>
+        <line id="선_15779" data-name="선 15779" class="cls-5" x2="7.5" transform="translate(6 36.667)"/>
+        <path id="패스_155911" data-name="패스 155911" class="cls-6" d="M44.675,35.46,41.54,32.324a1.111,1.111,0,0,0-1.568,0L29.783,42.514,29,48l5.486-.784L44.675,37.027A1.108,1.108,0,0,0,44.675,35.46Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

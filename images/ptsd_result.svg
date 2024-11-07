@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        opacity: 0;
+      }
+
+      .cls-2, .cls-5, .cls-6, .cls-7 {
+        fill: none;
+      }
+
+      .cls-2, .cls-5, .cls-6 {
+        stroke: #fff;
+      }
+
+      .cls-3 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-4 {
+        clip-path: url(#clip-path-2);
+      }
+
+      .cls-5 {
+        stroke-linejoin: round;
+      }
+
+      .cls-5, .cls-6, .cls-7 {
+        stroke-width: 2px;
+      }
+
+      .cls-6, .cls-7 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-7 {
+        stroke: #3b6dec;
+      }
+    </style>
+    <clipPath id="clip-path">
+      <rect id="사각형_119917" data-name="사각형 119917" class="cls-1" width="64" height="64" transform="translate(272 2657)"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="사각형_119919" data-name="사각형 119919" class="cls-2" width="38" height="50"/>
+    </clipPath>
+  </defs>
+  <g id="마스크_그룹_139546" data-name="마스크 그룹 139546" class="cls-3" transform="translate(-272 -2657)">
+    <g id="그룹_144256" data-name="그룹 144256" transform="translate(285 2664)">
+      <g id="그룹_144255" data-name="그룹 144255">
+        <g id="그룹_144254" data-name="그룹 144254" class="cls-4">
+          <rect id="사각형_119918" data-name="사각형 119918" class="cls-5" width="36" height="48" transform="translate(1 1)"/>
+        </g>
+      </g>
+      <rect id="사각형_119920" data-name="사각형 119920" class="cls-6" width="10" height="10" transform="translate(7 8)"/>
+      <line id="선_15786" data-name="선 15786" class="cls-7" x2="10" transform="translate(22 18)"/>
+      <line id="선_15787" data-name="선 15787" class="cls-7" x2="10" transform="translate(22 10)"/>
+      <line id="선_15788" data-name="선 15788" class="cls-7" x2="26" transform="translate(6 26)"/>
+      <line id="선_15789" data-name="선 15789" class="cls-7" x2="26" transform="translate(6 34)"/>
+      <line id="선_15790" data-name="선 15790" class="cls-7" x2="11" transform="translate(6 42)"/>
+    </g>
+  </g>
+</svg>
