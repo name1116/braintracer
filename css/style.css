@@ -2231,7 +2231,7 @@ span:nth-child(9) {
   top: -30px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #3b4cde;
+  background-color: #3b6cde;
   opacity: 0.5;
   border-radius: 50%;
   width: 62px;
@@ -2243,7 +2243,7 @@ span:nth-child(9) {
   top: -20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #3b4cde;
+  background-color: #3b6cde;
   font-size: 20px;
   color: white;
   border-radius: 50%;
@@ -2268,5 +2268,41 @@ span:nth-child(9) {
   font-size: 20px;
   line-height: 1.6;
   text-align: center;
+  color: #FFF;
+}
+
+.services-braintracer .services-last-text {
+  margin-top: 140px;
+  padding-bottom: 140px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.services-braintracer .services-last-text .services-last-text-img-wrap {
+  max-width: 700px;
+  max-height: 430px;
+}
+.services-braintracer .services-last-text .services-last-text-img-wrap img {
+  width: 100%;
+  height: 100%;
+}
+
+.services-braintracer .services-last-text .services-last-text-wrap {
+  padding-top: 36px;
+  text-align: left;
+}
+.services-braintracer .services-last-text .services-last-text-wrap .title {
+  font-size: 32px;
+  line-height: 1.44;
+  color: #fff;
+}
+.services-braintracer .services-last-text .services-last-text-wrap .title span {
+  color: #3b6dec;
+}
+.services-braintracer .services-last-text .services-last-text-wrap .text {
+  margin-top: 40px;
+  font-size: 18px;
+  line-height: 1.89;
   color: #FFF;
 }
