@@ -168,38 +168,6 @@ img {
   background-color: black;
 }
 
-@media screen and (max-width: 1200px) {
-  .pop-parent .pop {
-    width: 310px;
-  }
-  .pop-parent.active {
-    right: -310px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .pop-parent {
-    top: 50%;
-    right: unset;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  .pop-parent .pop-btns {
-    transform: translateY(100%);
-    top: unset;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    justify-content: space-between;
-  }
-  .pop-parent .pop .btn-toggle {
-    display: none;
-  }
-  .pop-parent .pop .btn-close {
-    display: block;
-  }
-}
-
 @font-face {
   font-family: S-CoreDream3;
   src: url(/0-기본폼/Project/fonts/SCDream3.otf);
@@ -454,45 +422,6 @@ span:nth-child(9) {
   z-index: -1500;
 }
 
-#header {
-  position: absolute;
-  width: 100%;
-  height: 80px;
-  z-index: 100;
-}
-#gnb {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-#gnb > a > .logo {
-  width: 160px;
-  height: 20px;
-
-  margin-top: 30px;
-  margin-left: 80px;
-}
-
-#gnb > .section {
-  margin-top: 27px;
-  margin-right: 136px;
-
-  display: flex;
-  gap: 130px;
-}
-
-#gnb > .section > a {
-  font-family: S-CoreDream5;
-  font-size: 17px;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  color: #fff;
-}
 
 .brain-main-texts {
   position: absolute;

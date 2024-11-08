@@ -1,3 +1,99 @@
+<style>
+  /*FONT_HOUSE*/
+  @font-face {
+    font-family: S-CoreDream3;
+    src: url(../fonts/SCDream3.otf);
+  }
+
+  @font-face {
+    font-family: S-CoreDream4;
+    src: url(../fonts/SCDream4.otf);
+  }
+
+  @font-face {
+    font-family: S-CoreDream5;
+    src: url(../fonts/SCDream5.otf);
+  }
+
+  @font-face {
+    font-family: S-CoreDream6;
+    src: url(../fonts/SCDream6.otf);
+  }
+
+  @font-face {
+    font-family: S-CoreDream7;
+    src: url(../fonts/SCDream7.otf);
+  }
+
+  /* fonts */
+  .font3 {
+    font-family: S-CoreDream3;
+    font-weight: 300;
+  }
+  .font4 {
+    font-family: S-CoreDream4;
+    font-weight: 200;
+  }
+  .font5 {
+    font-family: S-CoreDream5;
+    font-weight: 500;
+  }
+  .font6 {
+    font-family: S-CoreDream6;
+    font-weight: bold;
+  }
+  .font7 {
+    font-family: S-CoreDream7;
+  }
+
+  #header {
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    z-index: 100;
+  }
+  #gnb {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #gnb > a > .logo {
+    width: 160px;
+    height: 20px;
+
+    margin-top: 30px;
+    margin-left: 80px;
+  }
+
+  #gnb > .section {
+    margin-top: 27px;
+    margin-right: 136px;
+
+    display: flex;
+    gap: 130px;
+  }
+
+  #gnb > .section > a {
+    font-family: S-CoreDream5;
+    font-size: 17px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+  }
+
+
+  @media screen and (max-width:1500px) {
+    #gnb > .section {
+      margin-right: 80px;
+    }
+  }
+</style>
+
 <nav id="gnb">
   <a href="../../test/main.html">
     <img src="./images/main_small_subject.svg" alt="로고" class="logo" />
