@@ -559,7 +559,7 @@ span:nth-child(9) {
   justify-content: space-between;
 }
 
-#gnb > .logo {
+#gnb > a > .logo {
   width: 160px;
   height: 20px;
 
@@ -2577,6 +2577,7 @@ i {
   margin-top: 111.5px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 140px;
   text-align: center;
   background-color: #ffffff;
 }
@@ -2705,3 +2706,246 @@ i {
   top: 333px;
   left: 0%;
 }
+
+.contact-form .accept-wrap {
+  max-width: 1440px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+  text-align: left;
+}
+.contact-form .accept-wrap > .title {
+  font-size: 20px;
+  color: #202020;
+  margin-bottom: 15px;
+}
+.contact-form .accept-wrap .information-wrap {
+  max-width: 1440px;
+  width: 100%;
+  padding: 32px 32px;
+  background-color: #f9f9f9;
+}
+.contact-form .accept-wrap .information-wrap > .title {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 24px;
+}
+.contact-form .accept-wrap .information-wrap .text-flex-wrap {
+  display: flex;
+  justify-content: left;
+  align-items: first baseline;
+}
+.contact-form .accept-wrap .information-wrap .text-flex-wrap:not(:last-child) {
+  margin-bottom: 8px;
+}
+.contact-form .accept-wrap .information-wrap .text-flex-wrap .text-title {
+  max-width: 137px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #999;
+}
+.contact-form .accept-wrap .information-wrap .text-flex-wrap .text-content {
+  max-width: 1100px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #999;
+}
+
+.contact-form .check-wrap {
+  max-width: 1440px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
+  text-align: left;
+}
+.contact-form .check-wrap label {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.contact-form .check-wrap label input[type="checkbox"] {
+  display: block;
+  border-radius: 2px;
+  border: solid 1.5px #bfbfbf;
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+.contact-form .check-wrap label .check-info {
+  font-size: 17px;
+  color: #202020;
+}
+.contact-form .btn-submit {
+  padding: 22px 398px 25px 399px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.16);
+  background-color: #484848;
+  font-size: 18px;
+  color: #fff;
+}
+
+.contact-directions {
+  max-width: 1920px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 120px;
+}
+.contact-directions .content-wrap {
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact-directions .content-wrap .title {
+  font-size: 44px;
+  text-align: center;
+  color: #202020;
+  margin-bottom: 24px;
+}
+.contact-directions .content-wrap .text-flex {
+  max-width: 1000px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.contact-directions .content-wrap .text-flex .text {
+  max-width: 209px;
+  width: 100%;
+  text-align: left;
+  line-height: normal;
+  font-size: 24px;
+  color: #202020;
+}
+.contact-directions .content-wrap .text-flex i {
+  font-size: 30px;
+  line-height: normal;
+  color: #202020;
+  margin-right: 8px;
+}
+.contact-directions .content-wrap .text-flex .direction {
+  font-size: 24px;
+  text-align: left;
+  color: #202020;
+}
+
+.contact-directions .container-1920 {
+  width: 100%;
+  max-width: 1920px;
+  overflow: hidden;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+
+}
+
+.contact-directions .container-1920 .map {
+  width: 100%;
+  height: 100%;
+}
+/* 지도 상세 페이지 설명 */
+.contact-directions .container-1920 .loc-info {
+  position: absolute;
+  top: 189px;
+  left: 775px;
+  z-index: 20;
+
+  padding: 8px;
+
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  border: solid 1px #e4e4e4;
+}
+.contact-directions .container-1920 .loc-info .loc-btn-wrap {
+  text-align: right;
+}
+.contact-directions .container-1920 .loc-info .loc-btn-wrap .loc-info-btn {
+  font-size: 24px;
+  font-weight: normal;
+  font-stretch: normal;
+}
+
+.contact-directions .container-1920 .loc-info .loc-info-text-wrap {
+  padding-right: 44px;
+  padding-left: 24px;
+  padding-bottom: 24px;
+}
+.contact-directions .container-1920 .loc-info .loc-info-text-wrap .loc-info-title {
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  color: #202020;
+}
+.contact-directions .container-1920 .loc-info .loc-info-text-wrap .loc-info-detail {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: normal;
+  color: #202020;
+}
+.contact-directions .container-1920 .loc-info .loc-info-text-wrap .loc-info-detail.font3 {
+  color: #707070;
+}
+
+.contact-directions .container-1920 .company-info {
+  position: absolute;
+  bottom: 80px;
+  right: 80px;
+  padding: 40px;
+  z-index: 20;
+  background-color: #3b6dec;
+  text-align: left;
+}
+.contact-directions .container-1920 .company-info .company-name {
+  font-size: 32px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  color: #fff;
+}
+.contact-directions .container-1920 .company-info .company-name:after {
+  padding-top: 15px;
+  content: "";
+  display: block;
+  border-bottom: 3px solid #fff;
+  width: 25%;
+}
+
+.contact-directions .container-1920 .company-info .company-loc {
+  padding-top: 11px;
+  font-size: 20px;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.9;
+  color: #fff;
+}
+.contact-directions .container-1920 .company-info .company-loc i {
+  color: #fff;
+}
+
+.contact-directions .container-1920 .company-info .company-mail {
+  font-size: 20px;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.9;
+  color: #fff;
+}
+.contact-directions .container-1920 .company-info .company-mail i {
+  color: #fff;
+}
+
+/* mobile
+@media screen and (max-width:767px) {
+  
+} */
