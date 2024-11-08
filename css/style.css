@@ -997,8 +997,8 @@ span:nth-child(9) {
 }
 .about-section01 .about-section01-text {
   position: absolute;
+  width: 100%;
   top: 40%;
-  left: 35%;
 }
 .about-section01 .about-section01-text .about-section01-title {
   font-size: 56px;
@@ -1638,7 +1638,7 @@ span:nth-child(9) {
 .services-section01 .services-section01-text-wrap {
   position: absolute;
   top: 40%;
-  left: 35%;
+  width: 100%;
 }
 .services-section01 .services-section01-text-wrap .title {
   text-align: center;
@@ -2118,7 +2118,7 @@ i {
 .contact-section01 .contact-section01-text-wrap {
   position: absolute;
   top: 40%;
-  left: 33%;
+  width: 100%;
 }
 .contact-section01 .contact-section01-text-wrap .title {
   font-size: 56px;

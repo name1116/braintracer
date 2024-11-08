@@ -143,6 +143,10 @@
     margin-bottom: 14px;
   }
 
+  .only-mobile {
+    display: none;
+  }
+
   @media screen and (max-width: 1500px) {
     .com-info-div {
       margin-left: 100px;
@@ -152,10 +156,22 @@
     }
   }
   @media screen and (max-width: 1100px) {
+    .com-info-div {
+      padding-right: 30px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .only-mobile {
+      display: block;
+    }
+
     .footer {
       display: block;
       margin-left: auto;
       margin-right: auto;
+      padding-top: 32px;
+      padding-left: 20px;
+      
     }
     .nav {
       display: none;
@@ -164,6 +180,7 @@
       max-width: 500px;
       margin-left: auto;
       margin-right: auto;
+      padding: 0px;
     }
   }
 </style>
@@ -173,8 +190,10 @@
     <img src="./images/main_small_subject.svg" class="com-info-logo" />
 
     <p class="com-info">
-      상호명 : 브레인트레이서&nbsp; | &nbsp;대표 : 임재근&nbsp; | &nbsp;이메일 :
-      braintracer@manito.kr <br />
+      상호명 : 브레인트레이서&nbsp; | &nbsp;대표 : 임재근&nbsp;<br
+        class="only-mobile"
+      />
+      | &nbsp;이메일 : braintracer@manito.kr <br />
       주소 : 대전광역시 서구 둔지로 60, 4층 457호(둔산동, 35229) 브레인트레이서
     </p>
 

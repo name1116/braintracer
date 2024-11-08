@@ -56,6 +56,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    text-align: center;
   }
 
   #gnb > a > .logo {
@@ -72,6 +73,7 @@
 
     display: flex;
     gap: 130px;
+    text-align: center;
   }
 
   #gnb > .section > a {
@@ -86,10 +88,44 @@
     color: #fff;
   }
 
+  #gnb .ham-menu-btn {
+    display: none;
+  }
+  #gnb .ham-menu {
+    display: none;
+  }
 
-  @media screen and (max-width:1500px) {
+  @media screen and (max-width: 1500px) {
     #gnb > .section {
       margin-right: 80px;
+    }
+  }
+  @media screen and (max-width: 850px) {
+    #gnb > a > .logo {
+      margin-left: 20px;
+    }
+    #gnb > .section {
+      margin-right: 20px;
+      gap: 40px;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    #gnb {
+      padding: 20px;
+    }
+    #gnb > a > .logo {
+      margin: 0;
+    }
+    #gnb > .section {
+      display: none;
+    }
+
+    #gnb .ham-menu-btn {
+      display: block;
+    }
+    #gnb .ham-menu-btn i {
+      color: #fff;
+      font-size: 23px;
     }
   }
 </style>
@@ -104,4 +140,25 @@
     <a href="../../test/services.html" class="goto-link">Services</a>
     <a href="../../test/contact_us.html" class="goto-link">Contact us</a>
   </div>
+
+  <button class="ham-menu-btn">
+    <i class="xi-bars"></i>
+  </button>
 </nav>
+
+<section class="ham-menu">
+  
+</section>
+
+<script>
+  const hamBtn = document.querySelector(".ham-menu-btn");
+  const icon = document.querySelector(".ham-menu-btn i");
+  hamBtn.addEventListener("click", ()=> {
+
+    if(icon.className === "xi-bars") {
+      icon.className = "xi-close";
+    } else {
+      icon.className = "xi-bars";
+    }
+  })
+</script>
