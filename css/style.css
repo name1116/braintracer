@@ -524,15 +524,19 @@ span:nth-child(9) {
 /* fonts */
 .font3 {
   font-family: S-CoreDream3;
+  font-weight: 300;
 }
 .font4 {
   font-family: S-CoreDream4;
+  font-weight: 200;
 }
 .font5 {
   font-family: S-CoreDream5;
+  font-weight: 500;
 }
 .font6 {
   font-family: S-CoreDream6;
+  font-weight: bold;
 }
 .font7 {
   font-family: S-CoreDream7;
