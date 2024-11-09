@@ -5,6 +5,282 @@ img {
   vertical-align: top;
 }
 
+/* header */
+
+#header {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  z-index: 100;
+}
+#gnb {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+}
+
+#gnb > a > .logo {
+  width: 160px;
+  height: 20px;
+
+  margin-top: 30px;
+  margin-left: 80px;
+}
+
+#gnb > .section {
+  margin-top: 27px;
+  margin-right: 136px;
+
+  display: flex;
+  gap: 130px;
+  text-align: center;
+}
+
+#gnb > .section > a {
+  font-family: S-CoreDream5;
+  font-size: 17px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
+}
+
+.ham-menu-btn {
+  display: none;
+}
+.ham-menu {
+  display: none;
+}
+
+@media screen and (max-width: 1500px) {
+  #gnb > .section {
+    margin-right: 80px;
+  }
+}
+@media screen and (max-width: 850px) {
+  #gnb > a > .logo {
+    margin-left: 20px;
+  }
+  #gnb > .section {
+    margin-right: 20px;
+    gap: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #gnb {
+    max-height: 58px;
+    height: 100%;
+    padding: 20px;
+  }
+  #gnb > a > .logo {
+    margin: 0;
+  }
+  #gnb > .section {
+    display: none;
+  }
+
+  #gnb .ham-menu-btn {
+    display: block;
+  }
+  #gnb .ham-menu-btn i {
+    color: #fff;
+    font-size: 23px;
+  }
+
+  .ham-menu {
+    display: none;
+    max-width: 767px;
+    width: 100%;
+    min-height: 812px;
+    height: 100%;
+
+    margin-left: auto;
+    margin-right: auto;
+    position: relative
+  }
+  .ham-menu::before {
+    position: absolute;
+    content: "";
+    clear: both;
+    display: block;
+    width: 100%;
+    border: 1px solid #fff;
+  }
+  .ham-menu .ham-btn-wrap {
+    padding-top: 21px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .ham-menu .ham-btn-wrap .ham-btn {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .ham-menu .ham-btn-wrap .ham-btn .btn-title {
+    font-size: 16px;
+    color: #FFF;
+  }
+  .ham-menu .ham-btn-wrap .ham-btn i {
+    font-size: 17px;
+    color: #FFF;
+  }
+
+
+}
+
+
+
+
+/* footer */
+
+
+.footer {
+  width: 100%;
+  height: auto;
+  background-color: #484848;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.com-info-div {
+  padding-top: 57px;
+  margin-left: 240px;
+}
+
+.com-info-logo {
+  width: 206px;
+  height: 26px;
+}
+
+.com-info {
+  margin-top: 32px;
+  opacity: 0.7;
+  font-family: S-CoreDream4;
+  font-size: 14px;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.copyright {
+  padding-top: 32px;
+  padding-bottom: 40px;
+  height: auto;
+  opacity: 0.4;
+  font-family: S-CoreDream4;
+  font-size: 14px;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.71;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  padding-top: 38px;
+  margin-right: 240px;
+}
+
+.nav-sub a,
+.nav-text a {
+  text-decoration: none; /* 링크의 밑줄 제거 */
+  color: inherit; /* 링크의 색상 제거 */
+}
+
+.nav-sub {
+  font-family: S-CoreDream5;
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.line {
+  width: 128px;
+  height: 1px;
+  margin-top: 14.5px;
+  margin-bottom: 13.5px;
+  background-color: #fff;
+}
+
+.nav-text {
+  font-family: S-CoreDream3;
+  font-size: 12px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+  margin-bottom: 14px;
+}
+
+.only-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 1500px) {
+  .com-info-div {
+    margin-left: 100px;
+  }
+  .nav {
+    margin-right: 100px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .com-info-div {
+    padding-right: 30px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .only-mobile {
+    display: block;
+  }
+
+  .footer {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 32px;
+    padding-left: 20px;
+    
+  }
+  .nav {
+    display: none;
+  }
+  .com-info-div {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+  }
+}
+
+
 /* 팝업 */
 .pop-parent {
   position: fixed;

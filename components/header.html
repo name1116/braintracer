@@ -1,135 +1,3 @@
-<style>
-  /*FONT_HOUSE*/
-  @font-face {
-    font-family: S-CoreDream3;
-    src: url(../fonts/SCDream3.otf);
-  }
-
-  @font-face {
-    font-family: S-CoreDream4;
-    src: url(../fonts/SCDream4.otf);
-  }
-
-  @font-face {
-    font-family: S-CoreDream5;
-    src: url(../fonts/SCDream5.otf);
-  }
-
-  @font-face {
-    font-family: S-CoreDream6;
-    src: url(../fonts/SCDream6.otf);
-  }
-
-  @font-face {
-    font-family: S-CoreDream7;
-    src: url(../fonts/SCDream7.otf);
-  }
-
-  /* fonts */
-  .font3 {
-    font-family: S-CoreDream3;
-    font-weight: 300;
-  }
-  .font4 {
-    font-family: S-CoreDream4;
-    font-weight: 200;
-  }
-  .font5 {
-    font-family: S-CoreDream5;
-    font-weight: 500;
-  }
-  .font6 {
-    font-family: S-CoreDream6;
-    font-weight: bold;
-  }
-  .font7 {
-    font-family: S-CoreDream7;
-  }
-
-  #header {
-    position: absolute;
-    width: 100%;
-    height: 80px;
-    z-index: 100;
-  }
-  #gnb {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: center;
-  }
-
-  #gnb > a > .logo {
-    width: 160px;
-    height: 20px;
-
-    margin-top: 30px;
-    margin-left: 80px;
-  }
-
-  #gnb > .section {
-    margin-top: 27px;
-    margin-right: 136px;
-
-    display: flex;
-    gap: 130px;
-    text-align: center;
-  }
-
-  #gnb > .section > a {
-    font-family: S-CoreDream5;
-    font-size: 17px;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
-    color: #fff;
-  }
-
-  #gnb .ham-menu-btn {
-    display: none;
-  }
-  #gnb .ham-menu {
-    display: none;
-  }
-
-  @media screen and (max-width: 1500px) {
-    #gnb > .section {
-      margin-right: 80px;
-    }
-  }
-  @media screen and (max-width: 850px) {
-    #gnb > a > .logo {
-      margin-left: 20px;
-    }
-    #gnb > .section {
-      margin-right: 20px;
-      gap: 40px;
-    }
-  }
-  @media screen and (max-width: 767px) {
-    #gnb {
-      padding: 20px;
-    }
-    #gnb > a > .logo {
-      margin: 0;
-    }
-    #gnb > .section {
-      display: none;
-    }
-
-    #gnb .ham-menu-btn {
-      display: block;
-    }
-    #gnb .ham-menu-btn i {
-      color: #fff;
-      font-size: 23px;
-    }
-  }
-</style>
-
 <nav id="gnb">
   <a href="../../test/main.html">
     <img src="./images/main_small_subject.svg" alt="로고" class="logo" />
@@ -147,18 +15,72 @@
 </nav>
 
 <section class="ham-menu">
-  
+  <div class="ham-btn-wrap">
+    <button class="ham-btn">
+      <p class="btn-title font6">About us</p>
+      <i class="xi-angle-down"></i>
+    </button>
+    <button class="ham-btn">
+      <p class="btn-title font6">Services</p>
+      <i class="xi-angle-down"></i>
+    </button>
+    <button class="ham-btn">
+      <p class="btn-title font6">Contact us</p>
+      <i class="xi-angle-down"></i>
+    </button>
+    
+  </div>
 </section>
 
 <script>
+  const headerBg = document.getElementById("gnb")
   const hamBtn = document.querySelector(".ham-menu-btn");
   const icon = document.querySelector(".ham-menu-btn i");
+  const menu = document.querySelector(".ham-menu");
+
+
+  const buttonTitle = document.querySelector(".ham-btn .btn-title")
+  const buttonIcon = document.querySelector(".ham-btn i");
+
   hamBtn.addEventListener("click", ()=> {
 
     if(icon.className === "xi-bars") {
       icon.className = "xi-close";
+      menu.style.display = "block";
+      menu.style.backgroundColor = "#202020";
+      headerBg.style.backgroundColor = "#202020";
     } else {
       icon.className = "xi-bars";
+      menu.style.display = "none";
+      menu.style.backgroundColor = "";
+      headerBg.style.backgroundColor = "";
     }
   })
+  // document
+  //     .querySelectorAll(".ham-btn")
+  //     .forEach((btn, index, buttons) => {
+  //       btn.addEventListener("click", () => {
+  //         // 버튼 클릭 시 URL 해시 변경
+  //         if (index === 0) {
+  //           location.hash = "braintracerforall";
+  //         } else {
+  //           location.hash = "braintracerforptsd";
+  //         }
+
+  //         // 버튼 스타일 업데이트 및 섹션 표시
+  //         buttons.forEach((otherBtn, otherIndex) => {
+  //           if (otherIndex !== index) {
+  //             otherBtn.classList.remove("able", "font6");
+  //             otherBtn.classList.add("font4");
+  //             section01.style.display = "block";
+  //             section02.style.display = "none";
+  //           } else {
+  //             section01.style.display = "none";
+  //             section02.style.display = "block";
+  //           }
+  //         });
+
+  //         btn.classList.add("able", "font6");
+  //       });
+  //     });
 </script>
