@@ -41,12 +41,12 @@
               loop
             ></video>
             <div class="brain-main-texts">
-              <p class="big-text">
+              <p class="big-text font6">
                 심리적 외상을 조기에 탐지하는 <br />
                 브레인트레이서
               </p>
 
-              <p class="small-text">
+              <p class="small-text font4">
                 사용자의 심리 상태에 따라 맞춤형 설문을 제시하고 <br />
                 개인의 심리적 상태를 조기에 탐지하고 관리합니다.
               </p>
@@ -133,8 +133,10 @@
           />
           <p class="title font6">브레인트레이서의 특별함</p>
           <p class="content font5">
-            생활습관과 성격을 주 단위로 기록해주세요 맞춤형 질문을 제시하고<br />
-            사용자 감정 분석을 통해 심리 설문과 인지 측정을 매칭합니다.
+            생활습관과 성격을 주 단위로 기록해주세요<br class="only-mobile" />
+            맞춤형 질문을 제시하고<br class="only-pc" />
+            사용자 감정 분석을<br class="only-mobile" />
+            통해 심리 설문과 인지 측정을 매칭합니다.
           </p>
         </div>
 
@@ -303,7 +305,7 @@
         </div>
       </div>
 
-      <div class="company-info" data-aos="fade-up">
+      <div class="company-info only-pc" data-aos="fade-up">
         <h3 class="company-name font6">브레인트레이서</h3>
         <p class="company-loc font4">
           <i class="xi-maker"></i>&nbsp;대전광역시 서구 둔지로 60, <br />
@@ -314,11 +316,19 @@
         </p>
       </div>
     </div>
-
-    <div id="top_menu"></div>
-    <div id="footer"></div>
+    <div class="company-info only-mobile" data-aos="fade-up">
+      <h3 class="company-name font6">브레인트레이서</h3>
+      <p class="company-loc font4">
+        <i class="xi-maker"></i>&nbsp;대전광역시 서구 둔지로 60, <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;4층 457호(둔산동, 35229) 브레인트레이서
+      </p>
+      <p class="company-mail font4">
+        <i class="xi-mail"></i>&nbsp;braintracer@manito.kr
+      </p>
+    </div>
   </body>
-
+  <div id="top_menu"></div>
+  <div id="footer"></div>
 
   <script src="./js/jquery.js"></script>
   <script src="./js/script.js"></script>
@@ -389,6 +399,28 @@
       mapWidth: "1920",
       mapHeight: "764",
     }).render();
+
+    // 목적지 위치를 중앙에 고정하는 스크립트
+    function centerMap() {
+      // 목표 좌표 (예: 대전광역시 서구 둔지로 60의 좌표)
+      var centerPosition = new daum.maps.LatLng(36.349722, 127.378889); // 대전 서구 둔지로 60의 위도와 경도 예시
+
+      // 지도 중심을 설정하는 함수
+      daum.maps.load(function () {
+        var mapContainer = document.getElementById(
+          "daumRoughmapContainer1730511948647"
+        );
+        var options = {
+          center: centerPosition,
+          level: 3, // 확대 레벨 (숫자가 작을수록 확대됨)
+        };
+
+        var map = new daum.maps.Map(mapContainer, options);
+        map.setCenter(centerPosition); // 매번 새로고침 시 지도의 중심을 고정
+      });
+    }
+
+    centerMap(); // 페이지가 로드될 때마다 지도 중앙 설정
   </script>
   <!-- 지도 소스 끝 부분 -->
 
@@ -399,7 +431,6 @@
       locClose.style.display = "none";
     }
   </script>
-
 
   <!-- swiper -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
