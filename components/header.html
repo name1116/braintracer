@@ -52,6 +52,7 @@
 </section>
 
 <script>
+  const header = document.getElementById("header");
   const headerBg = document.getElementById("gnb");
   const mainHamBtn = document.querySelector(".ham-menu-btn");
   const mainIcon = document.querySelector(".ham-menu-btn i");
@@ -60,11 +61,13 @@
 
   mainHamBtn.addEventListener("click", () => {
     if (mainIcon.className === "xi-bars") {
+      header.classList.add("active");
       mainIcon.className = "xi-close";
       mainMenu.style.display = "block";
       mainMenu.style.backgroundColor = "#202020";
       headerBg.style.backgroundColor = "#202020";
     } else {
+      header.classList.remove("active");
       mainIcon.className = "xi-bars";
       mainMenu.style.display = "none";
       mainMenu.style.backgroundColor = "";
