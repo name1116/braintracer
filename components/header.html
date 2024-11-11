@@ -15,72 +15,106 @@
 </nav>
 
 <section class="ham-menu">
-  <div class="ham-btn-wrap">
-    <button class="ham-btn">
-      <p class="btn-title font6">About us</p>
-      <i class="xi-angle-down"></i>
-    </button>
-    <button class="ham-btn">
-      <p class="btn-title font6">Services</p>
-      <i class="xi-angle-down"></i>
-    </button>
-    <button class="ham-btn">
-      <p class="btn-title font6">Contact us</p>
-      <i class="xi-angle-down"></i>
-    </button>
-    
+  <div class="ham-wrap">
+    <div class="ham-btn-wrap">
+      <button class="ham-btn">
+        <p class="btn-title font6">About us</p>
+        <i class="xi-angle-down"></i>
+      </button>
+      <div class="ham-btn-detail-wrap">
+        <button class="ham-btn-detail font5">회사소개</button>
+        <button class="ham-btn-detail font5">연혁</button>
+      </div>
+    </div>
+
+    <div class="ham-btn-wrap">
+      <button class="ham-btn">
+        <p class="btn-title font6">Services</p>
+        <i class="xi-angle-down"></i>
+      </button>
+      <div class="ham-btn-detail-wrap">
+        <button class="ham-btn-detail font5">Braintracer For All</button>
+        <button class="ham-btn-detail font5">Braintracer For PTSD</button>
+      </div>
+    </div>
+
+    <div class="ham-btn-wrap">
+      <button class="ham-btn">
+        <p class="btn-title font6">Contact us</p>
+        <i class="xi-angle-down"></i>
+      </button>
+      <div class="ham-btn-detail-wrap">
+        <button class="ham-btn-detail font5">문의하기</button>
+        <button class="ham-btn-detail font5">오시는길</button>
+      </div>
+    </div>
   </div>
 </section>
 
 <script>
-  const headerBg = document.getElementById("gnb")
-  const hamBtn = document.querySelector(".ham-menu-btn");
-  const icon = document.querySelector(".ham-menu-btn i");
-  const menu = document.querySelector(".ham-menu");
+  const headerBg = document.getElementById("gnb");
+  const mainHamBtn = document.querySelector(".ham-menu-btn");
+  const mainIcon = document.querySelector(".ham-menu-btn i");
+  const mainMenu = document.querySelector(".ham-menu");
+  const hamBtns = document.querySelectorAll(".ham-btn");
 
-
-  const buttonTitle = document.querySelector(".ham-btn .btn-title")
-  const buttonIcon = document.querySelector(".ham-btn i");
-
-  hamBtn.addEventListener("click", ()=> {
-
-    if(icon.className === "xi-bars") {
-      icon.className = "xi-close";
-      menu.style.display = "block";
-      menu.style.backgroundColor = "#202020";
+  mainHamBtn.addEventListener("click", () => {
+    if (mainIcon.className === "xi-bars") {
+      mainIcon.className = "xi-close";
+      mainMenu.style.display = "block";
+      mainMenu.style.backgroundColor = "#202020";
       headerBg.style.backgroundColor = "#202020";
     } else {
-      icon.className = "xi-bars";
-      menu.style.display = "none";
-      menu.style.backgroundColor = "";
+      mainIcon.className = "xi-bars";
+      mainMenu.style.display = "none";
+      mainMenu.style.backgroundColor = "";
       headerBg.style.backgroundColor = "";
     }
-  })
-  // document
-  //     .querySelectorAll(".ham-btn")
-  //     .forEach((btn, index, buttons) => {
-  //       btn.addEventListener("click", () => {
-  //         // 버튼 클릭 시 URL 해시 변경
-  //         if (index === 0) {
-  //           location.hash = "braintracerforall";
-  //         } else {
-  //           location.hash = "braintracerforptsd";
-  //         }
+  });
 
-  //         // 버튼 스타일 업데이트 및 섹션 표시
-  //         buttons.forEach((otherBtn, otherIndex) => {
-  //           if (otherIndex !== index) {
-  //             otherBtn.classList.remove("able", "font6");
-  //             otherBtn.classList.add("font4");
-  //             section01.style.display = "block";
-  //             section02.style.display = "none";
-  //           } else {
-  //             section01.style.display = "none";
-  //             section02.style.display = "block";
-  //           }
-  //         });
+  hamBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const title = btn.querySelector(".btn-title");
+      const icon = btn.querySelector("i");
+      const detail = btn.closest(".ham-btn-wrap").querySelector(".ham-btn-detail-wrap");
+      const isActive = btn.classList.contains("active");
 
-  //         btn.classList.add("able", "font6");
-  //       });
-  //     });
+      // 모든 버튼의 색상 및 아이콘 초기화
+      hamBtns.forEach((otherBtn) => {
+        otherBtn.classList.remove("active");
+        const otherTitle = otherBtn.querySelector(".btn-title");
+        const otherIcon = otherBtn.querySelector("i");
+        const otherDetail = otherBtn.closest(".ham-btn-wrap").querySelector(".ham-btn-detail-wrap");
+        otherIcon.classList = "xi-angle-down"; // 초기 아이콘으로 설정
+        otherTitle.style.color = ""; // 기본 색상으로 초기화
+        otherIcon.style.color = ""; // 기본 색상으로 초기화
+        otherDetail.style.display = "";
+      });
+
+      // 현재 버튼이 활성화 상태가 아니라면 활성화 상태로 설정
+      if (!isActive) {
+        btn.classList.add("active");
+        title.style.color = "#3b6dec"; // 원하는 색상으로 변경
+        icon.classList = "xi-angle-up"; // 아이콘을 변경
+        icon.style.color = "#3b6dec"; // 원하는 색상으로 변경
+        detail.style.display = "flex";
+
+
+        detail.querySelectorAll(".ham-btn-detail").forEach((detailBtn) => {
+          const isDetail = detail.classList.contains("active");
+          detailBtn.addEventListener("click", () => {
+            
+            detail.querySelectorAll(".ham-btn-detail").forEach((otherDetailBtn) => {
+              
+              otherDetailBtn.classList.remove("active");
+            })
+            if(!isDetail) {
+              detailBtn.classList.add("active");
+
+            }
+        })
+        })
+      }
+    });
+  });
 </script>
