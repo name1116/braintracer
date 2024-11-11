@@ -1827,6 +1827,9 @@ span:nth-child(9) {
   .section-02 .main-items-wrap .biz-img-wrap {
     height: fit-content;
   }
+  .section-02 .main-items-wrap .item:first-of-type .monitering-bizs {
+    margin-top: 0px;
+  }
 
   .biz-text .biz-title-wrap .biz-title {
     font-size: 18px;
@@ -1856,6 +1859,11 @@ span:nth-child(9) {
   .section-03 .black-big-text .big-text.main-title .easy {
     font-size: 24px;
   }
+
+  .container-1920 {
+    width: 100%;
+  }
+
 
   .container-1920 .loc-info {
     max-width: 335px;

@@ -288,6 +288,7 @@
         id="daumRoughmapContainer1730511948647"
         class="root_daum_roughmap root_daum_roughmap_landing"
         data-aos="fade-left"
+        style="width: 100%; height: 100%;"
       ></section>
 
       <div class="loc-info" data-aos="fade-up">
@@ -332,6 +333,21 @@
 
   <script src="./js/jquery.js"></script>
   <script src="./js/script.js"></script>
+
+  <script>
+    function updateImageSrc() {
+      const img = document.querySelector(".special_image");
+      if (window.innerWidth <= 767) {
+        img.src = "../images/special_image_small.svg";
+      } else {
+        img.src = "../images/special_image.svg";
+      }
+    }
+
+    // 초기 실행 및 리사이즈 이벤트 추가
+    window.addEventListener("load", updateImageSrc);
+    window.addEventListener("resize", updateImageSrc);
+  </script>
 
   <!-- 비디오 스탯 -->
   <script>
@@ -396,31 +412,49 @@
     new daum.roughmap.Lander({
       timestamp: "1730511948647",
       key: "2m4r5",
-      mapWidth: "1920",
+      mapWidth: "100%",
       mapHeight: "764",
     }).render();
 
-    // 목적지 위치를 중앙에 고정하는 스크립트
-    function centerMap() {
-      // 목표 좌표 (예: 대전광역시 서구 둔지로 60의 좌표)
-      var centerPosition = new daum.maps.LatLng(36.349722, 127.378889); // 대전 서구 둔지로 60의 위도와 경도 예시
+      // 지도 컨테이너 동적 크기 조정
+  window.addEventListener("load", function () {
+    var mapContainer = document.getElementById("daumRoughmapContainer1730511948647");
+    mapContainer.style.width = "100%";
+    mapContainer.style.height = "764px"; // 원하는 높이 값
+  });
 
-      // 지도 중심을 설정하는 함수
-      daum.maps.load(function () {
-        var mapContainer = document.getElementById(
-          "daumRoughmapContainer1730511948647"
-        );
-        var options = {
-          center: centerPosition,
-          level: 3, // 확대 레벨 (숫자가 작을수록 확대됨)
-        };
+  window.addEventListener("resize", function () {
+    var mapContainer = document.getElementById("daumRoughmapContainer1730511948647");
+    mapContainer.style.width = "100%"; // 창 크기에 따라 width 100% 적용
+  });
 
-        var map = new daum.maps.Map(mapContainer, options);
-        map.setCenter(centerPosition); // 매번 새로고침 시 지도의 중심을 고정
-      });
-    }
+    daum.maps.load(function () {
+    // 지도 컨테이너를 지정
+    var mapContainer = document.getElementById('daumRoughmapContainer1730511948647');
+    
+    // 지도 옵션
+    var mapOption = {
+      center: new daum.maps.LatLng(36.349722, 127.378889), // 지도 중심좌표
+      level: 4 // 확대 레벨
+    };
+    
+    // 지도 생성
+    var map = new daum.maps.Map(mapContainer, mapOption);
 
-    centerMap(); // 페이지가 로드될 때마다 지도 중앙 설정
+    // 마커를 설정할 위치
+    var markerPosition = new daum.maps.LatLng(36.349722, 127.378889);
+
+    // 마커 생성
+    var marker = new daum.maps.Marker({
+      position: markerPosition
+    });
+
+    // 마커를 지도에 표시
+    marker.setMap(map);
+
+    // 지도 중심을 마커 위치로 설정
+    map.setCenter(markerPosition);
+  });
   </script>
   <!-- 지도 소스 끝 부분 -->
 
