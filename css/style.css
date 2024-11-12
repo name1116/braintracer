@@ -2365,13 +2365,14 @@ span:nth-child(9) {
 
 .history-section01 .history-section01-img-wrap {
   max-width: 1440px;
+  height: auto;
   margin: 0 auto;
   margin-top: 84px;
 }
 .history-section01 .history-section01-img-wrap img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .history-section01 .history-container {
@@ -2540,6 +2541,9 @@ span:nth-child(9) {
   .about-section02 .about-section02-title {
     font-size: 40px;
   }
+  .about-section02 .about-section02-title-line {
+    width: 32px;
+  }
   .about-section03 {
     padding-left: 30px;
     padding-right: 30px;
@@ -2645,159 +2649,247 @@ span:nth-child(9) {
     line-height: 2.14;
   }
 
-  @media screen and (max-width: 767px) {
-    .about-section01 {
-      height: 700px;
-    }
-    .about-section01 .about-section01-text .about-section01-title {
-      font-size: 24px;
-      line-height: 1.58;
-    }
-    .about-section01 .about-section01-text .about-section01-content {
-      margin-top: 24px;
-      font-size: 16px;
-    }
-    .about-section02 .about-section02-button-wrap .about-section02-button {
-      width: calc(50%);
-      font-size: 14px;
-      padding: 20px 0 20px;
-    }
-    .about-section02 .about-section02-button-wrap::after {
-      opacity: 0.2;
-      background-color: #e59c3c;
-    }
-    .about-section02 .about-section02-title {
-      font-size: 24px;
-      margin-top: 85.5px;
-    }
-    .about-section02 .about-section02-title::after {
-      width: 6px;
-      height: 6px;
-    }
-    .about-section02 .about-section02-title-line {
-      opacity: 0.5;
-    }
-    .about-section02 .about-section02-bg {
-      padding: 70px 35px 70px 34px;
-    }
-    .about-section02 .about-section02-bg .about-section02-bg-img {
-      max-width: 185px;
-      max-height: 22px;
-    }
-    .about-section02 .about-section02-bg .about-section02-bg-text {
-      font-size: 16px;
-      line-height: 1.88;
-      margin-top: 32px;
-    }
-    .about-section03 {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-    .about-section03 .about-section03-title {
-      padding-top: 80px;
-      font-size: 20px;
-      line-height: 1.7;
-    }
-    .about-section03 .solution-flex {
-      margin-top: 24px;
-    }
-    .about-section03 .solution-flex .solution-text-wrap {
-      margin-top: 24px;
-    }
-    .about-section03 .solution-flex .solution-text-wrap .solution-text-title {
-      font-size: 20px;
-      line-height: 1.7;
-    }
-    .about-section03 .solution-flex .solution-text-wrap .solution-text {
-      margin-top: 16px;
-      font-size: 14px;
-      line-height: 2.14;
-    }
-    .about-section03 .solution-flex.next {
-      margin-top: 40px;
-    }
+  .history-section01 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
-    .about-section04 .customer {
-      font-size: 20px;
-      line-height: 1.7;
-    }
-    .about-section04 .customer-text {
-      margin-top: 16px;
-      font-size: 12px;
-      line-height: 2.17;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-    .about-section04 .swiper {
-      margin-top: 24px;
-      height: 40px;
-    }
-    .about-section04 .swiper .swiper-wrapper .swiper-slide {
-      width: 105px;
-    }
-    .about-section04 .partner {
-      font-size: 20px;
-      line-height: 1.7;
-    }
-    .about-section04 .partner-text {
-      padding-left: 20px;
-      padding-right: 20px;
-      font-size: 12px;
-      line-height: 2.17;
-    }
-    .about-section04 .partner-wrap .partner-logo {
-      width: 105px;
-      height: 40px;
-    }
-    .about-section05 {
-      padding-top: 160px;
-    }
-    .about-section05-content-wrap {
-      padding-left: 20px;
-      padding-right: 20px;
-    }
-    .about-section05 .about-section05-content {
-      max-width: 727px;
-      width: 100%;
-    }
-    .about-section05 .about-section05-title {
-      font-size: 20px;
-      line-height: 1.7;
-    }
-    .about-section05 .about-section05-title .only-mobile {
-      display: block;
-    }
-    .about-section05 .about-section05-content .content-index {
-      font-size: 16px;
-    }
-    .about-section05 .about-section05-content .content-title {
-      font-size: 16px;
-    }
-    .about-section05 .about-section05-content .content {
-      font-size: 14px;
-      top: 33px;
-    }
-    .about-section06 .about-section06-title {
-      font-size: 20px;
-      line-height: 1.7;
-    }
-    .about-section06 .about-section06-img-wrap {
-      min-width: 335px;
-      /* min-height: 200px; */
-    }
-    .about-section06 .about-section06-img-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .about-section06 .about-section06-text-wrap .about-section06-text .text {
-      font-size: 14px;
-      line-height: 2.14;
-    }
+  .history-section01 .history-section01-title {
+    font-size: 40px;
+  }
+  .history-section01 .history-section01-title-line {
+    width: 32px;
+    opacity: 0.5;
+  }
+  .history-container .history-list .history-year-wrap h3 {
+    font-size: 32px;
+  }
+  .history-container .history-list .history-circle {
+    top: -5px;
+    left: 20px;
+  }
+  .history-container .history-list .history-circle.able {
+    top: 2px;
+    width: 32px;
+    height: 32px;
+    border: solid 5px #3b6dec;
+  }
+  .history-container .history-list:not(:last-child)::after {
+    top: 2px;
+    left: 20px;
+  }
+}
 
-    .about-section06 {
-      padding-bottom: 80px;
-    }
+@media screen and (max-width: 778px) {
+  .history-section01 {
+    padding-top: 85px;
+  }
+  .history-section01 .history-section01-title {
+    font-size: 24px;
+  }
+  .history-section01 .history-section01-title-line {
+    margin-top: 40px;
+  }
+  .history-section01 .history-section01-img-wrap {
+    margin-top: 40px;
+
+  }
+  .history-container .history-list .history-text {
+    margin-top: 24px;
+    margin-left: 65px;
+  }
+  .history-container .history-list .history-year-wrap h3 {
+    font-size: 20px;
+  }
+  .history-container .history-list .history-text .history-text-detail h4 {
+    font-size: 14px;
+  }
+  .history-container .history-list .history-text .history-text-detail p {
+    font-size: 14px;
+    line-height: 2;
+  }
+  .history-container .history-list .history-text .history-text-detail {
+    gap: 16px;
+    /* gap: 0px; */
+    margin-bottom: 24px;
+  }
+
+  .history-container .history-list .history-circle {
+    top: -10px;
+    left: 20px;
+  }
+  .history-container .history-list .history-circle.able {
+    top: -2px;
+    width: 32px;
+    height: 32px;
+    border: solid 5px #3b6dec;
+  }
+  .history-container .history-list:not(:last-child)::after {
+    top: 2px;
+    left: 20px;
+  }
+  .history-section01 .history-container {
+    margin-top: 40px;
+  }
+}
+@media screen and (max-width:500px) {
+  .history-container .history-list .history-text .history-text-detail {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about-section01 {
+    height: 700px;
+  }
+  .about-section01 .about-section01-text .about-section01-title {
+    font-size: 24px;
+    line-height: 1.58;
+  }
+  .about-section01 .about-section01-text .about-section01-content {
+    margin-top: 24px;
+    font-size: 16px;
+  }
+  .about-section02 .about-section02-button-wrap .about-section02-button {
+    width: calc(50%);
+    font-size: 14px;
+    padding: 20px 0 20px;
+  }
+  .about-section02 .about-section02-button-wrap::after {
+    opacity: 0.2;
+    background-color: #e59c3c;
+  }
+  .about-section02 .about-section02-title {
+    font-size: 24px;
+    margin-top: 85.5px;
+  }
+  .about-section02 .about-section02-title::after {
+    width: 6px;
+    height: 6px;
+  }
+  .about-section02 .about-section02-title-line {
+    opacity: 0.5;
+  }
+  .about-section02 .about-section02-bg {
+    padding: 70px 35px 70px 34px;
+  }
+  .about-section02 .about-section02-bg .about-section02-bg-img {
+    max-width: 185px;
+    max-height: 22px;
+  }
+  .about-section02 .about-section02-bg .about-section02-bg-text {
+    font-size: 16px;
+    line-height: 1.88;
+    margin-top: 32px;
+  }
+  .about-section03 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .about-section03 .about-section03-title {
+    padding-top: 80px;
+    font-size: 20px;
+    line-height: 1.7;
+  }
+  .about-section03 .solution-flex {
+    margin-top: 24px;
+  }
+  .about-section03 .solution-flex .solution-text-wrap {
+    margin-top: 24px;
+  }
+  .about-section03 .solution-flex .solution-text-wrap .solution-text-title {
+    font-size: 20px;
+    line-height: 1.7;
+  }
+  .about-section03 .solution-flex .solution-text-wrap .solution-text {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 2.14;
+  }
+  .about-section03 .solution-flex.next {
+    margin-top: 40px;
+  }
+
+  .about-section04 .customer {
+    font-size: 20px;
+    line-height: 1.7;
+  }
+  .about-section04 .customer-text {
+    margin-top: 16px;
+    font-size: 12px;
+    line-height: 2.17;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .about-section04 .swiper {
+    margin-top: 24px;
+    height: 40px;
+  }
+  .about-section04 .swiper .swiper-wrapper .swiper-slide {
+    width: 105px;
+  }
+  .about-section04 .partner {
+    font-size: 20px;
+    line-height: 1.7;
+  }
+  .about-section04 .partner-text {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 12px;
+    line-height: 2.17;
+  }
+  .about-section04 .partner-wrap .partner-logo {
+    width: 105px;
+    height: 40px;
+  }
+  .about-section05 {
+    padding-top: 160px;
+  }
+  .about-section05-content-wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .about-section05 .about-section05-content {
+    max-width: 727px;
+    width: 100%;
+  }
+  .about-section05 .about-section05-title {
+    font-size: 20px;
+    line-height: 1.7;
+  }
+  .about-section05 .about-section05-title .only-mobile {
+    display: block;
+  }
+  .about-section05 .about-section05-content .content-index {
+    font-size: 16px;
+  }
+  .about-section05 .about-section05-content .content-title {
+    font-size: 16px;
+  }
+  .about-section05 .about-section05-content .content {
+    font-size: 14px;
+    top: 33px;
+  }
+  .about-section06 .about-section06-title {
+    font-size: 20px;
+    line-height: 1.7;
+  }
+  .about-section06 .about-section06-img-wrap {
+    min-width: 335px;
+    /* min-height: 200px; */
+  }
+  .about-section06 .about-section06-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .about-section06 .about-section06-text-wrap .about-section06-text .text {
+    font-size: 14px;
+    line-height: 2.14;
+  }
+
+  .about-section06 {
+    padding-bottom: 80px;
   }
 }
 
