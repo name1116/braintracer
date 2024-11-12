@@ -2740,6 +2740,12 @@ span:nth-child(9) {
   .history-section01 .history-container {
     margin-top: 40px;
   }
+  .about-section02 .about-section02-title-line {
+    margin-top: 40px;
+  }
+  .about-section02 .about-section02-bg {
+    margin-top: 40px;
+  }
 }
 @media screen and (max-width:500px) {
   .history-container .history-list .history-text .history-text-detail {
