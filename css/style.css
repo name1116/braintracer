@@ -2048,6 +2048,7 @@ span:nth-child(9) {
 }
 
 .about-section03 .solution-flex {
+
   display: flex;
   justify-content: center;
   gap: 40px;
@@ -2073,6 +2074,7 @@ span:nth-child(9) {
 
 .about-section03 .solution-flex .solution-text-wrap .solution-text-title {
   font-size: 32px;
+  line-height: 1.7;
   text-align: left;
   color: #fff;
 }
@@ -2552,6 +2554,9 @@ span:nth-child(9) {
     font-size: 32px;
   }
   .about-section03 .solution-flex {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 700px;
     display: block;
     margin-top: 40px;
   }
@@ -2604,7 +2609,11 @@ span:nth-child(9) {
     margin-right: auto;
     justify-content: left;
   }
-
+  .about-section05 .about-section05-content-wrap {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   /* 질문사항 */
   .about-section05 .about-section05-content .content {
     flex: none;
@@ -3373,6 +3382,17 @@ span:nth-child(9) {
 i {
   color: #3b6dec;
 }
+
+/* service 반응형 */
+
+@media screen and (max-width:1280px) {
+  
+}
+
+
+
+
+
 
 /* Contact Us */
 .contact-header {
