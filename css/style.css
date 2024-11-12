@@ -3169,6 +3169,8 @@ span:nth-child(9) {
 .services-braintracer .services-last-text .services-last-text-img-wrap img {
   width: 100%;
   height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 .services-braintracer .services-last-text .services-last-text-wrap {
@@ -3278,7 +3280,6 @@ span:nth-child(9) {
 }
 .services-ptsd .services-ptsd-process-wrap .services-ptsd-process-flex {
   max-width: 1440px;
-  max-height: 740px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -3390,9 +3391,54 @@ i {
 }
 
 /* service 반응형 */
-
+/* 질문 */
 @media screen and (max-width:1280px) {
-  
+  .services-braintracer {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .services-braintracer .services-process-flex {
+    height: auto;
+    flex-wrap: wrap;
+    align-content: space-between;
+    row-gap: 52px;
+  }
+  .services-section01 .services-section01-text-wrap .title {
+    font-size: 48px;
+  }
+  .services-section01 .services-section01-text-wrap .text {
+    font-size: 16px;
+  }
+  .services-braintracer .services-braintracer-text-wrap .title {
+    font-size: 40px;
+  }
+  .services-braintracer .services-braintracer-text-wrap .text {
+    font-size: 32px;
+  }
+  .services-braintracer .services-process-text-wrap .text {
+    font-size: 32px
+  }
+  .services-braintracer .services-last-text .services-last-text-wrap .text {
+    line-height: 1.5;
+  }
+
+  .services-braintracer .services-last-text .services-last-text-wrap {
+    padding-top: 10px;
+  }
+
+  .services-braintracer .services-braintracer-text-wrap .title {
+    font-size: 32px;
+  }
+  .services-braintracer .services-braintracer-text-wrap .text {
+    font-size: 28px;
+  }
+  .services-braintracer .services-process-text-wrap .text {
+    font-size: 28px;
+  }
+  .services-braintracer .services-last-text .services-last-text-wrap .title {
+    font-size: 24px;
+  }
+
 }
 
 

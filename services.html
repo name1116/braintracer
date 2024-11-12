@@ -382,6 +382,43 @@
     });
   </script>
 
+  <script>
+
+    
+    document.addEventListener("DOMContentLoaded", function () {
+      function adjustArrows() {
+        const processContainer = document.querySelector(
+          ".services-process-flex"
+        );
+        const boxes = document.querySelectorAll(
+          ".services-process-flex .process"
+        );
+        const arrows = document.querySelectorAll(
+          ".services-process-flex .next-img-wrap"
+        );
+
+        // 모든 화살표 보이게 초기화
+        arrows.forEach((arrow) => (arrow.style.display = "block"));
+
+        let currentTop = boxes[0].getBoundingClientRect().top;
+
+        boxes.forEach((box, index) => {
+          const boxTop = box.getBoundingClientRect().top;
+
+          if (index > 0 && boxTop !== currentTop) {
+            // 줄바꿈이 발생한 경우 이전 화살표 숨김
+            arrows[index - 1].style.display = "none";
+            currentTop = boxTop;
+          }
+        });
+      }
+
+      // 초기화 및 창 크기 변경 시 실행
+      adjustArrows();
+      window.addEventListener("resize", adjustArrows);
+    });
+  </script>
+
   <script src="./js/jquery.js"></script>
   <script src="./js/script.js"></script>
 </html>
