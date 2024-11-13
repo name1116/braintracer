@@ -2926,7 +2926,7 @@ span:nth-child(9) {
 .services-section01 .services-section01-image {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 .services-section01 .services-section01-text-wrap {
   position: absolute;
@@ -3091,6 +3091,11 @@ span:nth-child(9) {
   min-width: 34px;
   min-height: 41px;
   transition: all 0.3s ease;
+}
+.services-braintracer .services-process-flex .next-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .services-braintracer .services-process-flex .next-img-wrap:hover {
   transform: translateY(-20px);
@@ -3426,12 +3431,6 @@ i {
     padding-top: 10px;
   }
 
-  .services-braintracer .services-braintracer-text-wrap .title {
-    font-size: 32px;
-  }
-  .services-braintracer .services-braintracer-text-wrap .text {
-    font-size: 28px;
-  }
   .services-braintracer .services-process-text-wrap .text {
     font-size: 28px;
   }
@@ -3439,6 +3438,142 @@ i {
     font-size: 24px;
   }
 
+  .services-ptsd .services-ptsd-text-wrap .title {
+    font-size: 40px;
+  }
+  .services-ptsd .services-ptsd-text-wrap .text {
+    font-size: 32px;
+  }
+  .services-ptsd .services-ptsd-img-wrap {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .services-ptsd .services-ptsd-process-wrap .title {
+    font-size: 32px;
+  }
+
+}
+
+@media screen and (max-width:767px) {
+
+  .services-section01 {
+    height: 700px;
+  }
+
+
+  .services-section02-button-wrap {
+    white-space: nowrap;
+  }
+
+  .services-section02 .services-section02-button-wrap .services-section02-button {
+    width: calc(50%);
+    font-size: 14px;
+    padding: 20px 0 20px;
+  }
+  .services-section02 .services-section02-button-wrap::after {
+    opacity: 0.2;
+    background-color: #e59c3c;
+  }
+  .services-section02 .services-section02-button-wrap .services-section02-button.able {
+    font-size: 14px;
+  }
+  .services-section01 .services-section01-text-wrap .title {
+    line-height: 1.58;
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  .services-section01 .services-section01-text-wrap .text {
+    line-height: 1.88;
+  }
+  .services-braintracer {
+    padding-top: 85.5px;
+  }
+  .services-braintracer .services-braintracer-text-wrap .title {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  .services-braintracer .services-braintracer-text-wrap .title::after {
+    width: 6px;
+    height: 6px;
+  }
+  .services-braintracer .services-braintracer-text-wrap .services-braintracer-title-line {
+    width: 32px;
+    margin-top: 0px;
+  }
+  .services-braintracer .services-braintracer-text-wrap .text {
+    margin-top: 40px;
+    font-size: 20px;
+    line-height: 1.7;
+  }
+  .services-braintracer .services-braintracer-img-wrap {
+    margin-top: 40px;
+    max-width: 400px;
+    max-height: 700px;
+  }
+  .services-braintracer .services-process-text-wrap {
+    margin-top: 80px;
+  }
+  .services-braintracer .services-process-text-wrap .text {
+    font-size: 20px;
+    line-height: 1.7;
+  }
+  .services-braintracer .services-process-flex .process {
+    min-width: 155px;
+    min-height: 166px;
+  }
+  .services-braintracer .services-process-flex .process img {
+    margin-top: 41px;
+    max-width: 24px;
+    min-height: 31px;
+  }
+  .services-braintracer .services-process-flex .process .process-text {
+    margin-top: 24px;
+    font-size: 14px;
+    line-height: 2;
+  }
+  .services-braintracer .services-process-flex .next-img-wrap {
+    min-width: auto;
+    min-height: auto;
+    max-width: 25px;
+    max-height: 33px;
+  }
+  .services-braintracer .services-last-text {
+    margin-top: 80px;
+    display: block;
+    position: relative;
+  }
+  .services-braintracer .services-last-text .services-last-text-wrap .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    line-height: 1.7;
+  }
+  .services-braintracer .services-last-text .services-last-text-img-wrap {
+    padding-top: 86px;
+  }
+  .services-braintracer .services-last-text .services-last-text-wrap {
+    padding-top: 0px;
+  }
+  .services-braintracer .services-last-text .services-last-text-wrap .text {
+    margin-top: 32px;
+    font-size: 14px;
+    line-height: 2.14;
+  }
+  .services-braintracer .services-last-text {
+    padding-bottom: 80px;
+  }
+  .services-braintracer .services-process-flex .process::before {
+    top: -20px;
+    width: 40px;
+    height: 40px;
+  }
+  .services-braintracer .services-process-flex .process::after {
+    top: -13px;
+    width: 26px;
+    height: 26px;
+    font-size: 16px;
+  }
 }
 
 

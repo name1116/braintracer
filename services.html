@@ -27,8 +27,8 @@
       <div class="services-section01-text-wrap">
         <h3 class="title font6">Services</h3>
         <p class="text font4">
-          감정 분석과 맞춤형 설문을 통해 심리 상태를<br />
-          모니터링하고 트라우마를 조기에 탐지합니다.
+          감정 분석과 맞춤형 설문을 통해<br class="only-mobile"/> 심리 상태를<br class="only-pc"/>
+          모니터링하고<br class="only-mobile"/> 트라우마를 조기에 탐지합니다.
         </p>
       </div>
     </section>
@@ -57,8 +57,8 @@
         </h3>
         <div class="services-braintracer-title-line"></div>
         <p class="text font6">
-          맞춤형 설문과 AI 기반 트라우마 분석을 통해<br />
-          심리 상태를 <span class="font6">실시간으로 모니터링</span>하고
+          맞춤형 설문과 AI 기반 트라우마<br class="only-mobile" /> 분석을 통해<br class="only-pc"/>
+          심리 상태를<br class="only-mobile" /> <span class="font6">실시간으로 모니터링</span>하고
           관리합니다.
         </p>
       </div>
@@ -130,7 +130,7 @@
             브레인트레이서는 소방공무원을 비롯한 모든 사람들에게 정신 건강
             관리를 새롭게 제안합니다.<br />
             복잡한 자가 측정 방식에서 벗어나 AI 기반의 맞춤형 설문과 실시간
-            분석을 통해 나의 상태<br />
+            분석을 통해 나의 상태<br class="only-pc"/>
             를 정확하게 파악하고 변화에 빠르게 대응할 수 있습니다.<br />
             <br />
             지금의 작은 관심이 큰 변화를 만듭니다.<br />
@@ -273,6 +273,20 @@
     <div id="top_menu"></div>
     <div id="footer"></div>
   </body>
+  <script>
+    function updateImageSrc() {
+      const img = document.querySelector(".services-braintracer-img-wrap img");
+      if (window.innerWidth <= 767) {
+        img.src = "./images/service_3circle_long.svg";
+      } else {
+        img.src = "./images/service_3circle.png";
+      }
+    }
+
+    // 초기 실행 및 리사이즈 이벤트 추가
+    window.addEventListener("load", updateImageSrc);
+    window.addEventListener("resize", updateImageSrc);
+  </script>
 
   <script>
     const section01 = document.querySelector(".services-braintracer");

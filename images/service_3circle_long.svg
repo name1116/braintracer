@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="290" viewBox="0 0 518.562 735">
+    <g data-name="그룹 145735" transform="translate(71.765 -1090)">
+        <g data-name="사각형 119861" transform="rotate(90 -378.729 711.271)" style="stroke:#3b6dec;stroke-linecap:round;stroke-linejoin:round;stroke-width:4px;stroke-dasharray:0 12;fill:none">
+            <rect width="735" height="290" rx="145" style="stroke:none"/>
+            <rect x="2" y="2" width="731" height="286" rx="143" style="fill:none"/>
+        </g>
+        <circle data-name="타원 2705" cx="109.281" cy="109.281" r="109.281" transform="rotate(90 -520.855 817.652)" style="fill:#202020"/>
+        <g data-name="그룹 145733" transform="translate(0 9.771)">
+            <circle data-name="타원 2703" cx="122.558" cy="122.558" r="122.558" transform="rotate(90 -507.578 817.652)" style="fill:#3b6dec"/>
+            <text transform="translate(188.539 1442.592)" style="font-size:20px;font-family:S-CoreDream-6Bold,'S-Core Dream \36 ';font-weight:700;fill:#fff"><tspan x="-69.77" y="0">BRAINTRACER</tspan></text>
+            <text data-name="심리적 외상 조기탐지 시스템" transform="translate(187.941 1467.805)" style="font-family:S-CoreDream-5Medium,'S-Core Dream \35 ';font-weight:500;font-size:12px;fill:#fff"><tspan x="-74.358" y="0">심리적 외상 조기탐지 시스템</tspan></text>
+        </g>
+        <g data-name="그룹 145734" transform="translate(0 .248)">
+            <circle data-name="타원 2702" cx="122.558" cy="122.558" r="122.558" transform="rotate(90 -400.339 710.413)" style="opacity:.5;fill:#3b6dec"/>
+            <text transform="translate(188.963 1228.902)" style="opacity:.8;font-size:20px;font-family:S-CoreDream-6Bold,'S-Core Dream \36 ';font-weight:700;fill:#fff"><tspan x="-36.66" y="0">COGEM</tspan></text>
+            <text data-name="쉽고 재미있는 심리측정" transform="translate(187.941 1254.117)" style="font-family:S-CoreDream-4Regular,'S-Core Dream \34 ';opacity:.8;font-size:12px;fill:#fff"><tspan x="-61.092" y="0">쉽고 재미있는 심리측정</tspan></text>
+        </g>
+        <g data-name="그룹 145732" transform="translate(0 -.132)">
+            <circle data-name="타원 2704" cx="122.558" cy="122.558" r="122.558" transform="rotate(90 -625.029 935.103)" style="opacity:.5;fill:#3b6dec"/>
+            <text transform="translate(188.752 1678.219)" style="opacity:.8;font-size:20px;font-family:S-CoreDream-6Bold,'S-Core Dream \36 ';font-weight:700;fill:#fff"><tspan x="-25.77" y="0">BASE</tspan></text>
+            <text data-name="개인 맞춤형 심리 모니터링 시스템" transform="translate(187.941 1703.432)" style="opacity:.8;font-family:S-CoreDream-5Medium,'S-Core Dream \35 ';font-weight:500;font-size:12px;fill:#fff"><tspan x="-87.624" y="0">개인 맞춤형 심리 모니터링 시스템</tspan></text>
+        </g>
+    </g>
+</svg>
