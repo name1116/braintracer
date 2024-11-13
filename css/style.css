@@ -2230,6 +2230,7 @@ span:nth-child(9) {
 .about-section05 .about-section05-content {
   margin-top: 63.5px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: left;
   align-items: center;
   position: relative;
@@ -2603,7 +2604,7 @@ span:nth-child(9) {
   }
 
   .about-section05 .about-section05-content {
-    padding-bottom: 230px;
+    /* padding-bottom: 230px; */
     margin-top: 0px;
     margin-left: auto;
     margin-right: auto;
@@ -2614,13 +2615,18 @@ span:nth-child(9) {
     margin-left: auto;
     margin-right: auto;
   }
+  .about-section05 .about-section05-content-wrap:not(:first-of-type){
+    margin-top: 40px;
+  }
   /* 질문사항 */
   .about-section05 .about-section05-content .content {
-    flex: none;
+    /* flex: none;
     position: absolute;
     top: 50px;
-    left: 0px;
+    left: 0px; */
+    width: 100%;
     font-size: 20px;
+    margin-top: 16px;
   }
   .about-section05 .about-section05-content-wrap::after {
     display: none;
@@ -4132,4 +4138,57 @@ i {
 }
 .contact-directions .container-1920 .company-info .company-mail i {
   color: #fff;
+}
+
+
+@media screen and (max-width:1280px) {
+  .contact-section01 .contact-section01-text-wrap .title {
+    font-size: 48px;
+  }
+  .contact-section01 .contact-section01-text-wrap .text {
+    font-size: 16px;
+  }
+  .contact-form .text-title-wrap .title {
+    font-size: 34px;
+  }
+  .contact-form {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .contact-form .btn-submit {
+    white-space: nowrap;
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+}
+
+@media screen and (max-width:767px) {
+  .contact-section01 .bg {
+    min-height: 320px;
+    filter: brightness(70%);
+    /* 배경 질문 */
+  }
+  .contact-section01 .contact-section01-text-wrap .title {
+    font-size: 24px;
+    line-height: 1.58;
+  }
+  .contact-section01 .contact-section01-text-wrap .text {
+    margin-top: 16px;
+    line-height: 1.88;
+  }
+  .contact-section02-button-wrap {
+    white-space: nowrap;
+  } 
+  .contact-section02 .contact-section02-button-wrap .contact-section02-button {
+    width: calc(50%);
+    font-size: 14px;
+    padding: 20px 0 20px;
+  }
+  .contact-section02 .contact-section02-button-wrap::after {
+    opacity: 0.2;
+    background-color: #e59c3c;
+  }
+  .contact-section02 .contact-section02-button-wrap .contact-section02-button.able {
+    font-size: 14px;
+  }
 }
