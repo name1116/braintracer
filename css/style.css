@@ -3551,6 +3551,8 @@ i {
   }
   .services-braintracer .services-last-text .services-last-text-img-wrap {
     padding-top: 86px;
+    border-radius: 10px;
+    overflow: hidden;
   }
   .services-braintracer .services-last-text .services-last-text-wrap {
     padding-top: 0px;
@@ -3573,6 +3575,81 @@ i {
     width: 26px;
     height: 26px;
     font-size: 16px;
+  }
+
+  .services-ptsd .services-ptsd-text-wrap {
+    padding-top: 85.5px;
+  }
+  .services-ptsd .services-ptsd-text-wrap .title {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  .services-ptsd .services-ptsd-text-wrap .title::after {
+    width: 6px;
+    height: 6px;
+  }
+  .services-ptsd .services-ptsd-text-wrap .services-ptsd-title-line {
+    width: 32px;
+  }
+  .services-ptsd .services-ptsd-text-wrap .text {
+    margin-top: 40px;
+    font-size: 20px;
+    line-height: 1.7;
+  }
+  .services-ptsd .services-ptsd-img-wrap {
+    margin-top: 40px;
+  }
+  .services-ptsd .services-ptsd-process-wrap {
+    margin-top: 80px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .services-ptsd .services-ptsd-process-wrap .title {
+    font-size: 20px;
+    line-height: 1.7;
+  }
+  .services-ptsd .services-ptsd-process-wrap .services-ptsd-process-flex {
+    margin-top: 40px;
+  }
+  .services-ptsd .services-ptsd-process-wrap .services-ptsd-process-flex .process {
+    padding: 24px;
+    min-height: 408px;
+  }
+  .services-ptsd .services-ptsd-process-wrap .services-ptsd-process-flex .process .index {
+    font-size: 16px;
+    line-height: 2.13;
+  }
+  .services-ptsd .services-ptsd-process-wrap .services-ptsd-process-flex .process .title {
+    font-size: 18px;
+    line-height: 1.89;
+  }
+  .services-ptsd .services-ptsd-process-wrap .services-ptsd-process-flex .process .content li {
+    font-size: 14px;
+    line-height: 2.29;
+    display: flex;
+  }
+  .services-ptsd .services-ptsd-process-wrap .services-ptsd-process-flex .process .img-wrap {
+    width: 40px;
+    height: 40px;
+  }
+  .services-ptsd .services-ptsd-contact {
+    margin-top: 80px;
+  }
+  .services-ptsd .services-ptsd-contact .text {
+    padding-top: 64px;
+    padding-left: 40px;
+    padding-right: 39px;
+    font-size: 16px;
+    line-height: 1.88;
+  }
+  .services-ptsd .services-ptsd-contact .btn {
+    margin-top: 24px;
+    margin-bottom: 64px;
+
+    padding: 13px 24px;
+  }
+  .services-ptsd .services-ptsd-contact .btn a, i {
+    font-size: 14px;
   }
 }
 
