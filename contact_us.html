@@ -19,12 +19,15 @@
   <body>
     <header id="header" class="contact-header"></header>
     <section class="contact-section01">
-      <img src="./images/contact_us.png" alt="Contact us" class="bg" />
+      <div class="img-wrap">
+        <img src="./images/contact_us.png" alt="Contact us" class="bg" />
+      </div>
       <div class="contact-section01-text-wrap">
         <h3 class="title font6">Contact us</h3>
         <p class="text font4">
           당신의 마음 상태 이제 브레인트레이서에서<br />
-          쉽게 관리하세요 외상 탐지부터<br class="only-mobile"> 치유까지 함께하겠습니다.
+          쉽게 관리하세요 외상 탐지부터<br class="only-mobile" />
+          치유까지 함께하겠습니다.
         </p>
       </div>
     </section>
@@ -54,7 +57,7 @@
 
       <div class="input-wrap-flex">
         <div class="input-wrap">
-          <p class="info font6">이름<span>*</span></p>
+          <p class="info font6">성함<span>*</span></p>
           <input
             type="text"
             name="name"
@@ -94,6 +97,7 @@
           type="text"
           name="message"
           placeholder="문의내용을 기재해주세요."
+          class="text-area"
         ></textarea>
       </div>
 
@@ -136,7 +140,7 @@
             <i class="xi-check"></i>
           </span> -->
           <p class="check-info font4">
-            개인정보 수집 및 이용에 대한 동의 (필수)
+            개인정보 수집 및 이용에 대한 동의 (필수)&nbsp;<button class="only-mobile font4">전문보기</button>
           </p>
         </label>
       </div>
@@ -148,9 +152,7 @@
         <h3 class="title font6">오시는길</h3>
         <div class="text-flex">
           <i class="xi-maker"></i>
-          <p class="text font6">
-            브레인트레이서
-          </p>
+          <p class="text font6">브레인트레이서</p>
           <p class="direction font4">
             대전광역시 서구 둔지로 60, 4층 457호(둔산동, 35229) 브레인트레이서
           </p>
@@ -164,7 +166,7 @@
           id="daumRoughmapContainer1730511948647"
           class="root_daum_roughmap root_daum_roughmap_landing"
         ></section>
-  
+
         <div class="loc-info">
           <div class="loc-btn-wrap">
             <button class="loc-info-btn" onclick="locInfoClose()">
@@ -179,7 +181,7 @@
             <p class="loc-info-detail font3">우편번호&nbsp;35229</p>
           </div>
         </div>
-  
+
         <div class="company-info">
           <h3 class="company-name font6">브레인트레이서</h3>
           <p class="company-loc font4">
@@ -197,8 +199,8 @@
     <div id="footer"></div>
   </body>
 
-    <!-- 지도 소스 -->
-    <script
+  <!-- 지도 소스 -->
+  <script
     charset="UTF-8"
     class="daum_roughmap_loader_script"
     src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"
