@@ -4,6 +4,9 @@
 img {
   vertical-align: top;
 }
+/* *{
+  word-break: keep-all;
+} */
 
 /* header */
 /* 테스트 끝나면 호버 해제 */
@@ -2356,6 +2359,15 @@ span:nth-child(9) {
   align-items: center;
   position: relative;
 }
+@media screen and (max-width:1650px) {
+  .about-section05 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .about-section05 .about-section05-content {
+    row-gap: 20px;
+  }
+}
 .about-section05 .about-section05-content.first {
   margin-top: 80px;
   display: flex;
@@ -2653,6 +2665,14 @@ span:nth-child(9) {
     padding-left: 100px;
     padding-right: 100px;
   }
+  .about-section03 {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .about-section06 {
+    /* padding-left: 30px;
+    padding-right: 30px; */
+  }
 }
 
 @media screen and (max-width: 1280px) {
@@ -2741,10 +2761,7 @@ span:nth-child(9) {
   }
   /* 질문사항 */
   .about-section05 .about-section05-content .content {
-    /* flex: none;
-    position: absolute;
-    top: 50px;
-    left: 0px; */
+
     width: 100%;
     font-size: 20px;
     margin-top: 16px;
@@ -3005,9 +3022,11 @@ span:nth-child(9) {
   .about-section05-content-wrap {
     padding-left: 20px;
     padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .about-section05 .about-section05-content {
-    max-width: 727px;
+    max-width: 350px;
     width: 100%;
   }
   .about-section05 .about-section05-title {
