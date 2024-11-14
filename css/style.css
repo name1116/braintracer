@@ -19,11 +19,10 @@ img {
 }
 
 /* 호버 */
-#header:hover { 
+#header:hover {
   background-color: #202020;
   height: 246px;
 }
-
 
 #gnb {
   display: flex;
@@ -81,7 +80,7 @@ img {
   text-decoration: underline;
 }
 
-#gnb > .section > .link-flex  a {
+#gnb > .section > .link-flex a {
   font-family: S-CoreDream5;
   font-size: 17px;
   font-weight: 500;
@@ -101,10 +100,14 @@ img {
   z-index: 100;
 }
 
+.ham-menu .ham-btn-wrap {
+  display: none;
+}
+
 @media screen and (max-width: 850px) {
   #header {
     /* padding-bottom: 0px; */
-    height: 58px;
+    height: 80px;
   }
 }
 
@@ -136,9 +139,12 @@ img {
 
 @media screen and (max-width: 767px) {
   /* 호버 */
+  #header {
+    height: 58px;
+  }
   #header:hover {
     background-color: transparent;
-    height: auto;
+    height: 58px;
   }
 
   #header.active {
@@ -190,6 +196,7 @@ img {
     background-color: #fff;
   }
   .ham-menu .ham-btn-wrap {
+    display: block;
     padding-top: 21px;
     padding-left: 20px;
     padding-right: 20px;
@@ -974,10 +981,19 @@ span:nth-child(9) {
   color: #fff;
 }
 
-.mySwiper {
+.swiper.mySwiper {
+  overflow: hidden;
+  max-width: 1920px;
+  width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
+}
+.mySwiper .swiper-wrapper {
+  width: 100%;
+}
+.mySwiper .swiper-wrapper .swiper-slide {
+  width: 100%;
 }
 
 .control-wrap {
@@ -1064,6 +1080,7 @@ span:nth-child(9) {
   width: 100%;
   height: 100%;
   z-index: -1500;
+  overflow: hidden;
 }
 .text {
   z-index: 100;
@@ -1913,9 +1930,9 @@ span:nth-child(9) {
   .container-1920 {
     width: 100%;
   }
-  /* 질문 */
-  .container-1920 svg { 
-    width: auto !important; 
+
+  .container-1920 .wrap_map .map svg {
+    width: 100% !important;
   }
 
   .container-1920 .loc-info {
@@ -3535,6 +3552,10 @@ i {
   .services-braintracer .services-last-text .services-last-text-wrap {
     padding-top: 10px;
   }
+  .services-braintracer .services-process-flex .process {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
   .services-braintracer .services-process-flex .process .process-text {
     font-size: 14px;
   }
@@ -4162,9 +4183,14 @@ i {
 .contact-directions .container-1920 .wrap_map .map {
   max-width: 1920px;
 }
-.contact-directions .container-1920 .map {
+.contact-directions .container-1920 .wrap_map .map {
   width: 100%;
   height: 100%;
+}
+
+/* 질문 */
+.contact-directions .container-1920 .wrap_map .map svg {
+  width: 100% !important;
 }
 /* 지도 상세 페이지 설명 */
 .contact-directions .container-1920 .loc-info {
@@ -4359,7 +4385,6 @@ i {
     display: none;
   }
   .contact-form .text-title-wrap::after {
-
     bottom: 24px;
     left: 0px;
     border-color: #c5c5c5;
@@ -4425,7 +4450,10 @@ i {
   .contact-form .accept-wrap .information-wrap .text-flex-wrap:first-of-type {
     display: none;
   }
-  .contact-form .accept-wrap .information-wrap .text-flex-wrap:not(:last-child) {
+  .contact-form
+    .accept-wrap
+    .information-wrap
+    .text-flex-wrap:not(:last-child) {
     margin-bottom: 16px;
   }
   .contact-form .accept-wrap .information-wrap .text-flex-wrap .text-title {
@@ -4452,11 +4480,9 @@ i {
     padding: 18px 137px;
     font-size: 16px;
   }
-  
 }
 
-
-@media screen and (max-width:1280px) {
+@media screen and (max-width: 1280px) {
   .contact-directions .content-wrap .title {
     font-size: 32px;
   }
@@ -4464,6 +4490,7 @@ i {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    gap: 20px;
   }
   .contact-directions .content-wrap .text-flex i {
     font-size: 24px;
@@ -4483,11 +4510,9 @@ i {
   .contact-directions .container-1920 .company-info .company-name {
     font-size: 24px;
   }
-
-
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
   .contact-directions {
     padding-top: 40px;
   }
@@ -4512,12 +4537,14 @@ i {
   .contact-directions .content-wrap .text-flex {
     padding-left: 56px;
     padding-right: 56px;
+    column-gap: 0px;
     row-gap: 16px;
   }
   .contact-directions .content-wrap .text-flex .text {
     font-size: 16px;
   }
   .contact-directions .content-wrap .text-flex .direction {
+    width: 100%;
     font-size: 14px;
     line-height: 2;
     text-align: center;
@@ -4551,5 +4578,4 @@ i {
   .contact-directions .container-1920 .company-info .company-mail {
     font-size: 14px;
   }
-
 }

@@ -87,7 +87,6 @@
 
 <script>
   const header = document.getElementById("header");
-  const headerBg = document.getElementById("gnb");
   const mainHamBtn = document.querySelector(".ham-menu-btn");
   const mainIcon = document.querySelector(".ham-menu-btn i");
   const mainMenu = document.querySelector(".ham-menu");
@@ -99,13 +98,11 @@
       mainIcon.className = "xi-close";
       mainMenu.style.display = "block";
       mainMenu.style.backgroundColor = "#202020";
-      headerBg.style.backgroundColor = "#202020";
     } else {
       header.classList.remove("active");
       mainIcon.className = "xi-bars";
       mainMenu.style.display = "none";
       mainMenu.style.backgroundColor = "";
-      headerBg.style.backgroundColor = "";
     }
   });
 
@@ -151,7 +148,6 @@
                 mainIcon.className = "xi-bars";
                 mainMenu.style.display = "none";
                 mainMenu.style.backgroundColor = "";
-                headerBg.style.backgroundColor = "";
               });
             if (!isDetail) {
               detailBtn.classList.add("active");
