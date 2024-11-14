@@ -388,6 +388,7 @@ img {
     display: none;
   }
   .com-info-div {
+
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
@@ -395,6 +396,7 @@ img {
   }
 
   .com-info-div .com-info {
+    margin-top: 23px;
     font-size: 12px;
     font-weight: 200;
     line-height: 1.83;
