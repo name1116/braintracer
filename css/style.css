@@ -255,6 +255,10 @@ img {
   margin-left: 240px;
 }
 
+.com-info-div a {
+  width: fit-content;
+}
+
 .com-info-logo {
   width: 206px;
   height: 26px;
@@ -1821,6 +1825,8 @@ span:nth-child(9) {
     font-size: 24px;
   }
   .text.section-01 .black-big-text .big-text.main-title::after {
+    top: -10px;
+    right: -10px;
     width: 6px;
     height: 6px;
   }
@@ -1877,6 +1883,8 @@ span:nth-child(9) {
   .section-02 .black-big-text .big-text.main-title::after {
     width: 6px;
     height: 6px;
+    top: -10px;
+    right: -10px;
   }
   .section-02 .black-big-text .big-text.main-title .easy {
     font-size: 24px;
@@ -1922,6 +1930,8 @@ span:nth-child(9) {
   .section-03 .black-big-text .big-text.main-title::after {
     width: 6px;
     height: 6px;
+    top: -10px;
+    right: -10px;
   }
   .section-03 .black-big-text .big-text.main-title .easy {
     font-size: 24px;
@@ -2807,6 +2817,12 @@ span:nth-child(9) {
   .history-section01 .history-section01-img-wrap {
     margin-top: 40px;
   }
+  .history-section01 .history-section01-title::after {
+    width: 6px;
+    height: 6px;
+    top: -10px;
+    right: -10px;
+  }
   .history-container .history-list .history-text {
     margin-top: 24px;
     margin-left: 65px;
@@ -2893,6 +2909,8 @@ span:nth-child(9) {
   .about-section02 .about-section02-title::after {
     width: 6px;
     height: 6px;
+    top: -10px;
+    right: -10px;
   }
   .about-section02 .about-section02-title-line {
     opacity: 0.5;
@@ -3631,6 +3649,8 @@ i {
   .services-braintracer .services-braintracer-text-wrap .title::after {
     width: 6px;
     height: 6px;
+    top: -10px;
+    right: -10px;
   }
   .services-braintracer
     .services-braintracer-text-wrap
@@ -3729,6 +3749,8 @@ i {
     margin-bottom: 40px;
   }
   .services-ptsd .services-ptsd-text-wrap .title::after {
+    top: -10px;
+    right: -10px;
     width: 6px;
     height: 6px;
   }
