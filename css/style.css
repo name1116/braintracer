@@ -6,6 +6,10 @@ img {
 }
 
 /* header */
+/* 테스트 끝나면 호버 해제 */
+#header #gnb > .section > .link-flex .link-btn-wrap {
+  display: none;
+}
 
 #header {
   position: absolute;
@@ -14,17 +18,13 @@ img {
   z-index: 100;
 }
 
-#header:hover {
+/* 호버 */
+#header:hover { 
   background-color: #202020;
+  height: 246px;
 }
 
 
-@media screen and (max-width: 850px) {
-  #header {
-    /* padding-bottom: 0px; */
-    height: 58px;
-  }
-}
 #gnb {
   display: flex;
   flex-direction: row;
@@ -43,13 +43,45 @@ img {
 #gnb > .section {
   margin-top: 27px;
   margin-right: 136px;
-
   display: flex;
-  gap: 130px;
   text-align: center;
 }
+#gnb > .section > .link-flex {
+  width: 200px;
+  height: auto;
+}
+/* 밑에 두줄 .link-flex 호버 */
+#gnb > .section > .link-flex:hover {
+  position: relative;
+}
+#gnb > .section > .link-flex:hover::after {
+  position: absolute;
+  top: 46px;
+  display: block;
+  content: "";
+  clear: both;
+  width: 100%;
+  height: 1px;
+  background-color: #3b6dec;
+}
+/* 밑에 세줄 호버 */
+#header:hover #gnb > .section > .link-flex .link-btn-wrap {
+  display: flex;
+  flex-direction: column;
+}
+#header:hover #gnb > .section > .link-flex .link-btn-wrap button:first-of-type {
+  margin-top: 45px;
+}
+#header:hover #gnb > .section > .link-flex .link-btn-wrap button {
+  padding: 16px 10px;
+  font-size: 17px;
+  color: #fff;
+}
+#header:hover #gnb > .section > .link-flex .link-btn-wrap button:hover {
+  text-decoration: underline;
+}
 
-#gnb > .section > a {
+#gnb > .section > .link-flex  a {
   font-family: S-CoreDream5;
   font-size: 17px;
   font-weight: 500;
@@ -69,9 +101,21 @@ img {
   z-index: 100;
 }
 
+@media screen and (max-width: 850px) {
+  #header {
+    /* padding-bottom: 0px; */
+    height: 58px;
+  }
+}
+
 @media screen and (max-width: 1500px) {
   #gnb > .section {
     margin-right: 80px;
+  }
+  #header:hover #gnb > .section > .link-flex .link-btn-wrap button {
+    padding: 16px 10px;
+    font-size: 15px;
+    color: #fff;
   }
 }
 @media screen and (max-width: 850px) {
@@ -81,10 +125,22 @@ img {
   }
   #gnb > .section {
     margin-right: 20px;
-    gap: 40px;
+  }
+
+  #header:hover #gnb > .section > .link-flex .link-btn-wrap button {
+    padding: 16px 10px;
+    font-size: 13px;
+    color: #fff;
   }
 }
+
 @media screen and (max-width: 767px) {
+  /* 호버 */
+  #header:hover {
+    background-color: transparent;
+    height: auto;
+  }
+
   #header.active {
     background-color: #202020;
     width: 100%;
