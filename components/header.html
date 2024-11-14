@@ -4,9 +4,9 @@
   </a>
 
   <div class="section">
-    <a href="../../test/about_us.html" class="goto-link">About us</a>
-    <a href="../../test/services.html" class="goto-link">Services</a>
-    <a href="../../test/contact_us.html" class="goto-link">Contact us</a>
+    <a href="../test/about_us.html" class="goto-link">About us</a>
+    <a href="../test/services.html" class="goto-link">Services</a>
+    <a href="../test/contact_us.html" class="goto-link">Contact us</a>
   </div>
 
   <button class="ham-menu-btn">
@@ -22,8 +22,12 @@
         <i class="xi-angle-down"></i>
       </button>
       <div class="ham-btn-detail-wrap">
-        <button class="ham-btn-detail font5">회사소개</button>
-        <button class="ham-btn-detail font5">연혁</button>
+        <button class="ham-btn-detail font5">
+          <a href="../test/about_us.html#aboutcompany">회사소개</a>
+        </button>
+        <button class="ham-btn-detail font5">
+          <a href="../test/about_us.html#companyhistory">연혁</a>
+        </button>
       </div>
     </div>
 
@@ -33,8 +37,16 @@
         <i class="xi-angle-down"></i>
       </button>
       <div class="ham-btn-detail-wrap">
-        <button class="ham-btn-detail font5">Braintracer For All</button>
-        <button class="ham-btn-detail font5">Braintracer For PTSD</button>
+        <button class="ham-btn-detail font5">
+          <a href="../test/services.html#braintracerforall"
+            >Braintracer For All</a
+          >
+        </button>
+        <button class="ham-btn-detail font5">
+          <a href="../test/services.html#braintracerforptsd"
+            >Braintracer For PTSD</a
+          >
+        </button>
       </div>
     </div>
 
@@ -44,8 +56,12 @@
         <i class="xi-angle-down"></i>
       </button>
       <div class="ham-btn-detail-wrap">
-        <button class="ham-btn-detail font5">문의하기</button>
-        <button class="ham-btn-detail font5">오시는길</button>
+        <button class="ham-btn-detail font5">
+          <a href="../test/contact_us.html#contact">문의하기</a>
+        </button>
+        <button class="ham-btn-detail font5">
+          <a href="../test/contact_us.html#directions">오시는길</a>
+        </button>
       </div>
     </div>
   </div>
@@ -79,7 +95,9 @@
     btn.addEventListener("click", () => {
       const title = btn.querySelector(".btn-title");
       const icon = btn.querySelector("i");
-      const detail = btn.closest(".ham-btn-wrap").querySelector(".ham-btn-detail-wrap");
+      const detail = btn
+        .closest(".ham-btn-wrap")
+        .querySelector(".ham-btn-detail-wrap");
       const isActive = btn.classList.contains("active");
 
       // 모든 버튼의 색상 및 아이콘 초기화
@@ -87,7 +105,9 @@
         otherBtn.classList.remove("active");
         const otherTitle = otherBtn.querySelector(".btn-title");
         const otherIcon = otherBtn.querySelector("i");
-        const otherDetail = otherBtn.closest(".ham-btn-wrap").querySelector(".ham-btn-detail-wrap");
+        const otherDetail = otherBtn
+          .closest(".ham-btn-wrap")
+          .querySelector(".ham-btn-detail-wrap");
         otherIcon.classList = "xi-angle-down"; // 초기 아이콘으로 설정
         otherTitle.style.color = ""; // 기본 색상으로 초기화
         otherIcon.style.color = ""; // 기본 색상으로 초기화
@@ -102,21 +122,24 @@
         icon.style.color = "#3b6dec"; // 원하는 색상으로 변경
         detail.style.display = "flex";
 
-
         detail.querySelectorAll(".ham-btn-detail").forEach((detailBtn) => {
           const isDetail = detail.classList.contains("active");
           detailBtn.addEventListener("click", () => {
-            
-            detail.querySelectorAll(".ham-btn-detail").forEach((otherDetailBtn) => {
-              
-              otherDetailBtn.classList.remove("active");
-            })
-            if(!isDetail) {
+            detail
+              .querySelectorAll(".ham-btn-detail")
+              .forEach((otherDetailBtn) => {
+                otherDetailBtn.classList.remove("active");
+                header.classList.remove("active");
+                mainIcon.className = "xi-bars";
+                mainMenu.style.display = "none";
+                mainMenu.style.backgroundColor = "";
+                headerBg.style.backgroundColor = "";
+              });
+            if (!isDetail) {
               detailBtn.classList.add("active");
-
             }
-        })
-        })
+          });
+        });
       }
     });
   });
