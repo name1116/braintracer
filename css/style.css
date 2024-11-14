@@ -1441,7 +1441,7 @@ span:nth-child(9) {
 }
 
 .container-1920 .loc-info .loc-info-text-wrap {
-  padding-right: 44px;
+  padding-right: 20px;
   padding-left: 24px;
   padding-bottom: 24px;
 }
@@ -1452,7 +1452,17 @@ span:nth-child(9) {
   font-style: normal;
   color: #202020;
 }
-.container-1920 .loc-info .loc-info-text-wrap .loc-info-detail {
+.container-1920 .loc-info .loc-info-text-wrap .loc-info-detail-wrap {
+  display: flex;
+  white-space: nowrap;
+}
+.container-1920 .loc-info .loc-info-text-wrap .loc-info-detail-wrap .loc-info-detail.font4:first-of-type {
+  width: 70px;
+}
+.container-1920 .loc-info .loc-info-text-wrap .loc-info-detail-wrap .loc-info-detail.font3:first-of-type {
+  width: 70px;
+}
+.container-1920 .loc-info .loc-info-text-wrap .loc-info-detail-wrap .loc-info-detail {
   margin-top: 8px;
   font-size: 16px;
   font-weight: 200;
@@ -4234,14 +4244,14 @@ i {
   text-align: right;
 }
 .contact-directions .container-1920 .loc-info .loc-btn-wrap .loc-info-btn {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: normal;
   font-stretch: normal;
 }
 
 .contact-directions .container-1920 .loc-info .loc-info-text-wrap {
-  padding-right: 44px;
-  padding-left: 24px;
+  padding-right: 20px;
+  padding-left: 16px;
   padding-bottom: 24px;
 }
 .contact-directions

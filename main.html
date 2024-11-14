@@ -299,10 +299,14 @@
         </div>
         <div class="loc-info-text-wrap">
           <h3 class="loc-info-title font6">대전광역시 서구 둔지로 60</h3>
-          <p class="loc-info-detail font4">
-            지번&nbsp;&nbsp;대전광역시 서구 둔산동 971
-          </p>
-          <p class="loc-info-detail font3">우편번호&nbsp;35229</p>
+          <div class="loc-info-detail-wrap">
+            <p class="loc-info-detail font4">지번</p>
+            <p class="loc-info-detail font4">대전광역시 서구 둔산동 971</p>
+          </div>
+          <div class="loc-info-detail-wrap">
+            <p class="loc-info-detail font3">우편번호</p>
+            <p class="loc-info-detail font3">35229</p>
+          </div>
         </div>
       </div>
 
@@ -476,7 +480,6 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
     var swiper = new Swiper(".mySwiper", {
-
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
