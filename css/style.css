@@ -200,7 +200,7 @@ img {
   }
   .ham-menu .ham-btn-wrap {
     display: block;
-    padding-top: 21px;
+    padding-top: 11px;
     padding-left: 20px;
     padding-right: 20px;
     width: 100%;
@@ -211,7 +211,8 @@ img {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   .ham-menu .ham-btn-wrap .ham-btn .btn-title {
     font-size: 16px;
@@ -1290,6 +1291,7 @@ span:nth-child(9) {
 .section-02 .main-items-wrap .item.active .biz-title-wrap .biz-title {
   color: #fff;
   width: 100%;
+  text-align: left;
 }
 .section-02 .main-items-wrap .item.active .biz-button i {
   transform: rotate(0deg);
@@ -1302,8 +1304,9 @@ span:nth-child(9) {
 
 /* 제목과 열기/닫기 버튼 */
 
-.section-02 .biz-title-wrap {
+.section-02 .biz-title-wrap .biz-button {
   display: flex;
+  width: 100%;
   justify-content: space-between;
 }
 
@@ -1925,7 +1928,7 @@ span:nth-child(9) {
     font-size: 18px;
   }
   .biz-text .biz-title-wrap .biz-button {
-    width: 20px;
+    /* width: 20px; */
   }
   .biz-text .biz-title-wrap .biz-button i {
     font-size: 20px;
@@ -2135,7 +2138,7 @@ span:nth-child(9) {
   width: 100%;
   max-width: 1920px;
   background-image: linear-gradient(120deg, #3b6dec 25%, #202020 129%);
-  padding: 114px 625px 113px;
+  padding: 114px 300px 113px;
 }
 .about-section02 .about-section02-bg .about-section02-bg-img {
   max-width: 359px;
@@ -3017,6 +3020,8 @@ span:nth-child(9) {
     height: 40px;
   }
   .about-section05 {
+    padding-left: 0px;
+    padding-right: 0px;
     padding-top: 160px;
   }
   .about-section05-content-wrap {
@@ -3341,6 +3346,7 @@ span:nth-child(9) {
 .services-braintracer .services-last-text .services-last-text-img-wrap {
   max-width: 700px;
   max-height: 430px;
+  width: 100%;
 }
 .services-braintracer .services-last-text .services-last-text-img-wrap img {
   width: 100%;
@@ -4221,6 +4227,7 @@ i {
 .contact-directions .content-wrap .text-flex .direction {
   font-size: 24px;
   text-align: left;
+  line-height: 1.5;
   color: #202020;
 }
 
@@ -4372,6 +4379,9 @@ i {
     padding-left: 200px;
     padding-right: 200px;
   }
+  .contact-form .check-wrap label .check-info .only-mobile {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -4520,6 +4530,9 @@ i {
   .contact-form .check-wrap label .check-info {
     font-size: 12px;
   }
+  .contact-form .check-wrap label .check-info .only-mobile {
+    display: inline-block;
+  }
   .contact-form .check-wrap label .check-info button {
     display: inline-block;
     font-size: 12px;
@@ -4530,7 +4543,8 @@ i {
     margin-bottom: 33px;
   }
   .contact-form .btn-submit {
-    padding: 18px 137px;
+    padding: 18px 30px;
+    width: 100%;
     font-size: 16px;
   }
 }
