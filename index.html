@@ -57,71 +57,10 @@
         <div id="footer"></div>
     </div>
 
-        <!-- <div id="top_menu"></div> -->
-
-        <!-- 팝업 -->
-        <!-- 
-    <div class="pop-parent" id="popParent">
-        <div class="pop">
-            <div class="swiper-container">
-                <div class="swiper popupSwiper">
-                    <div class="swiper-wrapper">
-                        <a href="{{$item->link}}" class="swiper-slide" target="_blank">
-                            <div class="m-ratioBox-wrap">
-                                <div class="m-ratioBox">
-                                    <img src="https://admin.hielpay.com/storage/popup/1698050140_open-popup2.jpg" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="swiper-control">
-                    <div class="swiper-pagination"></div>
-                </div>
-
-                <div class="pop-btns">
-                    <input type="checkbox" name="oneday" id="oneday_check">
-                    <label for="oneday_check">
-                        <span class="icon"></span> 오늘하루 보지 않기
-                    </label>
-
-                    <button class="btn-toggle">
-                        <i class="xi-angle-up" style="color:#fff;"></i>
-                    </button>
-
-                    <button class="btn-close" onclick="nonePopup()">
-                        <i class="xi-close" style="color:#fff;"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div> 
-    -->
-        <!-- //팝업 -->
 </body>
 
 <script src="./js/jquery.js"></script>
 <script src="./js/script.js"></script>
-<script>
-    function nonePopup() {
-        document.getElementById('popParent').style.display = "none";
-    }
 
-    //popup
-    var popupSwiper = new Swiper(".popupSwiper", {
-        autoplay: {
-            delay: 3000,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-        },
-        loop: true,
-    });
-
-    $(".pop-parent .btn-toggle").click(function () {
-        $(".pop-parent").toggleClass("active");
-    });
-</script>
 
 </html>

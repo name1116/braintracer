@@ -342,10 +342,10 @@
           <h4 class="content-index font5">01</h4>
           <h4 class="content-title font6">최고 수준의 정확도와 효율성</h4>
           <p class="content font4">
-            기존 룰 기반 시스템이나 단순 머신러닝 알고리즘에 비<br class="only-mobile"/>해 심리적 이상
+            기존 룰 기반 시스템이나 단순 머신러닝 알고리즘에 비해 심리적 이상
             조기탐지에서<br class="only-pc"/>
-            더 높은 정확도를 제공하<br class="only-mobile"/>며, 대량의 데이터를 효율적으로 처리할 수 있는
-            성능을<br class="only-mobile"/> 갖<br class="only-pc"/>추고 있습니다.
+            더 높은 정확도를 제공하며, 대량의 데이터를 효율적으로 처리할 수 있는
+            성능을 갖<br class="only-pc"/>추고 있습니다.
           </p>
         </div>
       </div>
@@ -354,11 +354,11 @@
           <h4 class="content-index font5">02</h4>
           <h4 class="content-title font6">개인 맞춤형 편의성 제공</h4>
           <p class="content font4">
-            소량의 데이터나 초기 학습 데이터 부족으로 인한 문제<br class="only-mobile"/>를 극복하여,
+            소량의 데이터나 초기 학습 데이터 부족으로 인한 문제를 극복하여,
             사용자의 심리<br class="only-pc"/>
-            상태에 최적화된 맞춤형 솔<br class="only-mobile"/>루션을 제공합니다. 다양한 분야에서 축적한
-            경험을 바<br class="only-mobile"/>탕<br class="only-pc"/>으로 직관적이고 사용하기 쉬운 사용자 경험(UX)을<br class="only-mobile"/>
-            구현하여, 설정 과정에서 오는 피<br class="only-pc"/>로감과 노력을 최소화<br class="only-mobile"/>합니다.
+            상태에 최적화된 맞춤형 솔루션을 제공합니다. 다양한 분야에서 축적한
+            경험을 바탕<br class="only-pc"/>으로 직관적이고 사용하기 쉬운 사용자 경험(UX)을
+            구현하여, 설정 과정에서 오는 피<br class="only-pc"/>로감과 노력을 최소화합니다.
           </p>
         </div>
       </div>
@@ -367,9 +367,9 @@
           <h4 class="content-index font5">03</h4>
           <h4 class="content-title font6">신뢰할 수 있는 결과 분석</h4>
           <p class="content font4">
-            기존의 해석이 어려운 블랙박스 모델과는 달리, 브레인<br class="only-mobile"/>트레이서는 분석
-            과정과 결과<br class="only-pc"/>를 명확하게 해석할 수 있<br class="only-mobile"/>어 사용자에게 신뢰성 높은
-            심리 분석 결과를 제공합니<br class="only-mobile"/>다.
+            기존의 해석이 어려운 블랙박스 모델과는 달리, 브레인트레이서는 분석
+            과정과 결과<br class="only-pc"/>를 명확하게 해석할 수 있어 사용자에게 신뢰성 높은
+            심리 분석 결과를 제공합니다.
           </p>
         </div>
       </div>
@@ -378,10 +378,10 @@
           <h4 class="content-index font5">04</h4>
           <h4 class="content-title font6">다양한 분야에서의 폭넓은 적용성</h4>
           <p class="content font4">
-            브레인트레이서는 이미 다양한 산업 분야에서 심리적 상<br class="only-mobile"/>태 모니터링과
+            브레인트레이서는 이미 다양한 산업 분야에서 심리적 상태 모니터링과
             이상 탐지에<br class="only-pc"/>
-            24시간 365일 미션 크리티<br class="only-mobile"/>컬 시스템으로 운영되고 있으며, 각 분야에서
-            심리적 안<br class="only-mobile"/>정<br class="only-pc"/>성 및 성과 개선에 기여하고 있습니다.
+            24시간 365일 미션 크리티컬 시스템으로 운영되고 있으며, 각 분야에서
+            심리적 안정<br class="only-pc"/>성 및 성과 개선에 기여하고 있습니다.
           </p>
         </div>
       </div>
@@ -749,13 +749,7 @@
 
           slideUp(siblingsTextWrap);
 
-          // circle
-          //   .closest(".history-list")
-          //   .querySelectorAll(".history-text-detail")
-          //   .forEach((historyText) => {
-          //     historyText.classList.remove("able");
-          //     historyText.classList.add("disable");
-          //   });
+
         } else {
           circle.classList.remove("disable");
           circle.classList.add("able");
@@ -763,38 +757,12 @@
           slideDown(siblingsTextWrap);
           isAnimating = false;
 
-          // circle
-          //   .closest(".history-list")
-          //   .querySelectorAll(".history-text-detail")
-          //   .forEach((historyText) => {
-          //     historyText.classList.remove("disable");
-          //     historyText.classList.add("able");
-          //   });
         }
       });
     });
   </script>
 
-  <script>
-    function nonePopup() {
-      document.getElementById("popParent").style.display = "none";
-    }
 
-    //popup
-    var popupSwiper = new Swiper(".popupSwiper", {
-      autoplay: {
-        delay: 3000,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-      },
-      loop: true,
-    });
-
-    $(".pop-parent .btn-toggle").click(function () {
-      $(".pop-parent").toggleClass("active");
-    });
-  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script>
