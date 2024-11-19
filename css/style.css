@@ -755,6 +755,7 @@ span:nth-child(9) {
   text-align: center;
   margin: 64px auto 0px auto;
   color: #fff;
+  transition: all 0.3s;
 }
 
 .go-homePage a {
@@ -765,6 +766,7 @@ span:nth-child(9) {
 .go-homePage:hover {
   background-color: #3b6dec;
   border-color: transparent;
+  transition: all 0.3s;
 }
 
 @media screen and (max-width: 767px) {
