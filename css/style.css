@@ -253,7 +253,7 @@ img {
   flex-direction: row;
   justify-content: space-between;
   padding-top: 38px;
-  
+
   padding-left: 240px;
   padding-right: 240px;
 }
@@ -311,7 +311,6 @@ img {
   display: flex;
   flex-direction: row;
   gap: 40px;
-
 }
 
 .nav-sub a,
@@ -763,6 +762,10 @@ span:nth-child(9) {
   color: inherit; /* 링크의 색상 제거 */
   padding: 14px 21px;
 }
+.go-homePage:hover {
+  background-color: #3b6dec;
+  border-color: transparent;
+}
 
 @media screen and (max-width: 767px) {
   .main-image {
@@ -997,7 +1000,7 @@ span:nth-child(9) {
 
 .swiper.mySwiper {
   overflow: hidden;
-  max-width: 1920px;
+  /* max-width: 1920px; */
   width: 100%;
   height: 100vh;
   display: flex;
@@ -1174,16 +1177,16 @@ span:nth-child(9) {
 }
 
 .show-more-btn .show-more a {
-  padding: 16px 32px;
   background-color: #fff;
   border-radius: 8px;
-
+  padding: 16px 32px;
   font-size: 20px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
   text-align: center;
   color: #3b6dec;
+  transition: all 0.3s;
 }
 
 .show-more-btn .show-more a i {
@@ -1193,6 +1196,15 @@ span:nth-child(9) {
   font-style: normal;
   text-align: center;
   color: #3b6dec;
+  transition: all 0.3s;
+}
+.show-more-btn:hover .show-more a {
+  padding-right: 24px;
+  transition: all 0.3s;
+}
+.show-more-btn:hover .show-more a i {
+  padding-left: 8px;
+  transition: all 0.3s;
 }
 
 .special-img {
@@ -1551,7 +1563,7 @@ span:nth-child(9) {
   display: block;
 }
 
-@media screen and (max-width : 767px) {
+@media screen and (max-width: 767px) {
   .container-1920 .root_daum_roughmap.root_daum_roughmap_landing {
     max-height: 375px;
   }
@@ -2094,6 +2106,7 @@ span:nth-child(9) {
   content: "";
   display: block;
   border-bottom: 1px solid #3b6dec;
+  opacity: 0.2;
   white-space: nowrap;
 }
 .about-section02 .about-section02-button-wrap .about-section02-button {
@@ -2309,14 +2322,12 @@ span:nth-child(9) {
   align-items: center;
   width: 164px;
   transition: transform 0.3s;
-  background-color: #707070; /*로고 사진 넣을때, 슬라이더 배경색 뺴줘야함*/
 }
 
 .about-section04 .swiper .swiper-wrapper .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
-  padding: 15px 16px;
 }
 
 .about-section04 .partner {
@@ -2346,7 +2357,6 @@ span:nth-child(9) {
 .about-section04 .partner-wrap .partner-logo {
   width: 164px;
   height: 63px;
-  background-color: #707070; /*로고 사진 넣을때, 배경색 뺴줘야함 */
 }
 .about-section04 .partner-wrap .partner-logo:hover {
   transition: 0.5s;
@@ -2357,7 +2367,6 @@ span:nth-child(9) {
   display: block;
   width: 100%;
   height: 100%;
-  padding: 15px 16px;
 }
 
 .about-section05 {
@@ -2778,8 +2787,6 @@ span:nth-child(9) {
     height: fit-content;
   }
 
-
-
   .about-section06 {
     padding-top: 0px;
   }
@@ -2849,6 +2856,11 @@ span:nth-child(9) {
     top: -10px;
     right: -10px;
   }
+  .history-container .history-list {
+    max-width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+  }
   .history-container .history-list .history-text {
     margin-top: 24px;
     padding-left: 65px;
@@ -2899,17 +2911,13 @@ span:nth-child(9) {
   }
 }
 
-
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) {
   .about-section05 .about-section05-content .content .only-pc {
     display: none;
   }
 }
 
-
 @media screen and (max-width: 767px) {
-
-
   .about-section05 .about-section05-content {
     margin-top: 0px;
     margin-left: auto;
@@ -2944,10 +2952,6 @@ span:nth-child(9) {
     width: fit-content;
     flex: 1;
   }
-
-
-
-
 
   .about-section01 {
     height: 700px;
@@ -3172,6 +3176,7 @@ span:nth-child(9) {
   content: "";
   display: block;
   border-bottom: 1px solid #3b6dec;
+  opacity: 0.2;
 }
 .services-section02 .services-section02-button-wrap .services-section02-button {
   position: relative;
@@ -3369,7 +3374,6 @@ span:nth-child(9) {
   /* width: 100%;
   height: 100%; */
   width: 50px;
-  height: 50px;
   margin-top: 63px;
 }
 .services-braintracer .services-process-flex .process .process-text {
@@ -3772,9 +3776,8 @@ i {
     height: 166px;
   }
   .services-braintracer .services-process-flex .process img {
-    margin-top: 20px;
-    max-width: 24px;
-    min-height: 31px;
+    margin-top: 40px;
+    max-width: 32px;
   }
   .services-braintracer .services-process-flex .process .process-text {
     margin-top: 24px;
@@ -3929,7 +3932,7 @@ i {
     font-size: 14px;
   }
 }
-@media screen and (max-width:400px) {
+@media screen and (max-width: 400px) {
   .services-ptsd .services-ptsd-contact .text .only-here {
     display: none;
   }
