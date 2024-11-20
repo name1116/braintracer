@@ -2653,6 +2653,7 @@ span:nth-child(9) {
 .history-container .history-list {
   position: relative;
   justify-content: flex-start;
+  align-items: flex-start;
   min-height: 200px;
 }
 .history-container .history-list .history-circle {
@@ -2675,6 +2676,7 @@ span:nth-child(9) {
 }
 .history-container .history-list .history-year-wrap {
   margin-left: 24px;
+  height: fit-content;
 }
 
 .history-container .history-list .history-year-wrap {
@@ -2886,6 +2888,9 @@ span:nth-child(9) {
     margin-right: auto;
     margin-left: auto;
   }
+  .history-container .history-list .history-text-wrap {
+    width: 100%;
+  }
   .history-container .history-list .history-text {
     margin-top: 24px;
     padding-left: 65px;
@@ -2943,9 +2948,6 @@ span:nth-child(9) {
 }
 
 @media screen and (max-width: 767px) {
-  .history-container .history-list .history-text-wrap.on {
-    width: 100%;
-  }
 
 
   .about-section05 .about-section05-content {
