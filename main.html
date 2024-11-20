@@ -337,6 +337,37 @@
   <div id="top_menu"></div>
   <div id="footer"></div>
 
+  <div class="pop-parent" id="popParent">
+    <div class="pop">
+        <div class="swiper-container">
+            <div class="swiper popupSwiper">
+                <div class="swiper-wrapper">
+                    <!-- @foreach($popups as $key => $popup) -->
+                        <a href="{{$popup->link}}" class="swiper-slide" target="_blank">
+                            <div class="m-ratioBox-wrap">
+                                <div class="m-ratioBox">
+                                    <img src="{{$popup->image}}" alt="">
+                                </div>
+                            </div>
+                        </a>
+                    <!-- @endforeach -->
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <div class="pop-btns">
+            <input type="checkbox" name="oneday" id="oneday_check" onclick="handleOnedayCheck()"/>
+            <label for="oneday_check">
+                <span class="icon"></span> 오늘하루 보지 않기
+            </label>
+            <button class="btn-close" onclick="nonePopup()">
+                <i class="xi-close"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
   <script src="./js/jquery.js"></script>
   <script src="./js/script.js"></script>
 

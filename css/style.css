@@ -419,10 +419,11 @@ img {
 .pop-parent {
   position: fixed;
   top: 200px;
-  right: 0;
+  right: calc(50% - 250px);
   z-index: 999;
   transition: all 0.2s;
 }
+
 
 .pop-parent .m-ratioBox-wrap {
   width: 100%;
@@ -470,7 +471,7 @@ img {
   display: flex;
 }
 .pop-parent .pop {
-  width: 400px;
+  width: 500px;
   position: relative;
 }
 .pop-parent .pop .btn-toggle {
@@ -490,12 +491,15 @@ img {
 }
 .pop-parent .pop-btns {
   display: flex;
+  justify-content: space-between;
   position: absolute;
-  top: 80px;
-  left: -120px;
+  bottom: -40px;
+  width: 100%;
+  height: 40px;
+  /* left: -120px; */
   background-color: #3c3c3c;
   opacity: 1;
-  transform: rotate(90deg);
+  /* transform: rotate(90deg); */
 }
 .pop-parent .pop-btns a {
   color: #fff;
@@ -571,11 +575,21 @@ img {
 }
 
 .pop-parent .pop .btn-close {
-  display: none;
+  /* display: none; */
   width: 40px;
   height: 40px;
   position: relative;
-  background-color: black;
+  /* background-color: black; */
+}
+
+@media screen and (max-width:767px) {
+  .pop-parent {
+    right: calc(50% - 155px);
+  }
+
+  .pop-parent .pop {
+    width: 310px;
+  }
 }
 
 @font-face {
@@ -2683,7 +2697,7 @@ span:nth-child(9) {
 .history-container .history-list .history-text .history-text-detail {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 40px;
   margin-bottom: 40px;
 }
@@ -2929,6 +2943,11 @@ span:nth-child(9) {
 }
 
 @media screen and (max-width: 767px) {
+  .history-container .history-list .history-text-wrap.on {
+    width: 100%;
+  }
+
+
   .about-section05 .about-section05-content {
     margin-top: 0px;
     margin-left: auto;
