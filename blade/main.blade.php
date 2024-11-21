@@ -347,7 +347,7 @@
     @include('client.components.footer')
 </footer>
 
-<div class="pop-parent" id="popParent">
+<div class="pop-parent" id="popParent" style="display: none;">
     <div class="pop">
         <div class="swiper-container">
             <div class="swiper popupSwiper">
@@ -536,83 +536,46 @@
     });
 </script>
 
-<script>
-    //popup
-    function setCookie(name, value, hours) {
-        const date = new Date();
-        date.setTime(date.getTime() + (hours * 60 * 60 * 1000)); // 시간(밀리초 단위)으로 만료 시간 설정
-        const expires = "expires=" + date.toUTCString();
-        document.cookie = name + "=" + value + ";" + expires + ";path=/";
+
+  <script>
+    $(".pop-parent .btn-close").click(function () {
+      $(".pop-parent").css({ display: "none" });
+    });
+
+    function setCookie(name, value, exp) {
+      var date = new Date();
+      date.setTime(date.getTime() + exp * 24 * 60 * 60 * 1000);
+
+      document.cookie =
+        name + "=" + value + ";expires=" + date.toUTCString() + ";path=/";
     }
 
-    // 쿠키 가져오는 함수
-    function getCookie(name) {
-        const cookieArr = document.cookie.split(";"); // 쿠키 문자열을 배열로 변환
-        for (let i = 0; i < cookieArr.length; i++) {
-            let cookie = cookieArr[i].trim();
-            if (cookie.indexOf(name + "=") === 0) {
-                return cookie.substring(name.length + 1, cookie.length); // 쿠키 값 반환
-            }
-        }
-        return null; // 쿠키가 없으면 null 반환
-    }
-
-    // 팝업을 숨기는 함수
-    function nonePopup() {
-        document.getElementById('popParent').style.display = 'none';
-    }
-
-    // '오늘 하루 보지 않기' 체크박스 클릭 시 실행되는 함수
     function handleOnedayCheck() {
-        if (document.getElementById('oneday_check').checked) {
-            // 24시간 동안 유효한 쿠키 설정
-            setCookie('hidePopup', 'true', 24);
-            nonePopup(); // 팝업 숨기기
-        }
+      setCookie("popup", "none", 1);
+
+      document.getElementById("popParent").style.display = "none";
     }
 
-    // 페이지 로드 시 쿠키를 확인하고 팝업 표시 여부 결정
-    window.onload = function () {
-        const hidePopup = getCookie('hidePopup');
-        if (hidePopup === 'true') {
-            // 쿠키 값이 'true'면 팝업을 숨김
-            nonePopup();
-        } else {
-            // 쿠키가 없으면 팝업을 보여줌
-            document.getElementById('popParent').style.display = 'block';
-        }
-    };
+    function getCookie(name) {
+      var value = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+      return value != null ? value[2] : null;
+    }
 
-    //
-
-    //popup
-    var popupSwiper = new Swiper(".popupSwiper", {
-        autoplay: {
-            delay: 3000,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-        },
-        loop: true,
-    });
-
-    $(".pop-parent .btn-toggle").click(function () {
-        $(".pop-parent").toggleClass("active");
-    });
+    if (getCookie("popup") == null) {
+      document.getElementById("popParent").style.display = "";
+    } else {
+      document.getElementById("popParent").style.display = "none";
+    }
 
     var popupSwiper = new Swiper(".popupSwiper", {
-        autoplay: {
-            delay: 3000,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-        },
-        loop: true,
+      autoplay: {
+        delay: 3000,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      loop: true,
     });
-
-    $(".pop-parent .btn-toggle").click(function () {
-        $(".pop-parent").toggleClass("active");
-    });
-</script>
+  </script>
 </body>
 </html>

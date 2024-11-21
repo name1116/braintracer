@@ -164,10 +164,10 @@
                       </div>
                       <p class="biz-content active font4">
                         사용자의 심리적 외상을 조기에 탐지하는 시스템으로,
-                        딥러닝 기반 음성 및 텍스트 감정 분석을 활용해
-                        심리 상태를 모니터링하고 사용자 상태 변화를 분석해
-                        심리적 악화의 시점을 파악합니다. 이를 바탕으로
-                        대화형 AI를 통해 트라우마 원인 분석을 지원합니다.
+                        딥러닝 기반 음성 및 텍스트 감정 분석을 활용해 심리
+                        상태를 모니터링하고 사용자 상태 변화를 분석해 심리적
+                        악화의 시점을 파악합니다. 이를 바탕으로 대화형 AI를 통해
+                        트라우마 원인 분석을 지원합니다.
                       </p>
 
                       <!-- <hr style="margin-top: 31px; border: 2px solid #484848" /> -->
@@ -181,19 +181,19 @@
                     <div class="biz-text">
                       <div class="biz-title-wrap">
                         <button class="biz-button">
-                        <p class="biz-title font6">
-                          쉽고 재미있는 심리 측정 시스템
-                        </p>
-                        
+                          <p class="biz-title font6">
+                            쉽고 재미있는 심리 측정 시스템
+                          </p>
+
                           <i class="xi-angle-up-thin"></i>
                         </button>
                       </div>
                       <p class="biz-content font4">
                         자기보고식 대답을 통해 심리 질환 측정을 자동으로
                         제공하는 시스템으로 기존 정부 제공 자가 심리 측정은
-                         사용자가 직접 질환을 선택해야 하지만, COGEM은
-                        자동으로 취약한 심리 요소를 분석하고 필요한 설문
-                         및 인지 게임을 제안합니다.
+                        사용자가 직접 질환을 선택해야 하지만, COGEM은 자동으로
+                        취약한 심리 요소를 분석하고 필요한 설문 및 인지 게임을
+                        제안합니다.
                       </p>
 
                       <!-- <hr style="margin-top: 31px; border: 2px solid #484848" /> -->
@@ -207,7 +207,9 @@
                     <div class="biz-text">
                       <div class="biz-title-wrap">
                         <button class="biz-button">
-                        <p class="biz-title font6">개인 맞춤형 심리 모니터링</p>
+                          <p class="biz-title font6">
+                            개인 맞춤형 심리 모니터링
+                          </p>
                           <i class="xi-angle-up-thin"></i>
                         </button>
                       </div>
@@ -230,9 +232,9 @@
                     <div class="biz-text">
                       <div class="biz-title-wrap">
                         <button class="biz-button">
-                        <p class="biz-title font6">
-                          딥러닝과 AI 기반 심리 분석 및 기록
-                        </p>
+                          <p class="biz-title font6">
+                            딥러닝과 AI 기반 심리 분석 및 기록
+                          </p>
                           <i class="xi-angle-up-thin"></i>
                         </button>
                       </div>
@@ -336,36 +338,41 @@
   <div id="top_menu"></div>
   <div id="footer"></div>
 
-  <div class="pop-parent" id="popParent">
+  <div class="pop-parent" id="popParent" style="display: none;">
     <div class="pop">
-        <div class="swiper-container">
-            <div class="swiper popupSwiper">
-                <div class="swiper-wrapper">
-                    <!-- @foreach($popups as $key => $popup) -->
-                        <a href="{{$popup->link}}" class="swiper-slide" target="_blank">
-                            <div class="m-ratioBox-wrap">
-                                <div class="m-ratioBox">
-                                    <img src="{{$popup->image}}" alt="">
-                                </div>
-                            </div>
-                        </a>
-                    <!-- @endforeach -->
+      <div class="swiper-container">
+        <div class="swiper popupSwiper">
+          <div class="swiper-wrapper">
+            <!-- @foreach($popups as $key => $popup) -->
+            <a href="{{$popup->link}}" class="swiper-slide" target="_blank">
+              <div class="m-ratioBox-wrap">
+                <div class="m-ratioBox">
+                  <img src="{{$popup->image}}" alt="" />
                 </div>
-            </div>
+              </div>
+            </a>
+            <!-- @endforeach -->
+          </div>
         </div>
+      </div>
 
-        <div class="swiper-pagination"></div>
-        <div class="pop-btns">
-            <input type="checkbox" name="oneday" id="oneday_check" onclick="handleOnedayCheck()"/>
-            <label for="oneday_check">
-                <span class="icon"></span> 오늘하루 보지 않기
-            </label>
-            <button class="btn-close" onclick="nonePopup()">
-                <i class="xi-close"></i>
-            </button>
-        </div>
+      <div class="swiper-pagination"></div>
+      <div class="pop-btns">
+        <input
+          type="checkbox"
+          name="oneday"
+          id="oneday_check"
+          onclick="handleOnedayCheck()"
+        />
+        <label for="oneday_check">
+          <span class="icon"></span> 오늘하루 보지 않기
+        </label>
+        <button class="btn-close">
+          <i class="xi-close"></i>
+        </button>
+      </div>
     </div>
-</div>
+  </div>
 
   <script src="./js/jquery.js"></script>
   <script src="./js/script.js"></script>
@@ -529,11 +536,35 @@
   </script>
 
   <script>
-    function nonePopup() {
+    $(".pop-parent .btn-close").click(function () {
+      $(".pop-parent").css({ display: "none" });
+    });
+
+    function setCookie(name, value, exp) {
+      var date = new Date();
+      date.setTime(date.getTime() + exp * 24 * 60 * 60 * 1000);
+
+      document.cookie =
+        name + "=" + value + ";expires=" + date.toUTCString() + ";path=/";
+    }
+
+    function handleOnedayCheck() {
+      setCookie("popup", "none", 1);
+
       document.getElementById("popParent").style.display = "none";
     }
 
-    //popup
+    function getCookie(name) {
+      var value = document.cookie.match("(^|;) ?" + name + "=([^;]*)(;|$)");
+      return value != null ? value[2] : null;
+    }
+
+    if (getCookie("popup") == null) {
+      document.getElementById("popParent").style.display = "";
+    } else {
+      document.getElementById("popParent").style.display = "none";
+    }
+
     var popupSwiper = new Swiper(".popupSwiper", {
       autoplay: {
         delay: 3000,
@@ -542,10 +573,6 @@
         el: ".swiper-pagination",
       },
       loop: true,
-    });
-
-    $(".pop-parent .btn-toggle").click(function () {
-      $(".pop-parent").toggleClass("active");
     });
   </script>
 </html>
