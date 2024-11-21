@@ -15,9 +15,12 @@
   />
   <link rel="stylesheet" type="text/css" href="./css/common.css" />
   <link rel="stylesheet" href="./css/style.css" />
-
+  <script src="./js/jquery.js"></script>
+  <script src="./js/script.js"></script>
   <body>
-    <header id="header" class="services-header"></header>
+    <header id="header" class="services-header">
+        @include('client.components.header')
+    </header>
     <section class="services-section01">
       <img
         src="./images/service_web.png"
@@ -46,7 +49,8 @@
           data-section="braintracerforptsd"
         >
           브레인트레이서 For PTSD
-        </button> -->
+        </button> --> 
+        <!-- 고객요청 주석 -->
       </div>
     </section>
     <!-- 버튼 토글 시 section이 다르게 나옴 -->
@@ -148,7 +152,7 @@
         </h3>
         <div class="services-ptsd-title-line"></div>
         <p class="text font6">
-          활동 데이터와 감정 분석을 통해<br class="only-mobile"/>
+        활동 데이터와 감정 분석을 통해<br class="only-mobile"/>
           <span class="font6">PTSD를 예측</span>하고<br />
           AI 기반 결과를 활용합니다.
         </p>
@@ -192,11 +196,11 @@
             <h3 class="title font6">사건 중심 PTSD 예방 시스템</h3>
             <ul class="content font3">
               <li>
-                사건 기록과 생체 데이터를 연계해 PTSD 발생 위험을 예측합니다.
+              사건 기록과 생체 데이터를 연계해 PTSD 발생 위험을 예측합니다.
               </li>
               <li>
-                사건별 트라우마 영향을 분석해 고위험 상황을 조기에
-                파악합니다.
+              사건별 트라우마 영향을 분석해 고위험 상황을 조기에
+              파악합니다.
               </li>
               <li>
                 AI 기반 알고리즘으로 스트레스 변화와 정신건강 악화 지점을 실시간
@@ -246,8 +250,8 @@
                 활용됩니다.
               </li>
               <li>
-                또한 고객사 내부 시스템과 연동해 사건에 대한 심리 상태를
-                모니터링합니다.
+              또한 고객사 내부 시스템과 연동해 사건에 대한 심리 상태를
+              모니터링합니다.
               </li>
             </ul>
             <div class="img-wrap">
@@ -259,19 +263,23 @@
 
       <div class="services-ptsd-contact">
         <p class="text font6">
-          사건별 트라우마 형성을
-          AI 알고리즘으로<br class="only-here"/> 예측하여 PTSD 예방을 지원하는 브레인트레이서
+        사건별 트라우마 형성을
+        AI 알고리즘으로<br class="only-here"/> 예측하여 PTSD 예방을 지원하는 브레인트레이서
         </p>
         <button class="btn">
-          <a href="../contact_us.html#contact" class="font6">
+          <a href="{{ route("contact_us") }}#contact" class="font6">
             문의하기 <i class="xi-long-arrow-right"></i
           ></a>
         </button>
       </div>
     </section>
 
-    <div id="top_menu"></div>
-    <div id="footer"></div>
+    <div id="top_menu">
+        @include('client.components.top_menu')
+    </div>
+    <footer id="footer">
+        @include('client.components.footer')
+    </footer>
   </body>
   <script>
     function updateImageSrc() {
@@ -396,9 +404,4 @@
       }
     });
   </script>
-
-
-
-  <script src="./js/jquery.js"></script>
-  <script src="./js/script.js"></script>
 </html>

@@ -38,6 +38,7 @@
               type="video/mp4"
               autoplay
               muted
+              playsinline
               loop
             ></video>
             <div class="brain-main-texts">
@@ -53,12 +54,10 @@
             </div>
           </div>
         </div>
-
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
+        <div class="swiper-slide"></div>
       </div>
 
-      <div class="control-wrap">
+      <!-- <div class="control-wrap">
         <div class="swiper-button-prev"></div>
 
         <div class="swiper-pagination">
@@ -67,7 +66,7 @@
         </div>
 
         <div class="swiper-button-next"></div>
-      </div>
+      </div> -->
     </div>
 
     <!-- 쉽고 재미있는 심리측정 -->
@@ -517,14 +516,15 @@
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
       },
-      autoplay: {
-        delay: 4000,
-        disableOnInteraction: false,
-      },
+      // autoplay: {
+      //   delay: 4000,
+      //   disableOnInteraction: false,
+      // },
+      autoplay: false,
+      allowTouchMove: false,
       pagination: {
         el: ".swiper-pagination",
       },
-      loop: true,
     });
   </script>
 

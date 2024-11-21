@@ -1,6 +1,6 @@
 <div id="footer" class="footer" data-speed="clamp(0.8)">
   <div class="com-info-div">
-    <a href="../main.html">
+    <a href="{{ route("main") }}">
       <img src="./images/main_small_subject.svg" class="com-info-logo" />
     </a>
     <div class="com-info">
@@ -22,10 +22,10 @@
       <div class="line"></div>
 
       <p class="nav-text">
-        <a href="../about_us.html#aboutcompany" class="font3"> 회사소개 </a>
+        <a href="{{ route("about_us") }}#aboutcompany" class="font3"> 회사소개 </a>
       </p>
       <p class="nav-text">
-        <a href="../about_us.html#companyhistory" class="font3"> 연혁 </a>
+        <a href="{{ route("about_us") }}#companyhistory" class="font3"> 연혁 </a>
       </p>
     </div>
     <div class="section">
@@ -34,13 +34,13 @@
       <div class="line"></div>
 
       <p class="nav-text">
-        <a href="../services.html#braintracerforall" class="font3">
+        <a href="{{ route("services") }}#braintracerforall" class="font3">
           브레인트레이서 For all
         </a>
       </p>
       <!-- 요청사항 주석 -->
       <!-- <p class="nav-text">
-        <a href="../services.html#braintracerforptsd" class="font3">
+          <a href="{{ route("services") }}#braintracerforptsd" class="font3">
           브레인트레이서 For PTSD
         </a>
       </p> -->
@@ -51,10 +51,10 @@
       <div class="line"></div>
 
       <p class="nav-text">
-        <a href="../contact_us.html#contact" class="font3"> 문의하기 </a>
+        <a href="{{ route("contact_us") }}#contact" class="font3"> 문의하기 </a>
       </p>
       <p class="nav-text">
-        <a href="../contact_us.html#directions" class="font3"> 오시는길 </a>
+          <a href="{{ route("contact_us") }}#directions" class="font3"> 오시는길 </a>
       </p>
     </div>
   </div>

@@ -51,7 +51,7 @@ img {
   text-align: center;
 }
 #gnb > .section > .link-flex {
-  width: 200px;
+  width: 210px;
   height: auto;
 }
 /* 밑에 두줄 .link-flex 호버 */
@@ -77,7 +77,7 @@ img {
   margin-top: 45px;
 }
 #header:hover #gnb > .section > .link-flex .link-btn-wrap button {
-  padding: 16px 10px;
+  padding: 16px 1px;
   font-size: 17px;
   color: #fff;
 }
@@ -319,6 +319,7 @@ img {
 .nav-text a {
   text-decoration: none; /* 링크의 밑줄 제거 */
   color: inherit; /* 링크의 색상 제거 */
+  white-space: nowrap;
 }
 
 .nav-sub {
@@ -592,29 +593,58 @@ img {
   }
 }
 
+/*FONT_HOUSE*/
 @font-face {
   font-family: S-CoreDream3;
-  src: url(/0-기본폼/Project/fonts/SCDream3.otf);
+  src: url(../fonts/SCDream3.otf);
 }
 
 @font-face {
   font-family: S-CoreDream4;
-  src: url(/0-기본폼/Project/fonts/SCDream4.otf);
+  src: url(../fonts/SCDream4.otf);
 }
 
 @font-face {
   font-family: S-CoreDream5;
-  src: url(/0-기본폼/Project/fonts/SCDream5.otf);
+  src: url(../fonts/SCDream5.otf);
 }
 
 @font-face {
   font-family: S-CoreDream6;
-  src: url(/0-기본폼/Project/fonts/SCDream6.otf);
+  src: url(../fonts/SCDream6.otf);
 }
 
 @font-face {
   font-family: S-CoreDream7;
-  src: url(/0-기본폼/Project/fonts/SCDream7.otf);
+  src: url(../fonts/SCDream7.otf);
+}
+@font-face {
+  font-family: S-CoreDream8;
+  src: url(../fonts/SCDream8.otf);
+}
+
+/* fonts */
+.font3 {
+  font-family: S-CoreDream3;
+  font-weight: 300;
+}
+.font4 {
+  font-family: S-CoreDream4;
+  font-weight: 200;
+}
+.font5 {
+  font-family: S-CoreDream5;
+  font-weight: 500;
+}
+.font6 {
+  font-family: S-CoreDream6;
+  font-weight: bold;
+}
+.font7 {
+  font-family: S-CoreDream7;
+}
+.font8 {
+  font-family: S-CoreDream8;
 }
 
 /*성철*/
@@ -694,9 +724,9 @@ img {
 }
 
 .main-image-bigText > span {
-  font-family: S-CoreDream6;
+  font-family: S-CoreDream4;
   font-size: 56px;
-  font-weight: bold;
+  font-weight: 200;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.54;
@@ -707,6 +737,9 @@ img {
   display: inline-block;
   opacity: 0;
   filter: blur(4px);
+}
+.main-image-bigText > span.font8 {
+  font-family: S-CoreDream8;
 }
 
 span:nth-child(1) {
@@ -742,6 +775,12 @@ span:nth-child(8) {
 }
 
 span:nth-child(9) {
+  animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(10) {
+  animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+span:nth-child(11) {
   animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }
 
@@ -832,9 +871,9 @@ span:nth-child(9) {
   }
 
   .main-image-bigText span {
-    font-family: S-CoreDream7;
+    font-family: S-CoreDream4;
     font-size: 32px;
-    font-weight: bold;
+    font-weight: 200;
     font-stretch: normal;
     font-style: normal;
     line-height: 1.44;
@@ -882,6 +921,12 @@ span:nth-child(9) {
   span:nth-child(9) {
     animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
+  span:nth-child(10) {
+    animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+  span:nth-child(11) {
+    animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
 
   @keyframes fade-in {
     100% {
@@ -918,52 +963,7 @@ span:nth-child(9) {
   }
 }
 
-/*FONT_HOUSE*/
-@font-face {
-  font-family: S-CoreDream3;
-  src: url(../fonts/SCDream3.otf);
-}
 
-@font-face {
-  font-family: S-CoreDream4;
-  src: url(../fonts/SCDream4.otf);
-}
-
-@font-face {
-  font-family: S-CoreDream5;
-  src: url(../fonts/SCDream5.otf);
-}
-
-@font-face {
-  font-family: S-CoreDream6;
-  src: url(../fonts/SCDream6.otf);
-}
-
-@font-face {
-  font-family: S-CoreDream7;
-  src: url(../fonts/SCDream7.otf);
-}
-
-/* fonts */
-.font3 {
-  font-family: S-CoreDream3;
-  font-weight: 300;
-}
-.font4 {
-  font-family: S-CoreDream4;
-  font-weight: 200;
-}
-.font5 {
-  font-family: S-CoreDream5;
-  font-weight: 500;
-}
-.font6 {
-  font-family: S-CoreDream6;
-  font-weight: bold;
-}
-.font7 {
-  font-family: S-CoreDream7;
-}
 
 /* 메인 CSS*/
 .bg-video {
@@ -3742,7 +3742,8 @@ i {
   .services-section02-button-wrap {
     /* white-space: nowrap; */
     position: relative;
-    display: flex;
+    /* display: flex;  */  
+    /* 고객요청으로 flex 주석 */
   }
 
   .services-section02
